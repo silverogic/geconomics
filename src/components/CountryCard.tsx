@@ -5,7 +5,8 @@ import { formatGdpCompact, formatPerCapita, formatExchangeRate } from '../utils/
 import { getConversionRate } from '../services/exchangeApi'
 import { translations } from '../i18n/translations'
 import { CountryFlag } from './CountryFlag'
-import { getStockIndex } from '../data/stockIndices'
+import { StockSparkline } from './StockSparkline'
+import { getStockPriceData } from '../data/stockPrices'
 
 interface CountryCardProps {
   country: CountryMeta
@@ -43,7 +44,7 @@ export const CountryCard: React.FC<CountryCardProps> = ({
 
   const displayName = lang === 'ko' ? country.nameKo : country.nameEn
   const secondaryName = lang === 'ko' ? country.nameEn : country.nameKo
-  const stockIndex = getStockIndex(country.id)
+  const stockData = getStockPriceData(country.id)
 
   return (
     <div
@@ -97,21 +98,48 @@ export const CountryCard: React.FC<CountryCardProps> = ({
             </div>
           </div>
 
-          {/* Stock Index Benchmark Row */}
-          {stockIndex && (
-            <div className="flex items-center justify-between pt-2 border-t border-slate-800/60 text-xs">
-              <div className="flex items-center gap-1.5 text-slate-400">
-                <LineChart className="w-3.5 h-3.5 text-indigo-400" />
-                <span className="text-[11px] font-medium">{t.cardStockIndex}</span>
+          {/* Stock Index Benchmark Row with Mini Sparkline */}
+          {stockData && (
+            <div className="pt-2 border-t border-slate-800/60 flex items-center justify-between gap-2">
+              <div className="min-w-0 flex-1">
+                <div className="flex items-center gap-1.5 text-slate-400">
+                  <LineChart className="w-3.5 h-3.5 text-indigo-400 shrink-0" />
+                  <span className="text-[11px] font-medium truncate">
+                    {lang === 'ko' ? stockData.nameKo : stockData.nameEn}
+                  </span>
+                </div>
+                <div className="flex items-center gap-1.5 mt-0.5">
+                  {stockData.isSupported ? (
+                    <span className="text-[11px] font-mono font-semibold text-slate-200">
+                      {stockData.currentPrice.toLocaleString()} {stockData.currency}
+                    </span>
+                  ) : (
+                    <span className="text-[10px] text-slate-500 font-mono">
+                      {lang === 'ko' ? '제재/조회제한' : 'Restricted'}
+                    </span>
+                  )}
+                </div>
               </div>
-              <div className="flex items-center gap-1.5">
-                <span className="font-semibold text-slate-200 group-hover:text-indigo-300 transition-colors">
-                  {lang === 'ko' ? stockIndex.nameKo : stockIndex.nameEn}
-                </span>
-                <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-slate-800 text-slate-400 border border-slate-700/60">
-                  {stockIndex.exchange}
-                </span>
-              </div>
+
+              {stockData.isSupported && stockData.points.length > 0 && (
+                <div className="flex items-center gap-2 shrink-0">
+                  <StockSparkline
+                    points={stockData.points}
+                    isPositive={stockData.changePct >= 0}
+                    width={58}
+                    height={22}
+                  />
+                  <span
+                    className={`text-[10px] font-mono font-bold px-1.5 py-0.5 rounded ${
+                      stockData.changePct >= 0
+                        ? 'text-emerald-400 bg-emerald-500/10 border border-emerald-500/20'
+                        : 'text-rose-400 bg-rose-500/10 border border-rose-500/20'
+                    }`}
+                  >
+                    {stockData.changePct >= 0 ? '+' : ''}{stockData.changePct}%
+                  </span>
+                </div>
+              )}
             </div>
           )}
         </div>
