@@ -5,9 +5,30 @@
     --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   }
 
+  /* Disable blinking caret and text selection globally on UI */
+  * {
+    caret-color: transparent;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
   body {
     @apply bg-slate-950 text-slate-100 min-h-screen antialiased selection:bg-indigo-500 selection:text-white;
     font-family: var(--font-sans);
+    cursor: default;
+  }
+
+  /* Re-enable caret, text selection, and text cursor ONLY in interactive input fields */
+  input, textarea {
+    caret-color: auto;
+    -webkit-user-select: text;
+    user-select: text;
+    cursor: text;
+  }
+
+  /* Interactive clickable elements */
+  button, select, [role="button"], a {
+    cursor: pointer;
   }
 }
 
