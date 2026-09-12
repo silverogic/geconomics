@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, memo } from 'react'
 import type { StockIndexMeta } from '../data/stockIndices'
 import type { Language } from '../types/economics'
-import { AlertCircle, LineChart } from 'lucide-react'
+import { AlertCircle, LineChart, ExternalLink } from 'lucide-react'
 
 interface TradingViewWidgetProps {
   stockIndex: StockIndexMeta | null
@@ -104,9 +104,24 @@ export const TradingViewWidget: React.FC<TradingViewWidgetProps> = memo(({ stock
     )
   }
 
+  const tradingViewUrl = `https://www.tradingview.com/chart/?symbol=${encodeURIComponent(stockIndex.symbol)}`
+
   return (
-    <div className="w-full h-[360px] sm:h-[400px] bg-slate-950/60 border border-slate-800 rounded-xl overflow-hidden p-2">
-      <div ref={containerRef} className="w-full h-full" />
+    <div className="space-y-1.5">
+      <div className="w-full h-[360px] sm:h-[400px] bg-slate-950/60 border border-slate-800 rounded-xl overflow-hidden p-2">
+        <div ref={containerRef} className="w-full h-full" />
+      </div>
+      <div className="flex items-center justify-end px-1">
+        <a
+          href={tradingViewUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 text-[11px] text-indigo-400 hover:text-indigo-300 transition-colors"
+        >
+          <span>{lang === 'ko' ? 'TradingView에서 공식 풀차트 보기' : 'Open full chart on TradingView'}</span>
+          <ExternalLink className="w-3 h-3" />
+        </a>
+      </div>
     </div>
   )
 })
