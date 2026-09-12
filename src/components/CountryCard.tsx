@@ -1,0 +1,141 @@
+import React from 'react'
+import { TrendingUp, TrendingDown, ArrowRight } from 'lucide-react'
+import type { CountryMeta, BaseCurrency, ExchangeRates, Language } from '../types/economics'
+import { formatGdpCompact, formatPerCapita, formatExchangeRate } from '../utils/formatters'
+import { getConversionRate } from '../services/exchangeApi'
+import { translations } from '../i18n/translations'
+
+interface CountryCardProps {
+  country: CountryMeta
+  rank: number
+  totalGdpUsd: number
+  gdpPerCapitaUsd: number
+  growthRatePct: number | null
+  baseCurrency: BaseCurrency
+  exchangeRates: ExchangeRates | null
+  lang: Language
+  onSelect: (c: CountryMeta) => void
+}
+
+export const CountryCard: React.FC<CountryCardProps> = ({
+  country,
+  rank,
+  totalGdpUsd,
+  gdpPerCapitaUsd,
+  growthRatePct,
+  baseCurrency,
+  exchangeRates,
+  lang,
+  onSelect,
+}) => {
+  const t = translations[lang]
+
+  // Exchange rate vs Base Currency
+  let fxRate = 0
+  let isRateLoaded = false
+  if (exchangeRates) {
+    fxRate = getConversionRate(exchangeRates, country.currencyCode, baseCurrency)
+    isRateLoaded = true
+  }
+
+  // Multiplier for USD to BaseCurrency (for GDP converted display)
+  const usdToBase = exchangeRates ? getConversionRate(exchangeRates, 'USD', baseCurrency) : 1
+
+  const displayName = lang === 'ko' ? country.nameKo : country.nameEn
+  const secondaryName = lang === 'ko' ? country.nameEn : country.nameKo
+
+  return (
+    <div
+      onClick={() => onSelect(country)}
+      className="group relative bg-slate-900/70 hover:bg-slate-800/80 border border-slate-800 hover:border-indigo-500/50 rounded-2xl p-5 transition-all duration-300 hover:shadow-xl hover:shadow-indigo-500/10 cursor-pointer flex flex-col justify-between"
+    >
+      {/* Card Header: Country ISO Badge, Name, Rank */}
+      <div>
+        <div className="flex items-start justify-between gap-2 mb-3">
+          <div className="flex items-center gap-3">
+            {/* Styled ISO Code Badge (No Emoji) */}
+            <div className="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700/80 flex items-center justify-center font-mono font-bold text-sm text-indigo-300 group-hover:border-indigo-500/50 group-hover:bg-indigo-950/40 transition-colors">
+              {country.iso2}
+            </div>
+            <div>
+              <div className="flex items-center gap-2">
+                <h3 className="font-bold text-slate-100 text-lg group-hover:text-indigo-400 transition-colors">
+                  {displayName}
+                </h3>
+                <span className="text-xs font-mono font-medium text-slate-500 bg-slate-800/80 px-1.5 py-0.5 rounded">
+                  {country.id}
+                </span>
+              </div>
+              <p className="text-xs text-slate-400">{secondaryName}</p>
+            </div>
+          </div>
+
+          <span className="text-xs font-bold font-mono px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700/60">
+            #{rank}
+          </span>
+        </div>
+
+        {/* GDP Metrics */}
+        <div className="grid grid-cols-2 gap-3 py-3 border-y border-slate-800/80 my-3">
+          <div>
+            <span className="text-[11px] font-medium text-slate-400 block mb-0.5">{t.cardTotalGdp}</span>
+            <span className="text-base sm:text-lg font-bold text-slate-100 tracking-tight block">
+              {formatGdpCompact(totalGdpUsd, baseCurrency, usdToBase, lang)}
+            </span>
+            <span className="text-[10px] text-slate-500 font-mono">
+              ${(totalGdpUsd / 1e12).toFixed(2)}T USD
+            </span>
+          </div>
+
+          <div>
+            <span className="text-[11px] font-medium text-slate-400 block mb-0.5">{t.cardPerCapita}</span>
+            <span className="text-base sm:text-lg font-bold text-slate-200 tracking-tight block">
+              {formatPerCapita(gdpPerCapitaUsd, baseCurrency, usdToBase, lang)}
+            </span>
+            <span className="text-[10px] text-slate-500 font-mono">
+              ${Math.round(gdpPerCapitaUsd).toLocaleString()} USD
+            </span>
+          </div>
+        </div>
+      </div>
+
+      {/* Card Footer: Exchange Rate & Growth Rate */}
+      <div>
+        <div className="flex items-center justify-between text-xs py-1">
+          {/* Exchange Rate */}
+          <div>
+            <span className="text-[11px] text-slate-400 block">{t.cardFxRate}</span>
+            {isRateLoaded ? (
+              <span className="font-mono font-semibold text-slate-200">
+                1 {country.currencyCode} = {formatExchangeRate(fxRate, country.currencyCode === 'KRW' ? 4 : 2)} {baseCurrency}
+              </span>
+            ) : (
+              <span className="text-slate-500 animate-pulse">{t.loadingData}</span>
+            )}
+          </div>
+
+          {/* Growth Rate */}
+          {growthRatePct !== null && (
+            <div className="text-right">
+              <span className="text-[11px] text-slate-400 block">{t.cardGrowthRate}</span>
+              <span
+                className={`inline-flex items-center gap-0.5 font-mono font-bold ${
+                  growthRatePct >= 0 ? 'text-emerald-400' : 'text-rose-400'
+                }`}
+              >
+                {growthRatePct >= 0 ? <TrendingUp className="w-3.5 h-3.5" /> : <TrendingDown className="w-3.5 h-3.5" />}
+                {growthRatePct > 0 ? `+${growthRatePct.toFixed(1)}%` : `${growthRatePct.toFixed(1)}%`}
+              </span>
+            </div>
+          )}
+        </div>
+
+        {/* View Details Action Link */}
+        <div className="mt-3 pt-2.5 border-t border-slate-800/60 flex items-center justify-between text-xs font-semibold text-indigo-400 group-hover:text-indigo-300">
+          <span>{t.cardViewDetails}</span>
+          <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" />
+        </div>
+      </div>
+    </div>
+  )
+}
