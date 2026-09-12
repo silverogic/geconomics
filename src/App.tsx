@@ -17,6 +17,7 @@ import { CountryFlag } from './components/CountryFlag'
 import {
   detectBrowserLanguage,
   detectBrowserBaseCurrency,
+  detectLocalCountryId,
   saveLanguagePreference,
   saveBaseCurrencyPreference,
 } from './utils/locale'
@@ -145,6 +146,16 @@ export function App() {
     return found ? found.rank : 1
   }, [allRankedItems, selectedCountry])
 
+  // User's detected home/local country for regional summary card
+  const localCountryId = useMemo(() => detectLocalCountryId(), [])
+  const localCountryItem = useMemo(() => {
+    return (
+      allRankedItems.find((i) => i.country.id === localCountryId) ||
+      allRankedItems.find((i) => i.country.id === 'KOR') ||
+      allRankedItems[0]
+    )
+  }, [allRankedItems, localCountryId])
+
   const usdToBase = exchangeRates ? getConversionRate(exchangeRates, 'USD', baseCurrency) : 1
 
   return (
@@ -224,10 +235,21 @@ export function App() {
                 </div>
 
                 <div className="bg-slate-950/60 border border-slate-800/80 rounded-xl p-3">
-                  <div className="text-[11px] text-slate-400 font-medium">{t.statSouthKorea}</div>
+                  <div className="text-[11px] text-slate-400 font-medium">
+                    {t.statLocalEconomy.replace(
+                      '{country}',
+                      localCountryItem ? (lang === 'ko' ? localCountryItem.country.nameKo : localCountryItem.country.nameEn) : ''
+                    )}
+                  </div>
                   <div className="text-base sm:text-lg font-bold text-slate-200 mt-1 truncate flex items-center">
-                    <CountryFlag iso2="KR" className="w-5 h-3.5 mr-1.5" />
-                    <span>South Korea (#{allRankedItems.find((i) => i.country.id === 'KOR')?.rank || 14})</span>
+                    {localCountryItem && (
+                      <>
+                        <CountryFlag iso2={localCountryItem.country.iso2} className="w-5 h-3.5 mr-1.5" />
+                        <span>
+                          {lang === 'ko' ? localCountryItem.country.nameKo : localCountryItem.country.nameEn} (#{localCountryItem.rank || '-'})
+                        </span>
+                      </>
+                    )}
                   </div>
                 </div>
               </div>

@@ -25,7 +25,7 @@ export const translations = {
     statCountriesTracked: 'Countries Tracked',
     statBaseCurrency: 'Current Base Currency',
     statTopEconomy: 'World #1 Economy',
-    statSouthKorea: 'South Korea GDP Scale',
+    statLocalEconomy: 'Local Economy ({country})',
 
     // Filters & Search
     searchPlaceholder: 'Search by country, code, or currency...',
@@ -133,7 +133,7 @@ export const translations = {
     statCountriesTracked: '추적 국가 수',
     statBaseCurrency: '현재 기준 통화',
     statTopEconomy: '세계 1위 경제대국',
-    statSouthKorea: '대한민국 경제 규모',
+    statLocalEconomy: '접속 지역 경제 규모 ({country})',
 
     // Filters & Search
     searchPlaceholder: '국가명, 영문, 통화코드 검색...',

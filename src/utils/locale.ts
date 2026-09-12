@@ -96,3 +96,74 @@ export function saveBaseCurrencyPreference(currency: BaseCurrency): void {
     localStorage.setItem(STORAGE_CURRENCY_KEY, currency)
   }
 }
+
+/**
+ * Detects the user's localized home country code (ISO-3) from browser locale and timezone hints.
+ * Returns matching country ID (e.g. 'KOR', 'JPN', 'USA', 'DEU', 'GBR') or defaults to 'KOR'.
+ */
+export function detectLocalCountryId(): string {
+  if (typeof window !== 'undefined' && typeof navigator !== 'undefined') {
+    const locale = (navigator.language || '').toLowerCase()
+    const timeZone = (Intl?.DateTimeFormat?.()?.resolvedOptions?.()?.timeZone || '').toLowerCase()
+
+    // Check exact regional tag (e.g., 'en-US' -> 'US', 'ko-KR' -> 'KR')
+    const match = locale.match(/[-_]([a-z]{2})\b/i)
+    const regionIso2 = match ? match[1].toUpperCase() : ''
+
+    const regionToId: Record<string, string> = {
+      KR: 'KOR',
+      US: 'USA',
+      JP: 'JPN',
+      CN: 'CHN',
+      GB: 'GBR',
+      DE: 'DEU',
+      FR: 'FRA',
+      IT: 'ITA',
+      CA: 'CAN',
+      AU: 'AUS',
+      BR: 'BRA',
+      IN: 'IND',
+      ES: 'ESP',
+      MX: 'MEX',
+      RU: 'RUS',
+      ID: 'IDN',
+      NL: 'NLD',
+      CH: 'CHE',
+      SA: 'SAU',
+      TR: 'TUR',
+      TW: 'TWN',
+      SG: 'SGP',
+      VN: 'VNM',
+      TH: 'THA',
+      ZA: 'ZAF',
+      NZ: 'NZL',
+    }
+
+    if (regionIso2 && regionToId[regionIso2]) {
+      return regionToId[regionIso2]
+    }
+
+    // Timezone hints
+    if (timeZone.includes('seoul')) return 'KOR'
+    if (timeZone.includes('tokyo')) return 'JPN'
+    if (timeZone.includes('london')) return 'GBR'
+    if (timeZone.includes('berlin')) return 'DEU'
+    if (timeZone.includes('paris')) return 'FRA'
+    if (timeZone.includes('shanghai') || timeZone.includes('beijing') || timeZone.includes('hong_kong')) return 'CHN'
+    if (timeZone.includes('sydney') || timeZone.includes('melbourne')) return 'AUS'
+    if (timeZone.includes('toronto') || timeZone.includes('vancouver')) return 'CAN'
+    if (timeZone.includes('new_york') || timeZone.includes('chicago') || timeZone.includes('los_angeles')) return 'USA'
+    if (timeZone.includes('sao_paulo')) return 'BRA'
+    if (timeZone.includes('kolkata')) return 'IND'
+
+    // Language prefix hints
+    if (locale.startsWith('ko')) return 'KOR'
+    if (locale.startsWith('ja')) return 'JPN'
+    if (locale.startsWith('zh')) return 'CHN'
+    if (locale.startsWith('de')) return 'DEU'
+    if (locale.startsWith('fr')) return 'FRA'
+  }
+
+  return 'KOR'
+}
+
