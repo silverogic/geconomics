@@ -43,10 +43,6 @@ export const Navbar: React.FC<NavbarProps> = ({
                 <span className="text-xl font-black tracking-tight bg-gradient-to-r from-white via-slate-100 to-slate-400 bg-clip-text text-transparent">
                   {t.appTitle}
                 </span>
-                <span className="text-[11px] px-2 py-0.5 rounded-full font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
-                  {t.liveBadge}
-                </span>
               </div>
               <p className="text-[11px] text-slate-400 hidden sm:block">
                 {t.appSubtitle}
