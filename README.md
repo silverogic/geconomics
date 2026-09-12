@@ -1,4 +1,4 @@
-# GlobalEcon - Real-time Global Exchange Rates & GDP Dashboard
+# Geconomics - Real-time Global Exchange Rates & GDP Dashboard
 
 A client-side macroeconomic dashboard hosted on GitHub Pages that retrieves official World Bank Open Data and real-time foreign exchange market rates on-demand without persistent storage or databases.
 
@@ -76,7 +76,7 @@ This project is configured for static hosting on GitHub Pages.
 1. Push this repository to GitHub on the `main` or `master` branch:
    ```bash
    git add .
-   git commit -m "feat: complete GlobalEcon dashboard"
+   git commit -m "feat: complete Geconomics dashboard"
    git remote add origin https://github.com/<username>/<repository>.git
    git push -u origin main
    ```

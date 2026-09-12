@@ -1,7 +1,7 @@
 import type { Language, BaseCurrency } from '../types/economics'
 
-const STORAGE_LANG_KEY = 'globalecon_lang'
-const STORAGE_CURRENCY_KEY = 'globalecon_base_currency'
+const STORAGE_LANG_KEY = 'geconomics_lang'
+const STORAGE_CURRENCY_KEY = 'geconomics_base_currency'
 
 /**
  * Detects initial language based on explicit user preference (localStorage)
@@ -9,7 +9,7 @@ const STORAGE_CURRENCY_KEY = 'globalecon_base_currency'
  */
 export function detectBrowserLanguage(): Language {
   if (typeof window !== 'undefined') {
-    const saved = localStorage.getItem(STORAGE_LANG_KEY)
+    const saved = localStorage.getItem(STORAGE_LANG_KEY) || localStorage.getItem('globalecon_lang')
     if (saved === 'ko' || saved === 'en') {
       return saved
     }
@@ -38,7 +38,7 @@ export function detectBrowserLanguage(): Language {
  */
 export function detectBrowserBaseCurrency(): BaseCurrency {
   if (typeof window !== 'undefined') {
-    const saved = localStorage.getItem(STORAGE_CURRENCY_KEY)
+    const saved = localStorage.getItem(STORAGE_CURRENCY_KEY) || localStorage.getItem('globalecon_base_currency')
     if (saved && ['USD', 'EUR', 'KRW', 'JPY', 'GBP', 'CNY'].includes(saved)) {
       return saved as BaseCurrency
     }

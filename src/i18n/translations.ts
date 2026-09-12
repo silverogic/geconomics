@@ -3,7 +3,7 @@ export type Language = 'en' | 'ko'
 export const translations = {
   en: {
     // Header & Nav
-    appTitle: 'GlobalEcon',
+    appTitle: 'Geconomics',
     appSubtitle: 'Real-time Exchange Rates & World Bank Official GDP',
     liveBadge: 'LIVE',
     navExplorer: 'Country Explorer',
@@ -111,7 +111,7 @@ export const translations = {
   },
   ko: {
     // Header & Nav
-    appTitle: 'GlobalEcon',
+    appTitle: 'Geconomics',
     appSubtitle: '실시간 환율 & 세계은행(World Bank) 공식 GDP',
     liveBadge: 'LIVE',
     navExplorer: '국가 탐색',
