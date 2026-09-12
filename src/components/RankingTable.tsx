@@ -20,6 +20,7 @@ interface RankingTableProps {
   exchangeRates: ExchangeRates | null
   lang: Language
   onSelectCountry: (c: CountryMeta) => void
+  hideHeader?: boolean
 }
 
 type SortField = 'rank' | 'countryName' | 'totalGdpUsd' | 'gdpPerCapitaUsd' | 'growthRatePct' | 'fxRate'
@@ -30,6 +31,7 @@ export const RankingTable: React.FC<RankingTableProps> = ({
   exchangeRates,
   lang,
   onSelectCountry,
+  hideHeader = false,
 }) => {
   const t = translations[lang]
   const [searchTerm, setSearchTerm] = useState('')
@@ -99,26 +101,28 @@ export const RankingTable: React.FC<RankingTableProps> = ({
   return (
     <div className="bg-slate-900 border border-slate-800 rounded-2xl p-4 sm:p-6 space-y-4">
       {/* Header & Search */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div>
-          <h2 className="text-xl sm:text-2xl font-black text-white">{t.tableTitle}</h2>
-          <p className="text-xs sm:text-sm text-slate-400 mt-0.5">
-            {t.tableSubtitle.replace('{count}', items.length.toString())}
-          </p>
-        </div>
+      {!hideHeader && (
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <h2 className="text-xl sm:text-2xl font-black text-white">{t.tableTitle}</h2>
+            <p className="text-xs sm:text-sm text-slate-400 mt-0.5">
+              {t.tableSubtitle.replace('{count}', items.length.toString())}
+            </p>
+          </div>
 
-        {/* Search Input */}
-        <div className="relative w-full sm:w-72">
-          <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
-          <input
-            type="text"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder={t.searchPlaceholder}
-            className="w-full bg-slate-950/80 border border-slate-800 rounded-xl pl-9 pr-4 py-2 text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors"
-          />
+          {/* Search Input */}
+          <div className="relative w-full sm:w-72">
+            <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+            <input
+              type="text"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              placeholder={t.searchPlaceholder}
+              className="w-full bg-slate-950/80 border border-slate-800 rounded-xl pl-9 pr-4 py-2 text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors"
+            />
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Datatable */}
       <div className="overflow-x-auto rounded-xl border border-slate-800">
@@ -190,7 +194,14 @@ export const RankingTable: React.FC<RankingTableProps> = ({
           </thead>
 
           <tbody className="divide-y divide-slate-800/60 bg-slate-900/50">
-            {filteredAndSorted.map((item) => {
+            {filteredAndSorted.length === 0 ? (
+              <tr>
+                <td colSpan={7} className="py-12 text-center text-slate-500">
+                  {t.noCountriesFound}
+                </td>
+              </tr>
+            ) : (
+              filteredAndSorted.map((item) => {
               const fxRate = exchangeRates
                 ? getConversionRate(exchangeRates, item.country.currencyCode, baseCurrency)
                 : 0
@@ -263,7 +274,7 @@ export const RankingTable: React.FC<RankingTableProps> = ({
                   </td>
                 </tr>
               )
-            })}
+            }))}
           </tbody>
         </table>
       </div>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { X, ExternalLink, ShieldCheck, TrendingUp, TrendingDown, Coins, Award } from 'lucide-react'
+import { X, ExternalLink, ShieldCheck, TrendingUp, TrendingDown, Coins, Award, LineChart } from 'lucide-react'
 import type { CountryMeta, CountryGdpDetail, BaseCurrency, ExchangeRates, Language } from '../types/economics'
 import { fetchCountryGdpDetail } from '../services/worldBankApi'
 import { getConversionRate } from '../services/exchangeApi'
@@ -8,6 +8,8 @@ import { GdpChart } from './GdpChart'
 import { CurrencyConverter } from './CurrencyConverter'
 import { translations } from '../i18n/translations'
 import { CountryFlag } from './CountryFlag'
+import { TradingViewWidget } from './TradingViewWidget'
+import { getStockIndex } from '../data/stockIndices'
 
 interface CountryModalProps {
   country: CountryMeta
@@ -63,6 +65,7 @@ export const CountryModal: React.FC<CountryModalProps> = ({
   const displayName = lang === 'ko' ? country.nameKo : country.nameEn
   const secondaryName = lang === 'ko' ? country.nameEn : country.nameKo
   const currencyName = lang === 'ko' ? country.currencyNameKo : country.currencyNameEn
+  const stockIndex = getStockIndex(country.id)
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-black/80 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6 animate-fadeIn">
@@ -198,6 +201,26 @@ export const CountryModal: React.FC<CountryModalProps> = ({
             exchangeRates={exchangeRates}
             lang={lang}
           />
+
+          {/* National Benchmark Stock Index Chart */}
+          {stockIndex && (
+            <div className="space-y-2.5">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                <div className="flex items-center gap-2">
+                  <LineChart className="w-4 h-4 text-indigo-400" />
+                  <h4 className="text-sm font-bold text-slate-200">
+                    {t.modalStockIndexTitle} ({lang === 'ko' ? stockIndex.nameKo : stockIndex.nameEn})
+                  </h4>
+                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-indigo-300 border border-slate-700">
+                    {stockIndex.exchange}
+                  </span>
+                </div>
+                <span className="text-[11px] text-slate-400">{t.modalStockIndexSub}</span>
+              </div>
+
+              <TradingViewWidget stockIndex={stockIndex} lang={lang} />
+            </div>
+          )}
 
           {/* 10-Year Historical GDP Chart */}
           <div>

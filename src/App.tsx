@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo, useCallback } from 'react'
-import { Search, Filter, Sparkles, AlertCircle } from 'lucide-react'
+import { Search, Filter, Sparkles, AlertCircle, LayoutGrid, List } from 'lucide-react'
 import { COUNTRIES } from './data/countries'
 import type { CountryMeta, BaseCurrency, ExchangeRates, Region, Language } from './types/economics'
 import { fetchExchangeRates, getConversionRate } from './services/exchangeApi'
@@ -49,6 +49,7 @@ export function App() {
   // Search & Filter state
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedRegion, setSelectedRegion] = useState<Region | 'All'>('All')
+  const [explorerViewMode, setExplorerViewMode] = useState<'cards' | 'table'>('cards')
 
   // Selected country for deep-dive modal
   const [selectedCountry, setSelectedCountry] = useState<CountryMeta | null>(null)
@@ -256,9 +257,9 @@ export function App() {
             </div>
 
             {/* Filter & Search Bar */}
-            <div className="flex flex-col md:flex-row items-center justify-between gap-3 bg-slate-900/90 border border-slate-800 p-3 sm:p-4 rounded-2xl">
+            <div className="flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-3 bg-slate-900/90 border border-slate-800 p-3 sm:p-4 rounded-2xl">
               {/* Search Bar */}
-              <div className="relative w-full md:w-80">
+              <div className="relative w-full xl:w-72 flex-shrink-0">
                 <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
                 <input
                   type="text"
@@ -269,36 +270,69 @@ export function App() {
                 />
               </div>
 
-              {/* Region Filter Buttons */}
-              <div className="flex items-center gap-1.5 overflow-x-auto w-full md:w-auto pb-1 md:pb-0 scrollbar-none text-xs font-semibold">
-                <Filter className="w-3.5 h-3.5 text-slate-500 mr-1 hidden sm:inline" />
-                {(['All', 'Asia', 'Europe', 'Americas', 'Africa', 'Oceania'] as const).map((reg) => (
+              {/* Region Filter Buttons and View Switcher */}
+              <div className="flex flex-wrap items-center justify-between xl:justify-end gap-2.5">
+                {/* Region Filter Buttons */}
+                <div className="flex items-center gap-1.5 overflow-x-auto pb-1 xl:pb-0 scrollbar-none text-xs font-semibold">
+                  <Filter className="w-3.5 h-3.5 text-slate-500 mr-1 hidden sm:inline" />
+                  {(['All', 'Asia', 'Europe', 'Americas', 'Africa', 'Oceania'] as const).map((reg) => (
+                    <button
+                      key={reg}
+                      onClick={() => setSelectedRegion(reg)}
+                      className={`px-3 py-1.5 rounded-xl transition-colors whitespace-nowrap ${
+                        selectedRegion === reg
+                          ? 'bg-indigo-600 text-white shadow-sm shadow-indigo-600/30'
+                          : 'bg-slate-800/80 text-slate-400 hover:text-slate-200 hover:bg-slate-700'
+                      }`}
+                    >
+                      {reg === 'All'
+                        ? t.filterAll
+                        : reg === 'Asia'
+                        ? t.filterAsia
+                        : reg === 'Europe'
+                        ? t.filterEurope
+                        : reg === 'Americas'
+                        ? t.filterAmericas
+                        : reg === 'Africa'
+                        ? t.filterAfrica
+                        : t.filterOceania}
+                    </button>
+                  ))}
+                </div>
+
+                {/* View Mode Switcher: Card View vs List Table View */}
+                <div className="flex items-center bg-slate-950/90 border border-slate-800 p-1 rounded-xl shrink-0">
                   <button
-                    key={reg}
-                    onClick={() => setSelectedRegion(reg)}
-                    className={`px-3 py-1.5 rounded-xl transition-colors whitespace-nowrap ${
-                      selectedRegion === reg
+                    onClick={() => setExplorerViewMode('cards')}
+                    title={t.viewCards}
+                    aria-label={t.viewCards}
+                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+                      explorerViewMode === 'cards'
                         ? 'bg-indigo-600 text-white shadow-sm shadow-indigo-600/30'
-                        : 'bg-slate-800/80 text-slate-400 hover:text-slate-200 hover:bg-slate-700'
+                        : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
                     }`}
                   >
-                    {reg === 'All'
-                      ? t.filterAll
-                      : reg === 'Asia'
-                      ? t.filterAsia
-                      : reg === 'Europe'
-                      ? t.filterEurope
-                      : reg === 'Americas'
-                      ? t.filterAmericas
-                      : reg === 'Africa'
-                      ? t.filterAfrica
-                      : t.filterOceania}
+                    <LayoutGrid className="w-3.5 h-3.5" />
+                    <span>{t.viewCards}</span>
                   </button>
-                ))}
+                  <button
+                    onClick={() => setExplorerViewMode('table')}
+                    title={t.viewTable}
+                    aria-label={t.viewTable}
+                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+                      explorerViewMode === 'table'
+                        ? 'bg-indigo-600 text-white shadow-sm shadow-indigo-600/30'
+                        : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
+                    }`}
+                  >
+                    <List className="w-3.5 h-3.5" />
+                    <span>{t.viewTable}</span>
+                  </button>
+                </div>
               </div>
             </div>
 
-            {/* Country Cards Grid */}
+            {/* Country Cards Grid or Table View */}
             {isLoading ? (
               <div className="py-20 flex flex-col items-center justify-center gap-3 text-slate-400">
                 <div className="w-8 h-8 border-3 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
@@ -308,7 +342,7 @@ export function App() {
               <div className="py-16 text-center text-slate-500 bg-slate-900/40 rounded-2xl border border-slate-800">
                 {t.noCountriesFound}
               </div>
-            ) : (
+            ) : explorerViewMode === 'cards' ? (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
                 {filteredRankedItems.map((item) => (
                   <CountryCard
@@ -325,6 +359,15 @@ export function App() {
                   />
                 ))}
               </div>
+            ) : (
+              <RankingTable
+                items={filteredRankedItems}
+                baseCurrency={baseCurrency}
+                exchangeRates={exchangeRates}
+                lang={lang}
+                onSelectCountry={(c) => setSelectedCountry(c)}
+                hideHeader
+              />
             )}
           </div>
         )}

@@ -1,10 +1,11 @@
 import React from 'react'
-import { TrendingUp, TrendingDown, ArrowRight } from 'lucide-react'
+import { TrendingUp, TrendingDown, ArrowRight, LineChart } from 'lucide-react'
 import type { CountryMeta, BaseCurrency, ExchangeRates, Language } from '../types/economics'
 import { formatGdpCompact, formatPerCapita, formatExchangeRate } from '../utils/formatters'
 import { getConversionRate } from '../services/exchangeApi'
 import { translations } from '../i18n/translations'
 import { CountryFlag } from './CountryFlag'
+import { getStockIndex } from '../data/stockIndices'
 
 interface CountryCardProps {
   country: CountryMeta
@@ -42,6 +43,7 @@ export const CountryCard: React.FC<CountryCardProps> = ({
 
   const displayName = lang === 'ko' ? country.nameKo : country.nameEn
   const secondaryName = lang === 'ko' ? country.nameEn : country.nameKo
+  const stockIndex = getStockIndex(country.id)
 
   return (
     <div
@@ -71,27 +73,47 @@ export const CountryCard: React.FC<CountryCardProps> = ({
           </span>
         </div>
 
-        {/* GDP Metrics */}
-        <div className="grid grid-cols-2 gap-3 py-3 border-y border-slate-800/80 my-3">
-          <div>
-            <span className="text-[11px] font-medium text-slate-400 block mb-0.5">{t.cardTotalGdp}</span>
-            <span className="text-base sm:text-lg font-bold text-slate-100 tracking-tight block">
-              {formatGdpCompact(totalGdpUsd, baseCurrency, usdToBase, lang)}
-            </span>
-            <span className="text-[10px] text-slate-500 font-mono">
-              ${(totalGdpUsd / 1e12).toFixed(2)}T USD
-            </span>
+        {/* GDP & Stock Index Metrics */}
+        <div className="py-3 border-y border-slate-800/80 my-3 space-y-2.5">
+          <div className="grid grid-cols-2 gap-3">
+            <div>
+              <span className="text-[11px] font-medium text-slate-400 block mb-0.5">{t.cardTotalGdp}</span>
+              <span className="text-base sm:text-lg font-bold text-slate-100 tracking-tight block">
+                {formatGdpCompact(totalGdpUsd, baseCurrency, usdToBase, lang)}
+              </span>
+              <span className="text-[10px] text-slate-500 font-mono">
+                ${(totalGdpUsd / 1e12).toFixed(2)}T USD
+              </span>
+            </div>
+
+            <div>
+              <span className="text-[11px] font-medium text-slate-400 block mb-0.5">{t.cardPerCapita}</span>
+              <span className="text-base sm:text-lg font-bold text-slate-200 tracking-tight block">
+                {formatPerCapita(gdpPerCapitaUsd, baseCurrency, usdToBase, lang)}
+              </span>
+              <span className="text-[10px] text-slate-500 font-mono">
+                ${Math.round(gdpPerCapitaUsd).toLocaleString()} USD
+              </span>
+            </div>
           </div>
 
-          <div>
-            <span className="text-[11px] font-medium text-slate-400 block mb-0.5">{t.cardPerCapita}</span>
-            <span className="text-base sm:text-lg font-bold text-slate-200 tracking-tight block">
-              {formatPerCapita(gdpPerCapitaUsd, baseCurrency, usdToBase, lang)}
-            </span>
-            <span className="text-[10px] text-slate-500 font-mono">
-              ${Math.round(gdpPerCapitaUsd).toLocaleString()} USD
-            </span>
-          </div>
+          {/* Stock Index Benchmark Row */}
+          {stockIndex && (
+            <div className="flex items-center justify-between pt-2 border-t border-slate-800/60 text-xs">
+              <div className="flex items-center gap-1.5 text-slate-400">
+                <LineChart className="w-3.5 h-3.5 text-indigo-400" />
+                <span className="text-[11px] font-medium">{t.cardStockIndex}</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <span className="font-semibold text-slate-200 group-hover:text-indigo-300 transition-colors">
+                  {lang === 'ko' ? stockIndex.nameKo : stockIndex.nameEn}
+                </span>
+                <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-slate-800 text-slate-400 border border-slate-700/60">
+                  {stockIndex.exchange}
+                </span>
+              </div>
+            </div>
+          )}
         </div>
       </div>
 
