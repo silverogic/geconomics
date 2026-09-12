@@ -19,6 +19,33 @@ const perCapitaCache: Map<string, { perCapita: number; year: number }> = new Map
 const growthCache: Map<string, { growth: number; year: number }> = new Map()
 const detailCache: Map<string, CountryGdpDetail> = new Map()
 
+/**
+ * Official macroeconomic data for Taiwan (TWN) sourced from IMF World Economic Outlook (WEO)
+ * and DGBAS (Directorate-General of Budget, Accounting and Statistics, Taiwan).
+ * Note: World Bank Open Data omits Taiwan due to UN/World Bank geopolitical membership policy.
+ */
+export const TAIWAN_IMF_DATA: CountryGdpDetail = {
+  countryCode: 'TWN',
+  latestYear: 2024,
+  totalGdpUsd: 801_495_000_000,
+  gdpPerCapitaUsd: 34_252,
+  growthRatePct: 5.3,
+  historical: [
+    { year: 2015, gdp: 534_515_000_000, gdpPerCapita: 22_753, growthRate: 1.5 },
+    { year: 2016, gdp: 543_081_000_000, gdpPerCapita: 23_071, growthRate: 2.2 },
+    { year: 2017, gdp: 591_687_000_000, gdpPerCapita: 25_102, growthRate: 3.7 },
+    { year: 2018, gdp: 610_690_000_000, gdpPerCapita: 25_889, growthRate: 2.9 },
+    { year: 2019, gdp: 613_512_000_000, gdpPerCapita: 25_993, growthRate: 3.1 },
+    { year: 2020, gdp: 676_861_000_000, gdpPerCapita: 28_728, growthRate: 3.4 },
+    { year: 2021, gdp: 776_965_000_000, gdpPerCapita: 33_239, growthRate: 6.7 },
+    { year: 2022, gdp: 765_624_000_000, gdpPerCapita: 32_909, growthRate: 2.7 },
+    { year: 2023, gdp: 757_387_000_000, gdpPerCapita: 32_339, growthRate: 1.1 },
+    { year: 2024, gdp: 801_495_000_000, gdpPerCapita: 34_252, growthRate: 5.3 },
+  ],
+  source: 'IMF World Economic Outlook (DGBAS Taiwan)',
+  lastUpdated: 'IMF WEO / DGBAS Official Statistics',
+}
+
 let isBulkLoaded = false
 
 /**
@@ -104,9 +131,45 @@ export async function loadGlobalGdpOverview(forceRefresh = false): Promise<{
       }
     }
 
+    // Ensure Taiwan (TWN) official fallback is populated from IMF WEO
+    if (!summaryCache.has('TWN')) {
+      summaryCache.set('TWN', {
+        totalGdp: TAIWAN_IMF_DATA.totalGdpUsd,
+        year: TAIWAN_IMF_DATA.latestYear,
+      })
+    }
+    if (!perCapitaCache.has('TWN')) {
+      perCapitaCache.set('TWN', {
+        perCapita: TAIWAN_IMF_DATA.gdpPerCapitaUsd,
+        year: TAIWAN_IMF_DATA.latestYear,
+      })
+    }
+    if (!growthCache.has('TWN')) {
+      growthCache.set('TWN', {
+        growth: TAIWAN_IMF_DATA.growthRatePct!,
+        year: TAIWAN_IMF_DATA.latestYear,
+      })
+    }
+
     isBulkLoaded = true
   } catch (err) {
     console.error('Failed to load global GDP overview from World Bank Open API:', err)
+  }
+
+  // Double check Taiwan in case of fetch failure
+  if (!summaryCache.has('TWN')) {
+    summaryCache.set('TWN', {
+      totalGdp: TAIWAN_IMF_DATA.totalGdpUsd,
+      year: TAIWAN_IMF_DATA.latestYear,
+    })
+    perCapitaCache.set('TWN', {
+      perCapita: TAIWAN_IMF_DATA.gdpPerCapitaUsd,
+      year: TAIWAN_IMF_DATA.latestYear,
+    })
+    growthCache.set('TWN', {
+      growth: TAIWAN_IMF_DATA.growthRatePct!,
+      year: TAIWAN_IMF_DATA.latestYear,
+    })
   }
 
   return {
@@ -123,6 +186,12 @@ export async function fetchCountryGdpDetail(countryId: string): Promise<CountryG
   const code = countryId.toUpperCase()
   if (detailCache.has(code)) {
     return detailCache.get(code)!
+  }
+
+  // Official fallback for Taiwan (TWN) not indexed in World Bank Open Data
+  if (code === 'TWN') {
+    detailCache.set('TWN', TAIWAN_IMF_DATA)
+    return TAIWAN_IMF_DATA
   }
 
   // Query 10-year historical range (2015 to 2024)
