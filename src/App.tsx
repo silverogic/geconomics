@@ -13,6 +13,7 @@ import { CountryModal } from './components/CountryModal'
 import { CompareView } from './components/CompareView'
 import { RankingTable, type CountryRowItem } from './components/RankingTable'
 import { Footer } from './components/Footer'
+import { CountryFlag } from './components/CountryFlag'
 import {
   detectBrowserLanguage,
   detectBrowserBaseCurrency,
@@ -216,15 +217,17 @@ export function App() {
 
                 <div className="bg-slate-950/60 border border-slate-800/80 rounded-xl p-3">
                   <div className="text-[11px] text-slate-400 font-medium">{t.statTopEconomy}</div>
-                  <div className="text-base sm:text-lg font-bold text-slate-200 mt-1 truncate">
-                    United States ({allRankedItems[0]?.totalGdpUsd ? formatGdpCompact(allRankedItems[0].totalGdpUsd, baseCurrency, usdToBase, lang) : '...'})
+                  <div className="text-base sm:text-lg font-bold text-slate-200 mt-1 truncate flex items-center">
+                    <CountryFlag iso2="US" className="w-5 h-3.5 mr-1.5" />
+                    <span>United States ({allRankedItems[0]?.totalGdpUsd ? formatGdpCompact(allRankedItems[0].totalGdpUsd, baseCurrency, usdToBase, lang) : '...'})</span>
                   </div>
                 </div>
 
                 <div className="bg-slate-950/60 border border-slate-800/80 rounded-xl p-3">
                   <div className="text-[11px] text-slate-400 font-medium">{t.statSouthKorea}</div>
-                  <div className="text-base sm:text-lg font-bold text-slate-200 mt-1 truncate">
-                    South Korea (#{allRankedItems.find((i) => i.country.id === 'KOR')?.rank || 14})
+                  <div className="text-base sm:text-lg font-bold text-slate-200 mt-1 truncate flex items-center">
+                    <CountryFlag iso2="KR" className="w-5 h-3.5 mr-1.5" />
+                    <span>South Korea (#{allRankedItems.find((i) => i.country.id === 'KOR')?.rank || 14})</span>
                   </div>
                 </div>
               </div>

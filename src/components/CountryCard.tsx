@@ -4,6 +4,7 @@ import type { CountryMeta, BaseCurrency, ExchangeRates, Language } from '../type
 import { formatGdpCompact, formatPerCapita, formatExchangeRate } from '../utils/formatters'
 import { getConversionRate } from '../services/exchangeApi'
 import { translations } from '../i18n/translations'
+import { CountryFlag } from './CountryFlag'
 
 interface CountryCardProps {
   country: CountryMeta
@@ -51,9 +52,7 @@ export const CountryCard: React.FC<CountryCardProps> = ({
       <div>
         <div className="flex items-start justify-between gap-2 mb-3">
           <div className="flex items-center gap-3">
-            <span className="text-3xl filter drop-shadow-sm select-none" role="img" aria-label={country.nameEn}>
-              {country.flagEmoji}
-            </span>
+            <CountryFlag iso2={country.iso2} className="w-10 h-7" alt={displayName} />
             <div>
               <div className="flex items-center gap-2">
                 <h3 className="font-bold text-slate-100 text-lg group-hover:text-indigo-400 transition-colors">

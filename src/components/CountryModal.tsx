@@ -7,6 +7,7 @@ import { formatGdpCompact, formatPerCapita, formatExchangeRate } from '../utils/
 import { GdpChart } from './GdpChart'
 import { CurrencyConverter } from './CurrencyConverter'
 import { translations } from '../i18n/translations'
+import { CountryFlag } from './CountryFlag'
 
 interface CountryModalProps {
   country: CountryMeta
@@ -72,9 +73,7 @@ export const CountryModal: React.FC<CountryModalProps> = ({
         {/* Modal Header: Country Flag, Name, Rank */}
         <div className="flex items-center justify-between p-4 sm:p-6 border-b border-slate-800 bg-slate-950/70">
           <div className="flex items-center gap-3.5">
-            <span className="text-4xl filter drop-shadow-md select-none" role="img" aria-label={country.nameEn}>
-              {country.flagEmoji}
-            </span>
+            <CountryFlag iso2={country.iso2} className="w-13 h-9" alt={displayName} />
             <div>
               <div className="flex items-center gap-2.5">
                 <h2 className="text-2xl font-black text-white">{displayName}</h2>

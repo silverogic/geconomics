@@ -7,6 +7,7 @@ import { getConversionRate } from '../services/exchangeApi'
 import { formatGdpCompact, formatPerCapita, formatExchangeRate } from '../utils/formatters'
 import { GdpChart } from './GdpChart'
 import { translations } from '../i18n/translations'
+import { CountryFlag } from './CountryFlag'
 
 interface CompareViewProps {
   baseCurrency: BaseCurrency
@@ -94,32 +95,32 @@ export const CompareView: React.FC<CompareViewProps> = ({
             </p>
           </div>
 
-          {/* Preset Buttons with Flags */}
+          {/* Preset Buttons with Vector Flags */}
           <div className="flex flex-wrap items-center gap-1.5 text-xs">
             <span className="text-slate-500 mr-1 font-medium">{t.compareRecommended}</span>
             <button
               onClick={() => setPreset('USA', 'CHN')}
-              className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors"
+              className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors flex items-center gap-1.5"
             >
-              {COUNTRIES.find((c) => c.id === 'USA')?.flagEmoji} USA vs {COUNTRIES.find((c) => c.id === 'CHN')?.flagEmoji} CHN
+              <CountryFlag iso2="US" className="w-4 h-3" /> USA vs <CountryFlag iso2="CN" className="w-4 h-3" /> CHN
             </button>
             <button
               onClick={() => setPreset('KOR', 'JPN')}
-              className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors"
+              className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors flex items-center gap-1.5"
             >
-              {COUNTRIES.find((c) => c.id === 'KOR')?.flagEmoji} KOR vs {COUNTRIES.find((c) => c.id === 'JPN')?.flagEmoji} JPN
+              <CountryFlag iso2="KR" className="w-4 h-3" /> KOR vs <CountryFlag iso2="JP" className="w-4 h-3" /> JPN
             </button>
             <button
               onClick={() => setPreset('DEU', 'GBR')}
-              className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors"
+              className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors flex items-center gap-1.5"
             >
-              {COUNTRIES.find((c) => c.id === 'DEU')?.flagEmoji} DEU vs {COUNTRIES.find((c) => c.id === 'GBR')?.flagEmoji} GBR
+              <CountryFlag iso2="DE" className="w-4 h-3" /> DEU vs <CountryFlag iso2="GB" className="w-4 h-3" /> GBR
             </button>
             <button
               onClick={() => setPreset('KOR', 'TWN')}
-              className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors"
+              className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors flex items-center gap-1.5"
             >
-              {COUNTRIES.find((c) => c.id === 'KOR')?.flagEmoji} KOR vs {COUNTRIES.find((c) => c.id === 'TWN')?.flagEmoji} TWN
+              <CountryFlag iso2="KR" className="w-4 h-3" /> KOR vs <CountryFlag iso2="TW" className="w-4 h-3" /> TWN
             </button>
           </div>
         </div>
@@ -180,9 +181,7 @@ export const CompareView: React.FC<CompareViewProps> = ({
         {/* Country A Card */}
         <div className="bg-slate-900/80 border-2 border-indigo-500/30 rounded-2xl p-5 shadow-lg shadow-indigo-500/5">
           <div className="flex items-center gap-3 mb-4">
-            <span className="text-4xl filter drop-shadow-sm select-none" role="img" aria-label={countryA.nameEn}>
-              {countryA.flagEmoji}
-            </span>
+            <CountryFlag iso2={countryA.iso2} className="w-12 h-8" alt={nameA} />
             <div>
               <h3 className="text-xl font-bold text-white">{nameA}</h3>
               <p className="text-xs text-slate-400">
@@ -237,9 +236,7 @@ export const CompareView: React.FC<CompareViewProps> = ({
         {/* Country B Card */}
         <div className="bg-slate-900/80 border-2 border-emerald-500/30 rounded-2xl p-5 shadow-lg shadow-emerald-500/5">
           <div className="flex items-center gap-3 mb-4">
-            <span className="text-4xl filter drop-shadow-sm select-none" role="img" aria-label={countryB.nameEn}>
-              {countryB.flagEmoji}
-            </span>
+            <CountryFlag iso2={countryB.iso2} className="w-12 h-8" alt={nameB} />
             <div>
               <h3 className="text-xl font-bold text-white">{nameB}</h3>
               <p className="text-xs text-slate-400">

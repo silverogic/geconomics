@@ -4,6 +4,7 @@ import type { CountryMeta, BaseCurrency, ExchangeRates, Language } from '../type
 import { formatGdpCompact, formatPerCapita, formatExchangeRate } from '../utils/formatters'
 import { getConversionRate } from '../services/exchangeApi'
 import { translations } from '../i18n/translations'
+import { CountryFlag } from './CountryFlag'
 
 export interface CountryRowItem {
   country: CountryMeta
@@ -209,9 +210,7 @@ export const RankingTable: React.FC<RankingTableProps> = ({
 
                   <td className="py-3.5 px-3.5">
                     <div className="flex items-center gap-2.5">
-                      <span className="text-2xl select-none" role="img" aria-label={item.country.nameEn}>
-                        {item.country.flagEmoji}
-                      </span>
+                      <CountryFlag iso2={item.country.iso2} className="w-7 h-5" alt={displayName} />
                       <div>
                         <div className="font-bold text-slate-100 group-hover:text-white flex items-center gap-1.5">
                           <span>{displayName}</span>
