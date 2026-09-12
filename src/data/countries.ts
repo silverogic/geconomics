@@ -15,6 +15,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '미국 달러',
     currencySymbol: '$',
     region: 'Americas',
+    flagEmoji: '🇺🇸',
   },
   {
     id: 'CHN',
@@ -26,6 +27,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '중국 위안',
     currencySymbol: '¥',
     region: 'Asia',
+    flagEmoji: '🇨🇳',
   },
   {
     id: 'DEU',
@@ -37,6 +39,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '유로',
     currencySymbol: '€',
     region: 'Europe',
+    flagEmoji: '🇩🇪',
   },
   {
     id: 'JPN',
@@ -48,6 +51,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '일본 엔',
     currencySymbol: '¥',
     region: 'Asia',
+    flagEmoji: '🇯🇵',
   },
   {
     id: 'IND',
@@ -59,6 +63,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '인도 루피',
     currencySymbol: '₹',
     region: 'Asia',
+    flagEmoji: '🇮🇳',
   },
   {
     id: 'GBR',
@@ -70,6 +75,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '영국 파운드',
     currencySymbol: '£',
     region: 'Europe',
+    flagEmoji: '🇬🇧',
   },
   {
     id: 'FRA',
@@ -81,6 +87,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '유로',
     currencySymbol: '€',
     region: 'Europe',
+    flagEmoji: '🇫🇷',
   },
   {
     id: 'ITA',
@@ -92,6 +99,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '유로',
     currencySymbol: '€',
     region: 'Europe',
+    flagEmoji: '🇮🇹',
   },
   {
     id: 'BRA',
@@ -103,6 +111,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '브라질 헤알',
     currencySymbol: 'R$',
     region: 'Americas',
+    flagEmoji: '🇧🇷',
   },
   {
     id: 'CAN',
@@ -114,6 +123,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '캐나다 달러',
     currencySymbol: 'CA$',
     region: 'Americas',
+    flagEmoji: '🇨🇦',
   },
   {
     id: 'RUS',
@@ -125,6 +135,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '러시아 루블',
     currencySymbol: '₽',
     region: 'Europe',
+    flagEmoji: '🇷🇺',
   },
   {
     id: 'MEX',
@@ -136,6 +147,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '멕시코 페소',
     currencySymbol: 'Mex$',
     region: 'Americas',
+    flagEmoji: '🇲🇽',
   },
   {
     id: 'AUS',
@@ -147,6 +159,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '호주 달러',
     currencySymbol: 'A$',
     region: 'Oceania',
+    flagEmoji: '🇦🇺',
   },
   {
     id: 'KOR',
@@ -158,6 +171,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '대한민국 원',
     currencySymbol: '₩',
     region: 'Asia',
+    flagEmoji: '🇰🇷',
   },
   {
     id: 'ESP',
@@ -169,6 +183,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '유로',
     currencySymbol: '€',
     region: 'Europe',
+    flagEmoji: '🇪🇸',
   },
   {
     id: 'IDN',
@@ -180,6 +195,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '인도네시아 루피아',
     currencySymbol: 'Rp',
     region: 'Asia',
+    flagEmoji: '🇮🇩',
   },
   {
     id: 'TUR',
@@ -191,6 +207,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '튀르키예 리라',
     currencySymbol: '₺',
     region: 'Europe',
+    flagEmoji: '🇹🇷',
   },
   {
     id: 'NLD',
@@ -202,6 +219,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '유로',
     currencySymbol: '€',
     region: 'Europe',
+    flagEmoji: '🇳🇱',
   },
   {
     id: 'SAU',
@@ -213,6 +231,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '사우디 리얄',
     currencySymbol: '﷼',
     region: 'Asia',
+    flagEmoji: '🇸🇦',
   },
   {
     id: 'CHE',
@@ -224,6 +243,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '스위스 프랑',
     currencySymbol: 'CHF',
     region: 'Europe',
+    flagEmoji: '🇨🇭',
   },
   {
     id: 'POL',
@@ -235,6 +255,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '폴란드 즈워티',
     currencySymbol: 'zł',
     region: 'Europe',
+    flagEmoji: '🇵🇱',
   },
   {
     id: 'SWE',
@@ -246,6 +267,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '스웨덴 크로나',
     currencySymbol: 'kr',
     region: 'Europe',
+    flagEmoji: '🇸🇪',
   },
   {
     id: 'BEL',
@@ -257,6 +279,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '유로',
     currencySymbol: '€',
     region: 'Europe',
+    flagEmoji: '🇧🇪',
   },
   {
     id: 'ARG',
@@ -268,6 +291,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '아르헨티나 페소',
     currencySymbol: '$',
     region: 'Americas',
+    flagEmoji: '🇦🇷',
   },
   {
     id: 'IRL',
@@ -279,6 +303,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '유로',
     currencySymbol: '€',
     region: 'Europe',
+    flagEmoji: '🇮🇪',
   },
   {
     id: 'NOR',
@@ -290,6 +315,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '노르웨이 크로네',
     currencySymbol: 'kr',
     region: 'Europe',
+    flagEmoji: '🇳🇴',
   },
   {
     id: 'AUT',
@@ -301,6 +327,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '유로',
     currencySymbol: '€',
     region: 'Europe',
+    flagEmoji: '🇦🇹',
   },
   {
     id: 'ISR',
@@ -312,6 +339,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '이스라엘 셰켈',
     currencySymbol: '₪',
     region: 'Asia',
+    flagEmoji: '🇮🇱',
   },
   {
     id: 'ARE',
@@ -323,6 +351,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: 'UAE 디르함',
     currencySymbol: 'د.إ',
     region: 'Asia',
+    flagEmoji: '🇦🇪',
   },
   {
     id: 'SGP',
@@ -334,6 +363,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '싱가포르 달러',
     currencySymbol: 'S$',
     region: 'Asia',
+    flagEmoji: '🇸🇬',
   },
   {
     id: 'MYS',
@@ -345,6 +375,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '말레이시아 링깃',
     currencySymbol: 'RM',
     region: 'Asia',
+    flagEmoji: '🇲🇾',
   },
   {
     id: 'ZAF',
@@ -356,6 +387,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '남아공 랜드',
     currencySymbol: 'R',
     region: 'Africa',
+    flagEmoji: '🇿🇦',
   },
   {
     id: 'PHL',
@@ -367,6 +399,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '필리핀 페소',
     currencySymbol: '₱',
     region: 'Asia',
+    flagEmoji: '🇵🇭',
   },
   {
     id: 'DNK',
@@ -378,6 +411,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '덴마크 크로네',
     currencySymbol: 'kr',
     region: 'Europe',
+    flagEmoji: '🇩🇰',
   },
   {
     id: 'EGY',
@@ -389,6 +423,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '이집트 파운드',
     currencySymbol: 'E£',
     region: 'Africa',
+    flagEmoji: '🇪🇬',
   },
   {
     id: 'BGD',
@@ -400,6 +435,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '방글라데시 타카',
     currencySymbol: '৳',
     region: 'Asia',
+    flagEmoji: '🇧🇩',
   },
   {
     id: 'VNM',
@@ -411,6 +447,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '베트남 동',
     currencySymbol: '₫',
     region: 'Asia',
+    flagEmoji: '🇻🇳',
   },
   {
     id: 'NGA',
@@ -422,6 +459,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '나이지리아 나이라',
     currencySymbol: '₦',
     region: 'Africa',
+    flagEmoji: '🇳🇬',
   },
   {
     id: 'THA',
@@ -433,6 +471,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '태국 바트',
     currencySymbol: '฿',
     region: 'Asia',
+    flagEmoji: '🇹🇭',
   },
   {
     id: 'HKG',
@@ -444,6 +483,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '홍콩 달러',
     currencySymbol: 'HK$',
     region: 'Asia',
+    flagEmoji: '🇭🇰',
   },
   {
     id: 'NZL',
@@ -455,6 +495,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '뉴질랜드 달러',
     currencySymbol: 'NZ$',
     region: 'Oceania',
+    flagEmoji: '🇳🇿',
   },
   {
     id: 'FIN',
@@ -466,6 +507,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '유로',
     currencySymbol: '€',
     region: 'Europe',
+    flagEmoji: '🇫🇮',
   },
   {
     id: 'PRT',
@@ -477,6 +519,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '유로',
     currencySymbol: '€',
     region: 'Europe',
+    flagEmoji: '🇵🇹',
   },
   {
     id: 'COL',
@@ -488,6 +531,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '콜롬비아 페소',
     currencySymbol: 'Col$',
     region: 'Americas',
+    flagEmoji: '🇨🇴',
   },
   {
     id: 'CHL',
@@ -499,6 +543,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '칠레 페소',
     currencySymbol: 'CLP$',
     region: 'Americas',
+    flagEmoji: '🇨🇱',
   },
   {
     id: 'CZE',
@@ -510,6 +555,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '체코 코루나',
     currencySymbol: 'Kč',
     region: 'Europe',
+    flagEmoji: '🇨🇿',
   },
   {
     id: 'ROU',
@@ -521,6 +567,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '루마니아 레우',
     currencySymbol: 'lei',
     region: 'Europe',
+    flagEmoji: '🇷🇴',
   },
   {
     id: 'PER',
@@ -532,6 +579,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '페루 솔',
     currencySymbol: 'S/',
     region: 'Americas',
+    flagEmoji: '🇵🇪',
   },
   {
     id: 'GRC',
@@ -543,6 +591,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '유로',
     currencySymbol: '€',
     region: 'Europe',
+    flagEmoji: '🇬🇷',
   },
   {
     id: 'QAT',
@@ -554,6 +603,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '카타르 리얄',
     currencySymbol: 'QR',
     region: 'Asia',
+    flagEmoji: '🇶🇦',
   },
   {
     id: 'HUN',
@@ -565,6 +615,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '헝가리 포린트',
     currencySymbol: 'Ft',
     region: 'Europe',
+    flagEmoji: '🇭🇺',
   },
   {
     id: 'KWT',
@@ -576,6 +627,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '쿠웨이트 디나르',
     currencySymbol: 'KD',
     region: 'Asia',
+    flagEmoji: '🇰🇼',
   },
   {
     id: 'UKR',
@@ -587,6 +639,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '우크라이나 흐리우냐',
     currencySymbol: '₴',
     region: 'Europe',
+    flagEmoji: '🇺🇦',
   },
   {
     id: 'TWN',
@@ -598,6 +651,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '신 대만 달러',
     currencySymbol: 'NT$',
     region: 'Asia',
+    flagEmoji: '🇹🇼',
   },
   {
     id: 'PAK',
@@ -609,6 +663,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '파키스탄 루피',
     currencySymbol: '₨',
     region: 'Asia',
+    flagEmoji: '🇵🇰',
   },
   {
     id: 'KAZ',
@@ -620,6 +675,7 @@ export const COUNTRIES: CountryMeta[] = [
     currencyNameKo: '카자흐스탄 텡게',
     currencySymbol: '₸',
     region: 'Asia',
+    flagEmoji: '🇰🇿',
   },
 ]
 

@@ -69,13 +69,12 @@ export const CountryModal: React.FC<CountryModalProps> = ({
         className="relative w-full max-w-4xl bg-slate-900 border border-slate-700/80 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[92vh]"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Modal Header */}
+        {/* Modal Header: Country Flag, Name, Rank */}
         <div className="flex items-center justify-between p-4 sm:p-6 border-b border-slate-800 bg-slate-950/70">
           <div className="flex items-center gap-3.5">
-            {/* Styled ISO Code Badge (No Emoji) */}
-            <div className="w-12 h-12 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center font-mono font-bold text-base text-indigo-300 shadow-inner">
-              {country.iso2}
-            </div>
+            <span className="text-4xl filter drop-shadow-md select-none" role="img" aria-label={country.nameEn}>
+              {country.flagEmoji}
+            </span>
             <div>
               <div className="flex items-center gap-2.5">
                 <h2 className="text-2xl font-black text-white">{displayName}</h2>

@@ -94,32 +94,32 @@ export const CompareView: React.FC<CompareViewProps> = ({
             </p>
           </div>
 
-          {/* Preset Buttons */}
+          {/* Preset Buttons with Flags */}
           <div className="flex flex-wrap items-center gap-1.5 text-xs">
             <span className="text-slate-500 mr-1 font-medium">{t.compareRecommended}</span>
             <button
               onClick={() => setPreset('USA', 'CHN')}
-              className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors font-mono"
+              className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors"
             >
-              USA vs CHN
+              {COUNTRIES.find((c) => c.id === 'USA')?.flagEmoji} USA vs {COUNTRIES.find((c) => c.id === 'CHN')?.flagEmoji} CHN
             </button>
             <button
               onClick={() => setPreset('KOR', 'JPN')}
-              className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors font-mono"
+              className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors"
             >
-              KOR vs JPN
+              {COUNTRIES.find((c) => c.id === 'KOR')?.flagEmoji} KOR vs {COUNTRIES.find((c) => c.id === 'JPN')?.flagEmoji} JPN
             </button>
             <button
               onClick={() => setPreset('DEU', 'GBR')}
-              className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors font-mono"
+              className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors"
             >
-              DEU vs GBR
+              {COUNTRIES.find((c) => c.id === 'DEU')?.flagEmoji} DEU vs {COUNTRIES.find((c) => c.id === 'GBR')?.flagEmoji} GBR
             </button>
             <button
               onClick={() => setPreset('KOR', 'TWN')}
-              className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors font-mono"
+              className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors"
             >
-              KOR vs TWN
+              {COUNTRIES.find((c) => c.id === 'KOR')?.flagEmoji} KOR vs {COUNTRIES.find((c) => c.id === 'TWN')?.flagEmoji} TWN
             </button>
           </div>
         </div>
@@ -139,7 +139,7 @@ export const CompareView: React.FC<CompareViewProps> = ({
             >
               {COUNTRIES.map((c) => (
                 <option key={c.id} value={c.id} className="bg-slate-900 text-white">
-                  [{c.iso2}] {lang === 'ko' ? c.nameKo : c.nameEn}
+                  {c.flagEmoji} {lang === 'ko' ? c.nameKo : c.nameEn}
                 </option>
               ))}
             </select>
@@ -167,7 +167,7 @@ export const CompareView: React.FC<CompareViewProps> = ({
             >
               {COUNTRIES.map((c) => (
                 <option key={c.id} value={c.id} className="bg-slate-900 text-white">
-                  [{c.iso2}] {lang === 'ko' ? c.nameKo : c.nameEn}
+                  {c.flagEmoji} {lang === 'ko' ? c.nameKo : c.nameEn}
                 </option>
               ))}
             </select>
@@ -180,9 +180,9 @@ export const CompareView: React.FC<CompareViewProps> = ({
         {/* Country A Card */}
         <div className="bg-slate-900/80 border-2 border-indigo-500/30 rounded-2xl p-5 shadow-lg shadow-indigo-500/5">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-11 h-11 rounded-xl bg-slate-800 border border-indigo-500/40 flex items-center justify-center font-mono font-bold text-base text-indigo-300">
-              {countryA.iso2}
-            </div>
+            <span className="text-4xl filter drop-shadow-sm select-none" role="img" aria-label={countryA.nameEn}>
+              {countryA.flagEmoji}
+            </span>
             <div>
               <h3 className="text-xl font-bold text-white">{nameA}</h3>
               <p className="text-xs text-slate-400">
@@ -237,9 +237,9 @@ export const CompareView: React.FC<CompareViewProps> = ({
         {/* Country B Card */}
         <div className="bg-slate-900/80 border-2 border-emerald-500/30 rounded-2xl p-5 shadow-lg shadow-emerald-500/5">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-11 h-11 rounded-xl bg-slate-800 border border-emerald-500/40 flex items-center justify-center font-mono font-bold text-base text-emerald-300">
-              {countryB.iso2}
-            </div>
+            <span className="text-4xl filter drop-shadow-sm select-none" role="img" aria-label={countryB.nameEn}>
+              {countryB.flagEmoji}
+            </span>
             <div>
               <h3 className="text-xl font-bold text-white">{nameB}</h3>
               <p className="text-xs text-slate-400">

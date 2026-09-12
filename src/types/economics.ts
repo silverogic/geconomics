@@ -12,6 +12,7 @@ export interface CountryMeta {
   currencyNameKo: string
   currencySymbol: string
   region: Region
+  flagEmoji: string
 }
 
 export interface GdpYearPoint {

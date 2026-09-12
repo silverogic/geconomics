@@ -30,7 +30,6 @@ export const CountryCard: React.FC<CountryCardProps> = ({
 }) => {
   const t = translations[lang]
 
-  // Exchange rate vs Base Currency
   let fxRate = 0
   let isRateLoaded = false
   if (exchangeRates) {
@@ -38,7 +37,6 @@ export const CountryCard: React.FC<CountryCardProps> = ({
     isRateLoaded = true
   }
 
-  // Multiplier for USD to BaseCurrency (for GDP converted display)
   const usdToBase = exchangeRates ? getConversionRate(exchangeRates, 'USD', baseCurrency) : 1
 
   const displayName = lang === 'ko' ? country.nameKo : country.nameEn
@@ -49,14 +47,13 @@ export const CountryCard: React.FC<CountryCardProps> = ({
       onClick={() => onSelect(country)}
       className="group relative bg-slate-900/70 hover:bg-slate-800/80 border border-slate-800 hover:border-indigo-500/50 rounded-2xl p-5 transition-all duration-300 hover:shadow-xl hover:shadow-indigo-500/10 cursor-pointer flex flex-col justify-between"
     >
-      {/* Card Header: Country ISO Badge, Name, Rank */}
+      {/* Card Header: Flag, Name, Rank */}
       <div>
         <div className="flex items-start justify-between gap-2 mb-3">
           <div className="flex items-center gap-3">
-            {/* Styled ISO Code Badge (No Emoji) */}
-            <div className="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700/80 flex items-center justify-center font-mono font-bold text-sm text-indigo-300 group-hover:border-indigo-500/50 group-hover:bg-indigo-950/40 transition-colors">
-              {country.iso2}
-            </div>
+            <span className="text-3xl filter drop-shadow-sm select-none" role="img" aria-label={country.nameEn}>
+              {country.flagEmoji}
+            </span>
             <div>
               <div className="flex items-center gap-2">
                 <h3 className="font-bold text-slate-100 text-lg group-hover:text-indigo-400 transition-colors">
@@ -102,7 +99,6 @@ export const CountryCard: React.FC<CountryCardProps> = ({
       {/* Card Footer: Exchange Rate & Growth Rate */}
       <div>
         <div className="flex items-center justify-between text-xs py-1">
-          {/* Exchange Rate */}
           <div>
             <span className="text-[11px] text-slate-400 block">{t.cardFxRate}</span>
             {isRateLoaded ? (
@@ -114,7 +110,6 @@ export const CountryCard: React.FC<CountryCardProps> = ({
             )}
           </div>
 
-          {/* Growth Rate */}
           {growthRatePct !== null && (
             <div className="text-right">
               <span className="text-[11px] text-slate-400 block">{t.cardGrowthRate}</span>

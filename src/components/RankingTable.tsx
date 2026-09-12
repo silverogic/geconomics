@@ -209,9 +209,9 @@ export const RankingTable: React.FC<RankingTableProps> = ({
 
                   <td className="py-3.5 px-3.5">
                     <div className="flex items-center gap-2.5">
-                      <div className="w-8 h-8 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center font-mono font-bold text-xs text-indigo-300">
-                        {item.country.iso2}
-                      </div>
+                      <span className="text-2xl select-none" role="img" aria-label={item.country.nameEn}>
+                        {item.country.flagEmoji}
+                      </span>
                       <div>
                         <div className="font-bold text-slate-100 group-hover:text-white flex items-center gap-1.5">
                           <span>{displayName}</span>
