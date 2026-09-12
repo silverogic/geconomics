@@ -31,8 +31,9 @@ A client-side macroeconomic dashboard hosted on GitHub Pages that retrieves offi
    - Operates with zero persistent backend databases.
    - Data is retrieved on-demand directly by the client browser with an in-memory session cache (10-minute TTL) to ensure rate limit compliance while maintaining real-time accuracy.
 
-6. **Bilingual Localization (i18n)**
-   - Supports English (`en`, default) and Korean (`ko`) with persistent language preference via `localStorage`.
+6. **Bilingual Localization (i18n) with Automatic Browser Detection**
+   - Automatically detects the user's browser language (`navigator.language`) and regional currency hints (e.g. KRW for Korea, EUR for Eurozone, USD for US/Global).
+   - Supports seamless manual switching between English (`en`) and Korean (`ko`), persisting user choices in `localStorage`.
 
 ---
 

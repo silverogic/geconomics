@@ -13,24 +13,35 @@ import { CountryModal } from './components/CountryModal'
 import { CompareView } from './components/CompareView'
 import { RankingTable, type CountryRowItem } from './components/RankingTable'
 import { Footer } from './components/Footer'
+import {
+  detectBrowserLanguage,
+  detectBrowserBaseCurrency,
+  saveLanguagePreference,
+  saveBaseCurrencyPreference,
+} from './utils/locale'
 
 export function App() {
-  // Localization: Default to English ('en')
-  const [lang, setLangState] = useState<Language>(() => {
-    const saved = localStorage.getItem('globalecon_lang')
-    return saved === 'ko' ? 'ko' : 'en'
-  })
+  // Localization: Auto-detected from browser locale or restored from localStorage
+  const [lang, setLangState] = useState<Language>(() => detectBrowserLanguage())
 
   const setLang = (newLang: Language) => {
     setLangState(newLang)
-    localStorage.setItem('globalecon_lang', newLang)
-    document.documentElement.lang = newLang
+    saveLanguagePreference(newLang)
   }
 
-  const t = translations[lang]
+  // Base currency: Auto-detected based on regional hints or restored from localStorage
+  const [baseCurrency, setBaseCurrencyState] = useState<BaseCurrency>(() => detectBrowserBaseCurrency())
 
-  // Default base currency to USD for international audience, or user selectable
-  const [baseCurrency, setBaseCurrency] = useState<BaseCurrency>('USD')
+  const setBaseCurrency = (newCurrency: BaseCurrency) => {
+    setBaseCurrencyState(newCurrency)
+    saveBaseCurrencyPreference(newCurrency)
+  }
+
+  useEffect(() => {
+    document.documentElement.lang = lang
+  }, [lang])
+
+  const t = translations[lang]
   const [activeTab, setActiveTab] = useState<'cards' | 'ranking' | 'compare'>('cards')
 
   // Search & Filter state
