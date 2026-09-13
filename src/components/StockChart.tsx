@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -14,7 +14,7 @@ import {
 import { Line } from 'react-chartjs-2'
 import { TrendingUp, TrendingDown, Info, ShieldAlert } from 'lucide-react'
 import type { Language } from '../types/economics'
-import { getStockPriceData } from '../data/stockPrices'
+import { getStockPriceData, loadStockPrices, type StockPriceInfo } from '../data/stockPrices'
 
 // Ensure ChartJS plugins are registered
 ChartJS.register(
@@ -37,7 +37,41 @@ export const StockChart: React.FC<StockChartProps> = ({
   countryId,
   lang = 'en',
 }) => {
-  const stockData = getStockPriceData(countryId)
+  const [stockData, setStockData] = useState<StockPriceInfo | undefined>(() => getStockPriceData(countryId))
+  const [isLoadingStock, setIsLoadingStock] = useState<boolean>(!stockData)
+
+  useEffect(() => {
+    let isMounted = true
+    const cached = getStockPriceData(countryId)
+    if (cached) {
+      setStockData(cached)
+      setIsLoadingStock(false)
+      return
+    }
+
+    setIsLoadingStock(true)
+    loadStockPrices().then((all) => {
+      if (isMounted) {
+        setStockData(all[countryId])
+        setIsLoadingStock(false)
+      }
+    })
+
+    return () => {
+      isMounted = false
+    }
+  }, [countryId])
+
+  if (isLoadingStock) {
+    return (
+      <div className="bg-slate-950/70 border border-slate-800 rounded-xl p-8 text-center flex flex-col items-center justify-center space-y-3">
+        <div className="w-8 h-8 rounded-full border-2 border-indigo-500/30 border-t-indigo-500 animate-spin" />
+        <p className="text-xs text-slate-400">
+          {lang === 'ko' ? '증시 시세 데이터를 불러오는 중...' : 'Loading market index data...'}
+        </p>
+      </div>
+    )
+  }
 
   if (!stockData || !stockData.isSupported || stockData.points.length === 0) {
     const fallbackReason = lang === 'ko'

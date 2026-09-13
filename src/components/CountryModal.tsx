@@ -10,7 +10,7 @@ import { CurrencyConverter } from './CurrencyConverter'
 import { translations } from '../i18n/translations'
 import { CountryFlag } from './CountryFlag'
 import { StockChart } from './StockChart'
-import { getStockPriceData } from '../data/stockPrices'
+import { getStockPriceData, loadStockPrices, type StockPriceInfo } from '../data/stockPrices'
 
 interface CountryModalProps {
   country: CountryMeta
@@ -34,6 +34,24 @@ export const CountryModal: React.FC<CountryModalProps> = ({
   const t = translations[lang]
   const [detail, setDetail] = useState<CountryGdpDetail | null>(null)
   const [isLoading, setIsLoading] = useState<boolean>(true)
+  const [stockData, setStockData] = useState<StockPriceInfo | undefined>(() => getStockPriceData(country.id))
+
+  useEffect(() => {
+    let isMounted = true
+    const cached = getStockPriceData(country.id)
+    if (cached) {
+      setStockData(cached)
+      return
+    }
+    loadStockPrices().then((all) => {
+      if (isMounted) {
+        setStockData(all[country.id])
+      }
+    })
+    return () => {
+      isMounted = false
+    }
+  }, [country.id])
 
   useEffect(() => {
     let isMounted = true
@@ -68,7 +86,6 @@ export const CountryModal: React.FC<CountryModalProps> = ({
   const displayName = lang === 'ko' ? country.nameKo : country.nameEn
   const secondaryName = lang === 'ko' ? country.nameEn : country.nameKo
   const currencyName = lang === 'ko' ? country.currencyNameKo : country.currencyNameEn
-  const stockData = getStockPriceData(country.id)
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-black/80 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6 animate-fadeIn">
