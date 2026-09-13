@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react'
 import { ArrowUpDown, Search, ArrowUp, ArrowDown } from 'lucide-react'
 import type { CountryMeta, BaseCurrency, ExchangeRates, Language, EconomicYear } from '../types/economics'
+import { CURRENT_YEAR_STR, ECONOMIC_YEAR_OPTIONS } from '../utils/economicYears'
 import { formatGdpCompact, formatPerCapita, formatExchangeRate } from '../utils/formatters'
 import { getConversionRate } from '../services/exchangeApi'
 import { translations } from '../i18n/translations'
@@ -35,7 +36,7 @@ export const RankingTable: React.FC<RankingTableProps> = ({
   lang,
   onSelectCountry,
   hideHeader = false,
-  selectedYear = '2024',
+  selectedYear = CURRENT_YEAR_STR,
   onYearChange,
 }) => {
   const t = translations[lang]
@@ -121,17 +122,17 @@ export const RankingTable: React.FC<RankingTableProps> = ({
                 <span className="text-[11px] font-semibold text-slate-400 px-2 hidden sm:inline">
                   {t.yearLabel}:
                 </span>
-                {(['2024', '2025', '2026'] as const).map((yr) => (
+                {ECONOMIC_YEAR_OPTIONS.map((opt) => (
                   <button
-                    key={yr}
-                    onClick={() => onYearChange(yr)}
+                    key={opt.year}
+                    onClick={() => onYearChange(opt.year)}
                     className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-all ${
-                      selectedYear === yr
+                      selectedYear === opt.year
                         ? 'bg-indigo-600 text-white shadow-sm shadow-indigo-600/30 font-bold'
                         : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
                     }`}
                   >
-                    {yr === '2024' ? t.year2024 : yr === '2025' ? t.year2025 : t.year2026}
+                    {t[opt.labelKey].replace('{year}', opt.year)}
                   </button>
                 ))}
               </div>

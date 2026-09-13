@@ -15,7 +15,7 @@ export interface CountryMeta {
   flagEmoji: string
 }
 
-export type EconomicYear = '2024' | '2025' | '2026'
+export type EconomicYear = string
 
 export interface GdpYearPoint {
   year: number

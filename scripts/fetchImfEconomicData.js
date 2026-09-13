@@ -37,7 +37,12 @@ async function main() {
   const growthData = growthRes.values?.NGDP_RPCH || {}
 
   const result = {}
-  const targetYears = ['2024', '2025', '2026']
+  const currentYr = new Date().getFullYear()
+  const maxYear = Math.max(2030, currentYr + 4)
+  const targetYears = []
+  for (let y = 2015; y <= maxYear; y++) {
+    targetYears.push(y.toString())
+  }
 
   for (const id of COUNTRY_IDS) {
     const debtObj = debtData[id] || {}
@@ -48,7 +53,7 @@ async function main() {
     // Build multi-year overview metrics
     const yearsOverview = {}
     for (const y of targetYears) {
-      // Fallback logic for countries missing 2026 (like PAK)
+      // Fallback logic for countries missing future years
       const prevY = (parseInt(y, 10) - 1).toString()
       const rawGdpBillion = gdpObj[y] ?? gdpObj[prevY] ?? 0
       const rawPcap = pcapObj[y] ?? pcapObj[prevY] ?? 0
@@ -63,9 +68,9 @@ async function main() {
       }
     }
 
-    // Build 10-year historical trajectory (2015 - 2026)
+    // Build historical trajectory (2015 - maxYear)
     const historical = []
-    for (let yr = 2015; yr <= 2026; yr++) {
+    for (let yr = 2015; yr <= maxYear; yr++) {
       const yrStr = yr.toString()
       const gdpBillion = gdpObj[yrStr]
       if (gdpBillion !== undefined && gdpBillion !== null && !isNaN(gdpBillion)) {

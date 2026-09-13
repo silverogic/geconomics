@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { GitCompare, ArrowRightLeft, TrendingUp } from 'lucide-react'
 import { COUNTRIES } from '../data/countries'
 import type { CountryGdpDetail, BaseCurrency, ExchangeRates, Language, EconomicYear } from '../types/economics'
+import { CURRENT_YEAR_STR, ECONOMIC_YEAR_OPTIONS } from '../utils/economicYears'
 import { fetchCountryGdpDetail } from '../services/worldBankApi'
 import { getConversionRate } from '../services/exchangeApi'
 import { formatGdpCompact, formatPerCapita, formatExchangeRate } from '../utils/formatters'
@@ -21,7 +22,7 @@ export const CompareView: React.FC<CompareViewProps> = ({
   baseCurrency,
   exchangeRates,
   lang,
-  selectedYear = '2024',
+  selectedYear = CURRENT_YEAR_STR,
   onYearChange,
 }) => {
   const t = translations[lang]
@@ -108,17 +109,17 @@ export const CompareView: React.FC<CompareViewProps> = ({
                 <span className="text-[11px] font-semibold text-slate-400 px-2 hidden sm:inline">
                   {t.yearLabel}:
                 </span>
-                {(['2024', '2025', '2026'] as const).map((yr) => (
+                {ECONOMIC_YEAR_OPTIONS.map((opt) => (
                   <button
-                    key={yr}
-                    onClick={() => onYearChange(yr)}
+                    key={opt.year}
+                    onClick={() => onYearChange(opt.year)}
                     className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-all ${
-                      selectedYear === yr
+                      selectedYear === opt.year
                         ? 'bg-indigo-600 text-white shadow-sm shadow-indigo-600/30 font-bold'
                         : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
                     }`}
                   >
-                    {yr === '2024' ? t.year2024 : yr === '2025' ? t.year2025 : t.year2026}
+                    {t[opt.labelKey].replace('{year}', opt.year)}
                   </button>
                 ))}
               </div>
@@ -222,7 +223,7 @@ export const CompareView: React.FC<CompareViewProps> = ({
 
           <div className="space-y-3">
             <div className="bg-slate-950/70 p-3 rounded-xl flex justify-between items-center">
-              <span className="text-xs text-slate-400">{t.cardTotalGdp} ({detailA?.latestYear ?? '2024'})</span>
+              <span className="text-xs text-slate-400">{t.cardTotalGdp} ({detailA?.latestYear ?? selectedYear})</span>
               <div className="text-right">
                 <span className="text-base font-bold text-indigo-400 block">
                   {detailA ? formatGdpCompact(detailA.totalGdpUsd, baseCurrency, usdToBase, lang) : '...'}
@@ -296,7 +297,7 @@ export const CompareView: React.FC<CompareViewProps> = ({
 
           <div className="space-y-3">
             <div className="bg-slate-950/70 p-3 rounded-xl flex justify-between items-center">
-              <span className="text-xs text-slate-400">{t.cardTotalGdp} ({detailB?.latestYear ?? '2024'})</span>
+              <span className="text-xs text-slate-400">{t.cardTotalGdp} ({detailB?.latestYear ?? selectedYear})</span>
               <div className="text-right">
                 <span className="text-base font-bold text-emerald-400 block">
                   {detailB ? formatGdpCompact(detailB.totalGdpUsd, baseCurrency, usdToBase, lang) : '...'}

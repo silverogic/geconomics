@@ -28,9 +28,20 @@ export const getAllImfData = (): Record<string, ImfCountryRecord> => {
 
 export const getImfYearMap = (year: EconomicYear): Map<string, ImfYearMetrics> => {
   const map = new Map<string, ImfYearMetrics>()
+  const yrNum = parseInt(year, 10)
   for (const [id, record] of Object.entries(IMF_DATA)) {
     if (record.years && record.years[year]) {
       map.set(id, record.years[year])
+    } else if (record.historical) {
+      const pt = record.historical.find((h) => h.year === yrNum)
+      if (pt) {
+        map.set(id, {
+          totalGdpUsd: pt.gdp,
+          gdpPerCapitaUsd: pt.gdpPerCapita ?? 0,
+          growthRatePct: pt.growthRate ?? null,
+          debtRatioPct: pt.debtRatio ?? null,
+        })
+      }
     }
   }
   return map

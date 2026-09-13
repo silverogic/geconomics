@@ -4,6 +4,7 @@ import type { CountryMeta, CountryGdpDetail, BaseCurrency, ExchangeRates, Langua
 import { fetchCountryGdpDetail } from '../services/worldBankApi'
 import { getConversionRate } from '../services/exchangeApi'
 import { formatGdpCompact, formatPerCapita, formatExchangeRate } from '../utils/formatters'
+import { CURRENT_YEAR_STR } from '../utils/economicYears'
 import { GdpChart } from './GdpChart'
 import { CurrencyConverter } from './CurrencyConverter'
 import { translations } from '../i18n/translations'
@@ -27,7 +28,7 @@ export const CountryModal: React.FC<CountryModalProps> = ({
   baseCurrency,
   exchangeRates,
   lang,
-  selectedYear = '2024',
+  selectedYear = CURRENT_YEAR_STR,
   onClose,
 }) => {
   const t = translations[lang]
@@ -108,7 +109,7 @@ export const CountryModal: React.FC<CountryModalProps> = ({
             {/* Total GDP */}
             <div className="bg-slate-950/70 border border-slate-800 rounded-xl p-3.5">
               <span className="text-xs font-semibold text-slate-400 block mb-1">
-                {t.modalTotalGdpTitle} ({detail?.latestYear ?? '2024'})
+                {t.modalTotalGdpTitle} ({detail?.latestYear ?? selectedYear})
               </span>
               <div className="text-lg sm:text-xl font-bold text-white tracking-tight">
                 {detail ? formatGdpCompact(detail.totalGdpUsd, baseCurrency, usdToBase, lang) : t.loadingData}

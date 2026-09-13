@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo, useCallback } from 'react'
 import { Search, Filter, Sparkles, AlertCircle, LayoutGrid, List } from 'lucide-react'
 import { COUNTRIES } from './data/countries'
 import type { CountryMeta, BaseCurrency, ExchangeRates, Region, Language, EconomicYear } from './types/economics'
+import { CURRENT_YEAR_STR, ECONOMIC_YEAR_OPTIONS } from './utils/economicYears'
 import { fetchExchangeRates, getConversionRate } from './services/exchangeApi'
 import { loadGlobalGdpOverview } from './services/worldBankApi'
 import { formatGdpCompact } from './utils/formatters'
@@ -46,8 +47,8 @@ export function App() {
   const t = translations[lang]
   const [activeTab, setActiveTab] = useState<'cards' | 'ranking' | 'compare'>('cards')
 
-  // Selected economic year: 2024 (Actual) | 2025 (Estimate) | 2026 (Projection)
-  const [selectedYear, setSelectedYear] = useState<EconomicYear>('2024')
+  // Selected economic year: Dynamic [현재 년도, 현재 년도 -1, 현재 년도 -2]
+  const [selectedYear, setSelectedYear] = useState<EconomicYear>(CURRENT_YEAR_STR)
 
   // Search & Filter state
   const [searchQuery, setSearchQuery] = useState('')
@@ -291,17 +292,17 @@ export function App() {
                   <span className="text-[11px] font-semibold text-slate-400 px-2 hidden sm:inline">
                     {t.yearLabel}:
                   </span>
-                  {(['2024', '2025', '2026'] as const).map((yr) => (
+                  {ECONOMIC_YEAR_OPTIONS.map((opt) => (
                     <button
-                      key={yr}
-                      onClick={() => handleYearChange(yr)}
+                      key={opt.year}
+                      onClick={() => handleYearChange(opt.year)}
                       className={`px-2.5 py-1.5 rounded-lg text-xs font-semibold transition-all ${
-                        selectedYear === yr
+                        selectedYear === opt.year
                           ? 'bg-indigo-600 text-white shadow-sm shadow-indigo-600/30 font-bold'
                           : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
                       }`}
                     >
-                      {yr === '2024' ? t.year2024 : yr === '2025' ? t.year2025 : t.year2026}
+                      {t[opt.labelKey].replace('{year}', opt.year)}
                     </button>
                   ))}
                 </div>

@@ -1,5 +1,6 @@
 import type { CountryGdpDetail, GdpYearPoint, EconomicYear } from '../types/economics'
 import { getImfCountryData, getImfYearMap } from '../data/imfEconomic'
+import { CURRENT_YEAR_STR } from '../utils/economicYears'
 
 interface WbItem {
   indicator: { id: string; value: string }
@@ -32,17 +33,17 @@ export interface GlobalEconomicOverview {
 
 /**
  * Loads macroeconomic indicators (Total GDP, GDP per capita, Growth rate, Debt % of GDP)
- * for all countries for the selected year (2024, 2025, or 2026).
+ * for all countries for the selected year (dynamically anchored to current year).
  */
 export async function loadGlobalGdpOverview(
   forceRefresh = false,
-  targetYear: EconomicYear = '2024'
+  targetYear: EconomicYear = CURRENT_YEAR_STR
 ): Promise<GlobalEconomicOverview> {
   const yrNum = parseInt(targetYear, 10)
 
-  // For projected / upcoming years 2025 and 2026, retrieve directly from authoritative IMF WEO dataset
-  if (targetYear === '2025' || targetYear === '2026') {
-    const imfMap = getImfYearMap(targetYear)
+  // Retrieve from authoritative IMF WEO dataset for the selected target year
+  const imfMap = getImfYearMap(targetYear)
+  if (imfMap.size > 0) {
     const gdpMap = new Map<string, { totalGdp: number; year: number }>()
     const perCapitaMap = new Map<string, { perCapita: number; year: number }>()
     const growthMap = new Map<string, { growth: number; year: number }>()
@@ -58,12 +59,9 @@ export async function loadGlobalGdpOverview(
     return { gdpMap, perCapitaMap, growthMap, debtMap }
   }
 
-  // 2024: Use World Bank Official Open Data with IMF Debt % and Taiwan Fallback
-  const imf2024Map = getImfYearMap('2024')
-
-  // Populate Debt Map from IMF WEO for all countries
-  for (const [id, m] of imf2024Map.entries()) {
-    debtCache.set(id, { debtRatio: m.debtRatioPct, year: 2024 })
+  // Populate Debt Map from IMF WEO for all countries if available
+  for (const [id, m] of imfMap.entries()) {
+    debtCache.set(id, { debtRatio: m.debtRatioPct, year: yrNum })
   }
 
   if (isBulkLoaded && !forceRefresh) {
@@ -143,25 +141,25 @@ export async function loadGlobalGdpOverview(
     }
 
     // Populate Taiwan and any missing country from IMF WEO
-    for (const [id, m] of imf2024Map.entries()) {
+    for (const [id, m] of imfMap.entries()) {
       if (!summaryCache.has(id)) {
-        summaryCache.set(id, { totalGdp: m.totalGdpUsd, year: 2024 })
+        summaryCache.set(id, { totalGdp: m.totalGdpUsd, year: yrNum })
       }
       if (!perCapitaCache.has(id)) {
-        perCapitaCache.set(id, { perCapita: m.gdpPerCapitaUsd, year: 2024 })
+        perCapitaCache.set(id, { perCapita: m.gdpPerCapitaUsd, year: yrNum })
       }
       if (!growthCache.has(id)) {
-        growthCache.set(id, { growth: m.growthRatePct ?? 0, year: 2024 })
+        growthCache.set(id, { growth: m.growthRatePct ?? 0, year: yrNum })
       }
     }
 
     isBulkLoaded = true
   } catch (err) {
     console.error('Failed to load global GDP overview from World Bank Open API, falling back to IMF:', err)
-    for (const [id, m] of imf2024Map.entries()) {
-      if (!summaryCache.has(id)) summaryCache.set(id, { totalGdp: m.totalGdpUsd, year: 2024 })
-      if (!perCapitaCache.has(id)) perCapitaCache.set(id, { perCapita: m.gdpPerCapitaUsd, year: 2024 })
-      if (!growthCache.has(id)) growthCache.set(id, { growth: m.growthRatePct ?? 0, year: 2024 })
+    for (const [id, m] of imfMap.entries()) {
+      if (!summaryCache.has(id)) summaryCache.set(id, { totalGdp: m.totalGdpUsd, year: yrNum })
+      if (!perCapitaCache.has(id)) perCapitaCache.set(id, { perCapita: m.gdpPerCapitaUsd, year: yrNum })
+      if (!growthCache.has(id)) growthCache.set(id, { growth: m.growthRatePct ?? 0, year: yrNum })
     }
   }
 
@@ -178,7 +176,7 @@ export async function loadGlobalGdpOverview(
  */
 export async function fetchCountryGdpDetail(
   countryId: string,
-  targetYear: EconomicYear = '2024'
+  targetYear: EconomicYear = CURRENT_YEAR_STR
 ): Promise<CountryGdpDetail> {
   const code = countryId.toUpperCase()
   const cacheKey = `${code}_${targetYear}`
@@ -190,10 +188,21 @@ export async function fetchCountryGdpDetail(
   const imfRecord = getImfCountryData(code)
   const yrNum = parseInt(targetYear, 10)
 
-  // For 2025 and 2026, or if country is Taiwan (TWN)
-  if (targetYear === '2025' || targetYear === '2026' || code === 'TWN' || !imfRecord) {
-    if (imfRecord) {
-      const yearMetrics = imfRecord.years[targetYear] || imfRecord.years['2024']
+  if (imfRecord) {
+    let yearMetrics = imfRecord.years?.[targetYear]
+    if (!yearMetrics && imfRecord.historical) {
+      const pt = imfRecord.historical.find((h) => h.year === yrNum)
+      if (pt) {
+        yearMetrics = {
+          totalGdpUsd: pt.gdp,
+          gdpPerCapitaUsd: pt.gdpPerCapita ?? 0,
+          growthRatePct: pt.growthRate ?? null,
+          debtRatioPct: pt.debtRatio ?? null,
+        }
+      }
+    }
+
+    if (yearMetrics) {
       const detail: CountryGdpDetail = {
         countryCode: code,
         latestYear: yrNum,
@@ -210,7 +219,7 @@ export async function fetchCountryGdpDetail(
     }
   }
 
-  // 2024: Try World Bank API for 10-year official historical curve, merging IMF debt and projections
+  // Fallback to World Bank API for 10-year official historical curve
   const [totalRes, perCapitaRes, growthRes] = await Promise.allSettled([
     fetch(`https://api.worldbank.org/v2/country/${code}/indicator/NY.GDP.MKTP.CD?date=2015:2024&format=json`),
     fetch(`https://api.worldbank.org/v2/country/${code}/indicator/NY.GDP.PCAP.CD?date=2015:2024&format=json`),
@@ -218,7 +227,7 @@ export async function fetchCountryGdpDetail(
   ])
 
   const historyMap: Map<number, GdpYearPoint> = new Map()
-  let latestYear = 2024
+  let latestYear = yrNum
   let latestTotalGdp = 0
   let lastUpdated = 'World Bank Official API & IMF WEO'
 
