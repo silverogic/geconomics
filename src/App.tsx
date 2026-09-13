@@ -5,7 +5,6 @@ import type { CountryMeta, BaseCurrency, ExchangeRates, Region, Language, Econom
 import { ECONOMIC_YEAR_OPTIONS, DEFAULT_ECONOMIC_YEAR } from './utils/economicYears'
 import { fetchExchangeRates, getConversionRate } from './services/exchangeApi'
 import { loadGlobalGdpOverview } from './services/worldBankApi'
-import { loadStockPrices } from './data/stockPrices'
 import { formatGdpCompact } from './utils/formatters'
 import { translations } from './i18n/translations'
 import { Navbar } from './components/Navbar'
@@ -83,7 +82,6 @@ export function App() {
       const [fx, gdpData] = await Promise.all([
         fetchExchangeRates(isRefresh),
         loadGlobalGdpOverview(isRefresh, yr),
-        loadStockPrices(isRefresh),
       ])
 
       setExchangeRates(fx)
