@@ -16,7 +16,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <div className="flex items-center gap-2 text-slate-200 font-bold text-base">
             <Globe className="w-5 h-5 text-indigo-400" />
-            <span>Geconomics</span>
+            <span>Geonomics</span>
           </div>
           <div className="flex flex-wrap items-center gap-4 text-xs text-slate-400">
             <a
@@ -64,7 +64,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
         </div>
 
         <div className="text-center text-slate-600 text-[11px]">
-          (C) {new Date().getFullYear()} Geconomics. Powered by World Bank Open API & Open Exchange Rates. Hosted on GitHub Pages.
+          (C) {new Date().getFullYear()} Geonomics. Powered by World Bank Open API & Open Exchange Rates. Hosted on GitHub Pages.
         </div>
       </div>
     </footer>
