@@ -1,12 +1,12 @@
 import React from 'react'
-import { Globe, RefreshCw, Layers, TableProperties, GitCompare, DollarSign, Languages } from 'lucide-react'
+import { Globe, RefreshCw, Layers, GitCompare, DollarSign, Languages } from 'lucide-react'
 import { BASE_CURRENCIES } from '../data/countries'
 import type { BaseCurrency, Language } from '../types/economics'
 import { translations } from '../i18n/translations'
 
 interface NavbarProps {
-  activeTab: 'cards' | 'ranking' | 'compare'
-  setActiveTab: (tab: 'cards' | 'ranking' | 'compare') => void
+  activeTab: 'cards' | 'compare'
+  setActiveTab: (tab: 'cards' | 'compare') => void
   baseCurrency: BaseCurrency
   setBaseCurrency: (c: BaseCurrency) => void
   lang: Language
@@ -62,17 +62,6 @@ export const Navbar: React.FC<NavbarProps> = ({
             >
               <Layers className="w-4 h-4" />
               {t.navExplorer}
-            </button>
-            <button
-              onClick={() => setActiveTab('ranking')}
-              className={`flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-sm font-semibold transition-all ${
-                activeTab === 'ranking'
-                  ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/30'
-                  : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/50'
-              }`}
-            >
-              <TableProperties className="w-4 h-4" />
-              {t.navRanking}
             </button>
             <button
               onClick={() => setActiveTab('compare')}
@@ -153,15 +142,6 @@ export const Navbar: React.FC<NavbarProps> = ({
           >
             <Layers className="w-3.5 h-3.5" />
             {t.navExplorer}
-          </button>
-          <button
-            onClick={() => setActiveTab('ranking')}
-            className={`flex items-center gap-1.5 py-1.5 px-3 rounded-lg font-medium ${
-              activeTab === 'ranking' ? 'bg-indigo-600 text-white' : 'text-slate-400'
-            }`}
-          >
-            <TableProperties className="w-3.5 h-3.5" />
-            {t.navRanking}
           </button>
           <button
             onClick={() => setActiveTab('compare')}

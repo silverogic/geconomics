@@ -45,7 +45,7 @@ export function App() {
   }, [lang])
 
   const t = translations[lang]
-  const [activeTab, setActiveTab] = useState<'cards' | 'ranking' | 'compare'>('cards')
+  const [activeTab, setActiveTab] = useState<'cards' | 'compare'>('cards')
 
   // Selected economic year: Default 2024 (Actual)
   const [selectedYear, setSelectedYear] = useState<EconomicYear>(DEFAULT_ECONOMIC_YEAR)
@@ -53,7 +53,7 @@ export function App() {
   // Search & Filter state
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedRegion, setSelectedRegion] = useState<Region | 'All'>('All')
-  const [explorerViewMode, setExplorerViewMode] = useState<'cards' | 'table'>('cards')
+  const [explorerViewMode, setExplorerViewMode] = useState<'cards' | 'table'>('table')
 
   // Selected country for deep-dive modal
   const [selectedCountry, setSelectedCountry] = useState<CountryMeta | null>(null)
@@ -413,20 +413,7 @@ export function App() {
           </div>
         )}
 
-        {/* TAB 2: RANKING TABLE */}
-        {activeTab === 'ranking' && (
-          <RankingTable
-            items={allRankedItems}
-            baseCurrency={baseCurrency}
-            exchangeRates={exchangeRates}
-            lang={lang}
-            onSelectCountry={(c) => setSelectedCountry(c)}
-            selectedYear={selectedYear}
-            onYearChange={handleYearChange}
-          />
-        )}
-
-        {/* TAB 3: 1:1 COMPARE */}
+        {/* 1:1 COMPARE */}
         {activeTab === 'compare' && (
           <CompareView
             baseCurrency={baseCurrency}
