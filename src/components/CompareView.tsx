@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { GitCompare, ArrowRightLeft, TrendingUp } from 'lucide-react'
 import { COUNTRIES } from '../data/countries'
 import type { CountryGdpDetail, BaseCurrency, ExchangeRates, Language, EconomicYear } from '../types/economics'
-import { CURRENT_YEAR_STR, ECONOMIC_YEAR_OPTIONS } from '../utils/economicYears'
+import { ECONOMIC_YEAR_OPTIONS, DEFAULT_ECONOMIC_YEAR } from '../utils/economicYears'
 import { fetchCountryGdpDetail } from '../services/worldBankApi'
 import { getConversionRate } from '../services/exchangeApi'
 import { formatGdpCompact, formatPerCapita, formatExchangeRate } from '../utils/formatters'
@@ -22,7 +22,7 @@ export const CompareView: React.FC<CompareViewProps> = ({
   baseCurrency,
   exchangeRates,
   lang,
-  selectedYear = CURRENT_YEAR_STR,
+  selectedYear = DEFAULT_ECONOMIC_YEAR,
   onYearChange,
 }) => {
   const t = translations[lang]

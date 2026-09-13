@@ -40,12 +40,9 @@ export const translations = {
 
     // Year Switcher
     yearLabel: 'Economic Horizon',
-    yearCurrent: 'Current Year ({year})',
-    yearPrev1: 'Current -1 ({year})',
-    yearPrev2: 'Current -2 ({year})',
-    yearCurrentShort: 'Current ({year})',
-    yearPrev1Short: '-1 Yr ({year})',
-    yearPrev2Short: '-2 Yr ({year})',
+    yearActual: '{year} Actual',
+    yearEstimate: '{year} Est.',
+    yearProjection: '{year} Proj.',
 
     // Country Card
     cardTotalGdp: 'Total GDP',
@@ -167,12 +164,9 @@ export const translations = {
 
     // Year Switcher
     yearLabel: '기준 연도',
-    yearCurrent: '현재 년도 ({year}년)',
-    yearPrev1: '현재 년도 -1 ({year}년)',
-    yearPrev2: '현재 년도 -2 ({year}년)',
-    yearCurrentShort: '현재 ({year})',
-    yearPrev1Short: '-1년 ({year})',
-    yearPrev2Short: '-2년 ({year})',
+    yearActual: '{year}년 실적',
+    yearEstimate: '{year}년 추정',
+    yearProjection: '{year}년 전망',
 
     // Country Card
     cardTotalGdp: '총 GDP',

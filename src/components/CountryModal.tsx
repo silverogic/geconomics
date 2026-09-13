@@ -4,7 +4,7 @@ import type { CountryMeta, CountryGdpDetail, BaseCurrency, ExchangeRates, Langua
 import { fetchCountryGdpDetail } from '../services/worldBankApi'
 import { getConversionRate } from '../services/exchangeApi'
 import { formatGdpCompact, formatPerCapita, formatExchangeRate } from '../utils/formatters'
-import { CURRENT_YEAR_STR } from '../utils/economicYears'
+import { DEFAULT_ECONOMIC_YEAR } from '../utils/economicYears'
 import { GdpChart } from './GdpChart'
 import { CurrencyConverter } from './CurrencyConverter'
 import { translations } from '../i18n/translations'
@@ -28,7 +28,7 @@ export const CountryModal: React.FC<CountryModalProps> = ({
   baseCurrency,
   exchangeRates,
   lang,
-  selectedYear = CURRENT_YEAR_STR,
+  selectedYear = DEFAULT_ECONOMIC_YEAR,
   onClose,
 }) => {
   const t = translations[lang]

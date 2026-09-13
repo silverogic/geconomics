@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react'
 import { ArrowUpDown, Search, ArrowUp, ArrowDown } from 'lucide-react'
 import type { CountryMeta, BaseCurrency, ExchangeRates, Language, EconomicYear } from '../types/economics'
-import { CURRENT_YEAR_STR, ECONOMIC_YEAR_OPTIONS } from '../utils/economicYears'
+import { ECONOMIC_YEAR_OPTIONS, DEFAULT_ECONOMIC_YEAR } from '../utils/economicYears'
 import { formatGdpCompact, formatPerCapita, formatExchangeRate } from '../utils/formatters'
 import { getConversionRate } from '../services/exchangeApi'
 import { translations } from '../i18n/translations'
@@ -36,7 +36,7 @@ export const RankingTable: React.FC<RankingTableProps> = ({
   lang,
   onSelectCountry,
   hideHeader = false,
-  selectedYear = CURRENT_YEAR_STR,
+  selectedYear = DEFAULT_ECONOMIC_YEAR,
   onYearChange,
 }) => {
   const t = translations[lang]

@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo, useCallback } from 'react'
 import { Search, Filter, Sparkles, AlertCircle, LayoutGrid, List } from 'lucide-react'
 import { COUNTRIES } from './data/countries'
 import type { CountryMeta, BaseCurrency, ExchangeRates, Region, Language, EconomicYear } from './types/economics'
-import { CURRENT_YEAR_STR, ECONOMIC_YEAR_OPTIONS } from './utils/economicYears'
+import { ECONOMIC_YEAR_OPTIONS, DEFAULT_ECONOMIC_YEAR } from './utils/economicYears'
 import { fetchExchangeRates, getConversionRate } from './services/exchangeApi'
 import { loadGlobalGdpOverview } from './services/worldBankApi'
 import { formatGdpCompact } from './utils/formatters'
@@ -47,8 +47,8 @@ export function App() {
   const t = translations[lang]
   const [activeTab, setActiveTab] = useState<'cards' | 'ranking' | 'compare'>('cards')
 
-  // Selected economic year: Dynamic [현재 년도, 현재 년도 -1, 현재 년도 -2]
-  const [selectedYear, setSelectedYear] = useState<EconomicYear>(CURRENT_YEAR_STR)
+  // Selected economic year: Default 2024 (Actual)
+  const [selectedYear, setSelectedYear] = useState<EconomicYear>(DEFAULT_ECONOMIC_YEAR)
 
   // Search & Filter state
   const [searchQuery, setSearchQuery] = useState('')
