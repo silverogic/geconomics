@@ -1,4 +1,4 @@
-import imfDataJson from './imfEconomicData.json'
+import excelDataJson from './excelEconomicData.json'
 import type { EconomicYear, GdpYearPoint } from '../types/economics'
 
 export interface ImfYearMetrics {
@@ -16,7 +16,7 @@ export interface ImfCountryRecord {
   lastUpdated: string
 }
 
-const IMF_DATA: Record<string, ImfCountryRecord> = imfDataJson as Record<string, ImfCountryRecord>
+const IMF_DATA: Record<string, ImfCountryRecord> = excelDataJson as Record<string, ImfCountryRecord>
 
 export const getImfCountryData = (countryId: string): ImfCountryRecord | undefined => {
   return IMF_DATA[countryId.toUpperCase()]
