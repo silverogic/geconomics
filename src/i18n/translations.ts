@@ -38,12 +38,22 @@ export const translations = {
     viewCards: 'Card View',
     viewTable: 'Table View',
 
+    // Year Switcher
+    yearLabel: 'Economic Horizon',
+    year2024: '2024 Actual',
+    year2025: '2025 Est.',
+    year2026: '2026 Proj.',
+    year2024Short: '2024',
+    year2025Short: '2025',
+    year2026Short: '2026',
+
     // Country Card
     cardTotalGdp: 'Total GDP',
     cardPerCapita: 'GDP Per Capita',
     cardStockIndex: 'Stock Benchmark',
     cardFxRate: 'Live FX Rate',
     cardGrowthRate: 'Growth Rate',
+    cardDebtRatio: 'Gov Debt',
     cardViewDetails: 'Detailed Metrics & 10-Yr Chart',
     loadingData: 'Loading data...',
     noCountriesFound: 'No countries match your search criteria.',
@@ -55,6 +65,8 @@ export const translations = {
     modalPerCapitaTitle: 'GDP Per Capita',
     modalGrowthTitle: 'Annual GDP Growth',
     modalRealGrowth: 'Real GDP Growth',
+    modalDebtTitle: 'National Debt Ratio',
+    modalDebtSub: 'General Government Gross Debt (% of GDP, IMF WEO)',
     modalRankTitle: 'Global Rank',
     modalRankValue: 'World #{rank}',
     modalRankSub: 'by Total GDP',
@@ -90,12 +102,13 @@ export const translations = {
     compareInsightTitle: 'Comparative Summary:',
     compareInsightText:
       '{countryA}\'s Total GDP is {gdpRatio}x that of {countryB}, and its GDP per capita is {perCapitaRatio}x.',
+    compareDebtRatio: 'Gov Debt (% GDP)',
     compareChartTitle: '10-Year GDP Trajectory Overlay',
     compareChartLoading: 'Aggregating comparative data...',
 
     // Ranking Table
     tableTitle: 'Global GDP & Exchange Rate Rankings',
-    tableSubtitle: 'World Bank official statistics covering {count} major economies',
+    tableSubtitle: 'Official macroeconomic statistics covering {count} major economies',
     colRank: 'Rank',
     colCountry: 'Country',
     colCurrency: 'Currency',
@@ -103,6 +116,7 @@ export const translations = {
     colTotalGdp: 'Total GDP ({base})',
     colPerCapita: 'GDP Per Capita',
     colGrowth: 'Growth Rate',
+    colDebt: 'Gov Debt (% GDP)',
 
     // Footer
     footerZeroStorageTitle: 'Zero-Storage On-Demand Architecture',
@@ -151,12 +165,22 @@ export const translations = {
     viewCards: '카드 뷰',
     viewTable: '리스트 테이블 뷰',
 
+    // Year Switcher
+    yearLabel: '기준 연도',
+    year2024: '2024년 실적',
+    year2025: '2025년 추정',
+    year2026: '2026년 전망',
+    year2024Short: '2024년',
+    year2025Short: '2025년',
+    year2026Short: '2026년',
+
     // Country Card
     cardTotalGdp: '총 GDP',
     cardPerCapita: '1인당 GDP',
     cardStockIndex: '대표 주식 지수',
     cardFxRate: '실시간 환율',
     cardGrowthRate: '성장률',
+    cardDebtRatio: '국가 부채',
     cardViewDetails: '상세 지표 및 10개년 차트',
     loadingData: '데이터 로딩 중...',
     noCountriesFound: '검색 조건에 맞는 국가가 없습니다.',
@@ -168,6 +192,8 @@ export const translations = {
     modalPerCapitaTitle: '1인당 GDP',
     modalGrowthTitle: '연간 경제성장률',
     modalRealGrowth: '실질 GDP 성장률',
+    modalDebtTitle: '국가 부채 비율',
+    modalDebtSub: '일반정부 총 부채 비율 (GDP 대비 %, IMF WEO 공식)',
     modalRankTitle: '전 세계 순위',
     modalRankValue: '세계 {rank}위',
     modalRankSub: '총 GDP 기준',
@@ -203,12 +229,13 @@ export const translations = {
     compareInsightTitle: '비교 요약:',
     compareInsightText:
       '{countryA}의 총 GDP는 {countryB}의 {gdpRatio}배이며, 1인당 GDP는 {perCapitaRatio}배 수준입니다.',
+    compareDebtRatio: '국가 부채 비율 (% GDP)',
     compareChartTitle: '10개년 GDP 궤적 동시 비교',
     compareChartLoading: '비교 데이터를 집계 중입니다...',
 
     // Ranking Table
     tableTitle: '전 세계 GDP & 환율 순위표',
-    tableSubtitle: '세계은행 공식 집계치 기준 (총 {count}개 주요국 수록)',
+    tableSubtitle: '공식 거시경제 집계치 기준 (총 {count}개 주요국 수록)',
     colRank: '순위',
     colCountry: '국가',
     colCurrency: '통화',
@@ -216,6 +243,7 @@ export const translations = {
     colTotalGdp: '총 GDP ({base})',
     colPerCapita: '1인당 GDP',
     colGrowth: '성장률',
+    colDebt: '부채 비율 (% GDP)',
 
     // Footer
     footerZeroStorageTitle: '무보관 온디맨드(Zero-Storage On-Demand) 시스템',

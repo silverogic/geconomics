@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { X, ExternalLink, ShieldCheck, TrendingUp, TrendingDown, Coins, Award, LineChart } from 'lucide-react'
-import type { CountryMeta, CountryGdpDetail, BaseCurrency, ExchangeRates, Language } from '../types/economics'
+import type { CountryMeta, CountryGdpDetail, BaseCurrency, ExchangeRates, Language, EconomicYear } from '../types/economics'
 import { fetchCountryGdpDetail } from '../services/worldBankApi'
 import { getConversionRate } from '../services/exchangeApi'
 import { formatGdpCompact, formatPerCapita, formatExchangeRate } from '../utils/formatters'
@@ -17,6 +17,7 @@ interface CountryModalProps {
   baseCurrency: BaseCurrency
   exchangeRates: ExchangeRates | null
   lang: Language
+  selectedYear?: EconomicYear
   onClose: () => void
 }
 
@@ -26,6 +27,7 @@ export const CountryModal: React.FC<CountryModalProps> = ({
   baseCurrency,
   exchangeRates,
   lang,
+  selectedYear = '2024',
   onClose,
 }) => {
   const t = translations[lang]
@@ -36,7 +38,7 @@ export const CountryModal: React.FC<CountryModalProps> = ({
     let isMounted = true
     setIsLoading(true)
 
-    fetchCountryGdpDetail(country.id)
+    fetchCountryGdpDetail(country.id, selectedYear)
       .then((res) => {
         if (isMounted) {
           setDetail(res)
@@ -51,7 +53,7 @@ export const CountryModal: React.FC<CountryModalProps> = ({
     return () => {
       isMounted = false
     }
-  }, [country.id])
+  }, [country.id, selectedYear])
 
   // Conversion rates
   const usdToBase = exchangeRates ? getConversionRate(exchangeRates, 'USD', baseCurrency) : 1
@@ -102,7 +104,7 @@ export const CountryModal: React.FC<CountryModalProps> = ({
         {/* Scrollable Body */}
         <div className="p-4 sm:p-6 overflow-y-auto space-y-6">
           {/* Key Metrics Grid */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
             {/* Total GDP */}
             <div className="bg-slate-950/70 border border-slate-800 rounded-xl p-3.5">
               <span className="text-xs font-semibold text-slate-400 block mb-1">
@@ -151,6 +153,31 @@ export const CountryModal: React.FC<CountryModalProps> = ({
                   : 'N/A'}
               </div>
               <span className="text-[11px] text-slate-500">{t.modalRealGrowth}</span>
+            </div>
+
+            {/* National Debt Ratio */}
+            <div className="bg-slate-950/70 border border-slate-800 rounded-xl p-3.5">
+              <span className="text-xs font-semibold text-slate-400 block mb-1">
+                {t.modalDebtTitle}
+              </span>
+              <div
+                className={`text-lg sm:text-xl font-bold flex items-center gap-1 font-mono ${
+                  detail?.debtRatioPct === null || detail?.debtRatioPct === undefined
+                    ? 'text-slate-400'
+                    : detail.debtRatioPct < 60
+                      ? 'text-emerald-400'
+                      : detail.debtRatioPct <= 100
+                        ? 'text-amber-400'
+                        : 'text-rose-400'
+                }`}
+              >
+                {detail?.debtRatioPct !== null && detail?.debtRatioPct !== undefined
+                  ? `${detail.debtRatioPct.toFixed(1)}%`
+                  : 'N/A'}
+              </div>
+              <span className="text-[11px] text-slate-500 truncate block" title={t.modalDebtSub}>
+                {t.modalDebtSub}
+              </span>
             </div>
 
             {/* Global Rank */}

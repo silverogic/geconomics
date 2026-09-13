@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo, useCallback } from 'react'
 import { Search, Filter, Sparkles, AlertCircle, LayoutGrid, List } from 'lucide-react'
 import { COUNTRIES } from './data/countries'
-import type { CountryMeta, BaseCurrency, ExchangeRates, Region, Language } from './types/economics'
+import type { CountryMeta, BaseCurrency, ExchangeRates, Region, Language, EconomicYear } from './types/economics'
 import { fetchExchangeRates, getConversionRate } from './services/exchangeApi'
 import { loadGlobalGdpOverview } from './services/worldBankApi'
 import { formatGdpCompact } from './utils/formatters'
@@ -46,6 +46,9 @@ export function App() {
   const t = translations[lang]
   const [activeTab, setActiveTab] = useState<'cards' | 'ranking' | 'compare'>('cards')
 
+  // Selected economic year: 2024 (Actual) | 2025 (Estimate) | 2026 (Projection)
+  const [selectedYear, setSelectedYear] = useState<EconomicYear>('2024')
+
   // Search & Filter state
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedRegion, setSelectedRegion] = useState<Region | 'All'>('All')
@@ -59,6 +62,7 @@ export function App() {
   const [gdpMap, setGdpMap] = useState<Map<string, { totalGdp: number; year: number }>>(new Map())
   const [perCapitaMap, setPerCapitaMap] = useState<Map<string, { perCapita: number; year: number }>>(new Map())
   const [growthMap, setGrowthMap] = useState<Map<string, { growth: number; year: number }>>(new Map())
+  const [debtMap, setDebtMap] = useState<Map<string, { debtRatio: number | null; year: number }>>(new Map())
 
   const [isLoading, setIsLoading] = useState(true)
   const [isRefreshing, setIsRefreshing] = useState(false)
@@ -66,21 +70,24 @@ export function App() {
   const [lastRefreshed, setLastRefreshed] = useState<Date>(new Date())
 
   // Initial and refresh data fetcher
-  const loadData = useCallback(async (isRefresh = false) => {
+  const loadData = useCallback(async (isRefresh = false, yearToLoad?: EconomicYear) => {
     if (isRefresh) setIsRefreshing(true)
     else setIsLoading(true)
     setErrorMsg(null)
 
+    const yr = yearToLoad ?? selectedYear
+
     try {
       const [fx, gdpData] = await Promise.all([
         fetchExchangeRates(isRefresh),
-        loadGlobalGdpOverview(isRefresh),
+        loadGlobalGdpOverview(isRefresh, yr),
       ])
 
       setExchangeRates(fx)
       setGdpMap(new Map(gdpData.gdpMap))
       setPerCapitaMap(new Map(gdpData.perCapitaMap))
       setGrowthMap(new Map(gdpData.growthMap))
+      setDebtMap(new Map(gdpData.debtMap))
       setLastRefreshed(new Date())
     } catch (err: any) {
       console.error('Error synchronizing economic data:', err)
@@ -93,7 +100,13 @@ export function App() {
       setIsLoading(false)
       setIsRefreshing(false)
     }
-  }, [lang])
+  }, [lang, selectedYear])
+
+  const handleYearChange = (newYear: EconomicYear) => {
+    if (newYear === selectedYear) return
+    setSelectedYear(newYear)
+    loadData(false, newYear)
+  }
 
   useEffect(() => {
     loadData(false)
@@ -105,6 +118,7 @@ export function App() {
       const gdpObj = gdpMap.get(country.id)
       const pcapObj = perCapitaMap.get(country.id)
       const growthObj = growthMap.get(country.id)
+      const debtObj = debtMap.get(country.id)
 
       return {
         country,
@@ -112,6 +126,7 @@ export function App() {
         totalGdpUsd: gdpObj?.totalGdp || 0,
         gdpPerCapitaUsd: pcapObj?.perCapita || 0,
         growthRatePct: growthObj?.growth ?? null,
+        debtRatioPct: debtObj?.debtRatio ?? null,
       }
     })
 
@@ -121,7 +136,7 @@ export function App() {
     })
 
     return list
-  }, [gdpMap, perCapitaMap, growthMap])
+  }, [gdpMap, perCapitaMap, growthMap, debtMap])
 
   // Filtered countries for Card Grid
   const filteredRankedItems = useMemo(() => {
@@ -258,16 +273,38 @@ export function App() {
 
             {/* Filter & Search Bar */}
             <div className="flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-3 bg-slate-900/90 border border-slate-800 p-3 sm:p-4 rounded-2xl">
-              {/* Search Bar */}
-              <div className="relative w-full xl:w-72 flex-shrink-0">
-                <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
-                <input
-                  type="text"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder={t.searchPlaceholder}
-                  className="w-full bg-slate-950/80 border border-slate-800 rounded-xl pl-10 pr-4 py-2 text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors"
-                />
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                {/* Search Bar */}
+                <div className="relative w-full sm:w-64 flex-shrink-0">
+                  <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+                  <input
+                    type="text"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    placeholder={t.searchPlaceholder}
+                    className="w-full bg-slate-950/80 border border-slate-800 rounded-xl pl-10 pr-4 py-2 text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors"
+                  />
+                </div>
+
+                {/* Year Switcher Segment */}
+                <div className="flex items-center bg-slate-950/90 border border-slate-800 p-1 rounded-xl shrink-0">
+                  <span className="text-[11px] font-semibold text-slate-400 px-2 hidden sm:inline">
+                    {t.yearLabel}:
+                  </span>
+                  {(['2024', '2025', '2026'] as const).map((yr) => (
+                    <button
+                      key={yr}
+                      onClick={() => handleYearChange(yr)}
+                      className={`px-2.5 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+                        selectedYear === yr
+                          ? 'bg-indigo-600 text-white shadow-sm shadow-indigo-600/30 font-bold'
+                          : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
+                      }`}
+                    >
+                      {yr === '2024' ? t.year2024 : yr === '2025' ? t.year2025 : t.year2026}
+                    </button>
+                  ))}
+                </div>
               </div>
 
               {/* Region Filter Buttons and View Switcher */}
@@ -352,6 +389,7 @@ export function App() {
                     totalGdpUsd={item.totalGdpUsd}
                     gdpPerCapitaUsd={item.gdpPerCapitaUsd}
                     growthRatePct={item.growthRatePct}
+                    debtRatioPct={item.debtRatioPct}
                     baseCurrency={baseCurrency}
                     exchangeRates={exchangeRates}
                     lang={lang}
@@ -366,6 +404,8 @@ export function App() {
                 exchangeRates={exchangeRates}
                 lang={lang}
                 onSelectCountry={(c) => setSelectedCountry(c)}
+                selectedYear={selectedYear}
+                onYearChange={handleYearChange}
                 hideHeader
               />
             )}
@@ -380,6 +420,8 @@ export function App() {
             exchangeRates={exchangeRates}
             lang={lang}
             onSelectCountry={(c) => setSelectedCountry(c)}
+            selectedYear={selectedYear}
+            onYearChange={handleYearChange}
           />
         )}
 
@@ -389,6 +431,8 @@ export function App() {
             baseCurrency={baseCurrency}
             exchangeRates={exchangeRates}
             lang={lang}
+            selectedYear={selectedYear}
+            onYearChange={handleYearChange}
           />
         )}
       </main>
@@ -401,6 +445,7 @@ export function App() {
           baseCurrency={baseCurrency}
           exchangeRates={exchangeRates}
           lang={lang}
+          selectedYear={selectedYear}
           onClose={() => setSelectedCountry(null)}
         />
       )}

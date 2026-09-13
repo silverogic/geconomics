@@ -15,11 +15,14 @@ export interface CountryMeta {
   flagEmoji: string
 }
 
+export type EconomicYear = '2024' | '2025' | '2026'
+
 export interface GdpYearPoint {
   year: number
   gdp: number // Current US$
   gdpPerCapita?: number // Current US$
   growthRate?: number // Annual %
+  debtRatio?: number // % of GDP
 }
 
 export interface CountryGdpDetail {
@@ -28,6 +31,7 @@ export interface CountryGdpDetail {
   totalGdpUsd: number
   gdpPerCapitaUsd: number
   growthRatePct: number | null
+  debtRatioPct: number | null
   historical: GdpYearPoint[]
   source: string
   lastUpdated: string
@@ -44,6 +48,7 @@ export interface EconomySummary {
   totalGdpUsd: number
   gdpPerCapitaUsd: number
   growthRatePct: number | null
+  debtRatioPct: number | null
   rank: number
   latestYear: number
   exchangeRateVsBase: number

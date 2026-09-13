@@ -1,0 +1,6209 @@
+{
+  "USA": {
+    "countryId": "USA",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 29298025000000,
+        "gdpPerCapitaUsd": 86173.37,
+        "growthRatePct": 2.8,
+        "debtRatioPct": 122.3
+      },
+      "2025": {
+        "totalGdpUsd": 30767075000000,
+        "gdpPerCapitaUsd": 89991.15,
+        "growthRatePct": 2.1,
+        "debtRatioPct": 123.9
+      },
+      "2026": {
+        "totalGdpUsd": 32383920000000,
+        "gdpPerCapitaUsd": 94429.75,
+        "growthRatePct": 2.3,
+        "debtRatioPct": 125.8
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 18295000000000,
+        "gdpPerCapita": 57006.93,
+        "growthRate": 2.9,
+        "debtRatio": 105.4
+      },
+      {
+        "year": 2016,
+        "gdp": 18804900000000,
+        "gdpPerCapita": 58179.7,
+        "growthRate": 1.8,
+        "debtRatio": 107.4
+      },
+      {
+        "year": 2017,
+        "gdp": 19612100000000,
+        "gdpPerCapita": 60292.98,
+        "growthRate": 2.5,
+        "debtRatio": 106.4
+      },
+      {
+        "year": 2018,
+        "gdp": 20656525000000,
+        "gdpPerCapita": 63165.28,
+        "growthRate": 3,
+        "debtRatio": 107.7
+      },
+      {
+        "year": 2019,
+        "gdp": 21539975000000,
+        "gdpPerCapita": 65561.32,
+        "growthRate": 2.6,
+        "debtRatio": 108.8
+      },
+      {
+        "year": 2020,
+        "gdp": 21375275000000,
+        "gdpPerCapita": 64518,
+        "growthRate": -2.1,
+        "debtRatio": 132.6
+      },
+      {
+        "year": 2021,
+        "gdp": 23725650000000,
+        "gdpPerCapita": 71365.73,
+        "growthRate": 6.2,
+        "debtRatio": 125
+      },
+      {
+        "year": 2022,
+        "gdp": 26054600000000,
+        "gdpPerCapita": 77948.99,
+        "growthRate": 2.5,
+        "debtRatio": 119.1
+      },
+      {
+        "year": 2023,
+        "gdp": 27811500000000,
+        "gdpPerCapita": 82536.1,
+        "growthRate": 2.9,
+        "debtRatio": 120
+      },
+      {
+        "year": 2024,
+        "gdp": 29298025000000,
+        "gdpPerCapita": 86173.37,
+        "growthRate": 2.8,
+        "debtRatio": 122.3
+      },
+      {
+        "year": 2025,
+        "gdp": 30767075000000,
+        "gdpPerCapita": 89991.15,
+        "growthRate": 2.1,
+        "debtRatio": 123.9
+      },
+      {
+        "year": 2026,
+        "gdp": 32383920000000,
+        "gdpPerCapita": 94429.75,
+        "growthRate": 2.3,
+        "debtRatio": 125.8
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "CHN": {
+    "countryId": "CHN",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 18945112000000,
+        "gdpPerCapitaUsd": 13452.66,
+        "growthRatePct": 5,
+        "debtRatioPct": 90.4
+      },
+      "2025": {
+        "totalGdpUsd": 19626247000000,
+        "gdpPerCapitaUsd": 13968.07,
+        "growthRatePct": 5,
+        "debtRatioPct": 99.2
+      },
+      "2026": {
+        "totalGdpUsd": 20851593000000,
+        "gdpPerCapitaUsd": 14873.57,
+        "growthRatePct": 4.4,
+        "debtRatioPct": 106.9
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 11305640000000,
+        "gdpPerCapita": 8173.19,
+        "growthRate": 7,
+        "debtRatio": 40.8
+      },
+      {
+        "year": 2016,
+        "gdp": 11452000000000,
+        "gdpPerCapita": 8225.12,
+        "growthRate": 6.8,
+        "debtRatio": 50
+      },
+      {
+        "year": 2017,
+        "gdp": 12516152000000,
+        "gdpPerCapita": 8939.41,
+        "growthRate": 6.9,
+        "debtRatio": 53.9
+      },
+      {
+        "year": 2018,
+        "gdp": 14107927000000,
+        "gdpPerCapita": 10038.3,
+        "growthRate": 6.8,
+        "debtRatio": 55.9
+      },
+      {
+        "year": 2019,
+        "gdp": 14593450000000,
+        "gdpPerCapita": 10349.38,
+        "growthRate": 6.1,
+        "debtRatio": 59.8
+      },
+      {
+        "year": 2020,
+        "gdp": 15110191000000,
+        "gdpPerCapita": 10700.36,
+        "growthRate": 2.3,
+        "debtRatio": 70.1
+      },
+      {
+        "year": 2021,
+        "gdp": 18183505000000,
+        "gdpPerCapita": 12872.37,
+        "growthRate": 8.6,
+        "debtRatio": 72.1
+      },
+      {
+        "year": 2022,
+        "gdp": 18337777000000,
+        "gdpPerCapita": 12989.39,
+        "growthRate": 3.1,
+        "debtRatio": 77.3
+      },
+      {
+        "year": 2023,
+        "gdp": 18366936000000,
+        "gdpPerCapita": 13029.25,
+        "growthRate": 5.4,
+        "debtRatio": 84.1
+      },
+      {
+        "year": 2024,
+        "gdp": 18945112000000,
+        "gdpPerCapita": 13452.66,
+        "growthRate": 5,
+        "debtRatio": 90.4
+      },
+      {
+        "year": 2025,
+        "gdp": 19626247000000,
+        "gdpPerCapita": 13968.07,
+        "growthRate": 5,
+        "debtRatio": 99.2
+      },
+      {
+        "year": 2026,
+        "gdp": 20851593000000,
+        "gdpPerCapita": 14873.57,
+        "growthRate": 4.4,
+        "debtRatio": 106.9
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "DEU": {
+    "countryId": "DEU",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 4684182000000,
+        "gdpPerCapitaUsd": 56086.9,
+        "growthRatePct": -0.5,
+        "debtRatioPct": 62.2
+      },
+      "2025": {
+        "totalGdpUsd": 5048059000000,
+        "gdpPerCapitaUsd": 60438.79,
+        "growthRatePct": 0.2,
+        "debtRatioPct": 62.9
+      },
+      "2026": {
+        "totalGdpUsd": 5452858000000,
+        "gdpPerCapitaUsd": 65302.89,
+        "growthRatePct": 0.8,
+        "debtRatioPct": 64.6
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 3425446000000,
+        "gdpPerCapita": 42109.33,
+        "growthRate": 1.7,
+        "debtRatio": 71.2
+      },
+      {
+        "year": 2016,
+        "gdp": 3535812000000,
+        "gdpPerCapita": 43189.58,
+        "growthRate": 2.2,
+        "debtRatio": 68.3
+      },
+      {
+        "year": 2017,
+        "gdp": 3764023000000,
+        "gdpPerCapita": 45881.46,
+        "growthRate": 2.8,
+        "debtRatio": 64
+      },
+      {
+        "year": 2018,
+        "gdp": 4057272000000,
+        "gdpPerCapita": 49384.53,
+        "growthRate": 1.1,
+        "debtRatio": 60.8
+      },
+      {
+        "year": 2019,
+        "gdp": 3960332000000,
+        "gdpPerCapita": 48177.61,
+        "growthRate": 1,
+        "debtRatio": 58.7
+      },
+      {
+        "year": 2020,
+        "gdp": 3938244000000,
+        "gdpPerCapita": 47953.68,
+        "growthRate": -4.1,
+        "debtRatio": 68
+      },
+      {
+        "year": 2021,
+        "gdp": 4358147000000,
+        "gdpPerCapita": 53151.54,
+        "growthRate": 3.9,
+        "debtRatio": 67.9
+      },
+      {
+        "year": 2022,
+        "gdp": 4204327000000,
+        "gdpPerCapita": 50943.63,
+        "growthRate": 1.8,
+        "debtRatio": 64.4
+      },
+      {
+        "year": 2023,
+        "gdp": 4563523000000,
+        "gdpPerCapita": 54793.07,
+        "growthRate": -0.9,
+        "debtRatio": 62.3
+      },
+      {
+        "year": 2024,
+        "gdp": 4684182000000,
+        "gdpPerCapita": 56086.9,
+        "growthRate": -0.5,
+        "debtRatio": 62.2
+      },
+      {
+        "year": 2025,
+        "gdp": 5048059000000,
+        "gdpPerCapita": 60438.79,
+        "growthRate": 0.2,
+        "debtRatio": 62.9
+      },
+      {
+        "year": 2026,
+        "gdp": 5452858000000,
+        "gdpPerCapita": 65302.89,
+        "growthRate": 0.8,
+        "debtRatio": 64.6
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "JPN": {
+    "countryId": "JPN",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 4190008000000,
+        "gdpPerCapitaUsd": 33820.26,
+        "growthRatePct": -0.2,
+        "debtRatioPct": 214.5
+      },
+      "2025": {
+        "totalGdpUsd": 4435163000000,
+        "gdpPerCapitaUsd": 35973.15,
+        "growthRatePct": 1.2,
+        "debtRatioPct": 206.5
+      },
+      "2026": {
+        "totalGdpUsd": 4379253000000,
+        "gdpPerCapitaUsd": 35703.43,
+        "growthRatePct": 0.7,
+        "debtRatioPct": 204.4
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 4534438000000,
+        "gdpPerCapita": 35710.56,
+        "growthRate": 1.8,
+        "debtRatio": 200.1
+      },
+      {
+        "year": 2016,
+        "gdp": 5110357000000,
+        "gdpPerCapita": 40251.69,
+        "growthRate": 0.7,
+        "debtRatio": 202.1
+      },
+      {
+        "year": 2017,
+        "gdp": 5038232000000,
+        "gdpPerCapita": 39750.62,
+        "growthRate": 1.6,
+        "debtRatio": 203.1
+      },
+      {
+        "year": 2018,
+        "gdp": 5154293000000,
+        "gdpPerCapita": 40746.9,
+        "growthRate": 0.8,
+        "debtRatio": 203.7
+      },
+      {
+        "year": 2019,
+        "gdp": 5245755000000,
+        "gdpPerCapita": 41560.16,
+        "growthRate": -0.3,
+        "debtRatio": 206.3
+      },
+      {
+        "year": 2020,
+        "gdp": 5189197000000,
+        "gdpPerCapita": 41233.6,
+        "growthRate": -4.3,
+        "debtRatio": 228.8
+      },
+      {
+        "year": 2021,
+        "gdp": 5225934000000,
+        "gdpPerCapita": 41643.61,
+        "growthRate": 3.6,
+        "debtRatio": 222.7
+      },
+      {
+        "year": 2022,
+        "gdp": 4447976000000,
+        "gdpPerCapita": 35565.98,
+        "growthRate": 1.3,
+        "debtRatio": 227.8
+      },
+      {
+        "year": 2023,
+        "gdp": 4384854000000,
+        "gdpPerCapita": 35224.68,
+        "growthRate": 0.7,
+        "debtRatio": 220.3
+      },
+      {
+        "year": 2024,
+        "gdp": 4190008000000,
+        "gdpPerCapita": 33820.26,
+        "growthRate": -0.2,
+        "debtRatio": 214.5
+      },
+      {
+        "year": 2025,
+        "gdp": 4435163000000,
+        "gdpPerCapita": 35973.15,
+        "growthRate": 1.2,
+        "debtRatio": 206.5
+      },
+      {
+        "year": 2026,
+        "gdp": 4379253000000,
+        "gdpPerCapita": 35703.43,
+        "growthRate": 0.7,
+        "debtRatio": 204.4
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "IND": {
+    "countryId": "IND",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 3760814000000,
+        "gdpPerCapitaUsd": 2591.99,
+        "growthRatePct": 7.1,
+        "debtRatioPct": 84.8
+      },
+      "2025": {
+        "totalGdpUsd": 3916312000000,
+        "gdpPerCapitaUsd": 2675.32,
+        "growthRatePct": 7.6,
+        "debtRatioPct": 84.1
+      },
+      "2026": {
+        "totalGdpUsd": 4153191000000,
+        "gdpPerCapitaUsd": 2812.62,
+        "growthRatePct": 6.5,
+        "debtRatioPct": 83.4
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 2081604000000,
+        "gdpPerCapita": 1567.44,
+        "growthRate": 8,
+        "debtRatio": 69.8
+      },
+      {
+        "year": 2016,
+        "gdp": 2264818000000,
+        "gdpPerCapita": 1685.2,
+        "growthRate": 8.3,
+        "debtRatio": 69.8
+      },
+      {
+        "year": 2017,
+        "gdp": 2609908000000,
+        "gdpPerCapita": 1919.53,
+        "growthRate": 6.8,
+        "debtRatio": 70.8
+      },
+      {
+        "year": 2018,
+        "gdp": 2653495000000,
+        "gdpPerCapita": 1930.29,
+        "growthRate": 6.5,
+        "debtRatio": 71.7
+      },
+      {
+        "year": 2019,
+        "gdp": 2776336000000,
+        "gdpPerCapita": 1998.76,
+        "growthRate": 3.9,
+        "debtRatio": 76.7
+      },
+      {
+        "year": 2020,
+        "gdp": 2611953000000,
+        "gdpPerCapita": 1862.2,
+        "growthRate": -5.8,
+        "debtRatio": 90.6
+      },
+      {
+        "year": 2021,
+        "gdp": 3084517000000,
+        "gdpPerCapita": 2181.1,
+        "growthRate": 9.7,
+        "debtRatio": 85.7
+      },
+      {
+        "year": 2022,
+        "gdp": 3249939000000,
+        "gdpPerCapita": 2279.98,
+        "growthRate": 7.6,
+        "debtRatio": 84.6
+      },
+      {
+        "year": 2023,
+        "gdp": 3500906000000,
+        "gdpPerCapita": 2434.45,
+        "growthRate": 7.2,
+        "debtRatio": 85
+      },
+      {
+        "year": 2024,
+        "gdp": 3760814000000,
+        "gdpPerCapita": 2591.99,
+        "growthRate": 7.1,
+        "debtRatio": 84.8
+      },
+      {
+        "year": 2025,
+        "gdp": 3916312000000,
+        "gdpPerCapita": 2675.32,
+        "growthRate": 7.6,
+        "debtRatio": 84.1
+      },
+      {
+        "year": 2026,
+        "gdp": 4153191000000,
+        "gdpPerCapita": 2812.62,
+        "growthRate": 6.5,
+        "debtRatio": 83.4
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "GBR": {
+    "countryId": "GBR",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 3695355000000,
+        "gdpPerCapitaUsd": 53338.65,
+        "growthRatePct": 1.1,
+        "debtRatioPct": 99.9
+      },
+      "2025": {
+        "totalGdpUsd": 4003022000000,
+        "gdpPerCapitaUsd": 57608.21,
+        "growthRatePct": 1.3,
+        "debtRatioPct": 102.3
+      },
+      "2026": {
+        "totalGdpUsd": 4264794000000,
+        "gdpPerCapitaUsd": 61056.1,
+        "growthRatePct": 0.8,
+        "debtRatioPct": 103.6
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 2946231000000,
+        "gdpPerCapita": 45266.04,
+        "growthRate": 2.1,
+        "debtRatio": 87.3
+      },
+      {
+        "year": 2016,
+        "gdp": 2716852000000,
+        "gdpPerCapita": 41411.64,
+        "growthRate": 2.2,
+        "debtRatio": 87.3
+      },
+      {
+        "year": 2017,
+        "gdp": 2701370000000,
+        "gdpPerCapita": 40952.19,
+        "growthRate": 3,
+        "debtRatio": 86.1
+      },
+      {
+        "year": 2018,
+        "gdp": 2900745000000,
+        "gdpPerCapita": 43760.39,
+        "growthRate": 1.6,
+        "debtRatio": 85.6
+      },
+      {
+        "year": 2019,
+        "gdp": 2877392000000,
+        "gdpPerCapita": 43185.92,
+        "growthRate": 1.3,
+        "debtRatio": 84.9
+      },
+      {
+        "year": 2020,
+        "gdp": 2725948000000,
+        "gdpPerCapita": 40844.29,
+        "growthRate": -10,
+        "debtRatio": 104.8
+      },
+      {
+        "year": 2021,
+        "gdp": 3195327000000,
+        "gdpPerCapita": 47707.12,
+        "growthRate": 8.5,
+        "debtRatio": 103.4
+      },
+      {
+        "year": 2022,
+        "gdp": 3192851000000,
+        "gdpPerCapita": 47206.39,
+        "growthRate": 5.1,
+        "debtRatio": 97.5
+      },
+      {
+        "year": 2023,
+        "gdp": 3422072000000,
+        "gdpPerCapita": 49938.29,
+        "growthRate": 0.3,
+        "debtRatio": 98.9
+      },
+      {
+        "year": 2024,
+        "gdp": 3695355000000,
+        "gdpPerCapita": 53338.65,
+        "growthRate": 1.1,
+        "debtRatio": 99.9
+      },
+      {
+        "year": 2025,
+        "gdp": 4003022000000,
+        "gdpPerCapita": 57608.21,
+        "growthRate": 1.3,
+        "debtRatio": 102.3
+      },
+      {
+        "year": 2026,
+        "gdp": 4264794000000,
+        "gdpPerCapita": 61056.1,
+        "growthRate": 0.8,
+        "debtRatio": 103.6
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "FRA": {
+    "countryId": "FRA",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 3161042000000,
+        "gdpPerCapitaUsd": 46053.56,
+        "growthRatePct": 1.1,
+        "debtRatioPct": 113.2
+      },
+      "2025": {
+        "totalGdpUsd": 3368925000000,
+        "gdpPerCapitaUsd": 48929.95,
+        "growthRatePct": 0.9,
+        "debtRatioPct": 116
+      },
+      "2026": {
+        "totalGdpUsd": 3596094000000,
+        "gdpPerCapitaUsd": 52083.33,
+        "growthRatePct": 0.9,
+        "debtRatioPct": 118.4
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 2442731000000,
+        "gdpPerCapita": 36775.68,
+        "growthRate": 1,
+        "debtRatio": 97
+      },
+      {
+        "year": 2016,
+        "gdp": 2469726000000,
+        "gdpPerCapita": 37081.5,
+        "growthRate": 0.7,
+        "debtRatio": 98.1
+      },
+      {
+        "year": 2017,
+        "gdp": 2587955000000,
+        "gdpPerCapita": 38756.65,
+        "growthRate": 2.3,
+        "debtRatio": 98.8
+      },
+      {
+        "year": 2018,
+        "gdp": 2782838000000,
+        "gdpPerCapita": 41539.76,
+        "growthRate": 1.6,
+        "debtRatio": 98.5
+      },
+      {
+        "year": 2019,
+        "gdp": 2723094000000,
+        "gdpPerCapita": 40487.3,
+        "growthRate": 2.1,
+        "debtRatio": 98.2
+      },
+      {
+        "year": 2020,
+        "gdp": 2645806000000,
+        "gdpPerCapita": 39230.93,
+        "growthRate": -7.6,
+        "debtRatio": 114.9
+      },
+      {
+        "year": 2021,
+        "gdp": 2968405000000,
+        "gdpPerCapita": 43848.35,
+        "growthRate": 6.8,
+        "debtRatio": 112.8
+      },
+      {
+        "year": 2022,
+        "gdp": 2796987000000,
+        "gdpPerCapita": 41095.77,
+        "growthRate": 2.8,
+        "debtRatio": 111.4
+      },
+      {
+        "year": 2023,
+        "gdp": 3061095000000,
+        "gdpPerCapita": 44749.68,
+        "growthRate": 1.6,
+        "debtRatio": 109.6
+      },
+      {
+        "year": 2024,
+        "gdp": 3161042000000,
+        "gdpPerCapita": 46053.56,
+        "growthRate": 1.1,
+        "debtRatio": 113.2
+      },
+      {
+        "year": 2025,
+        "gdp": 3368925000000,
+        "gdpPerCapita": 48929.95,
+        "growthRate": 0.9,
+        "debtRatio": 116
+      },
+      {
+        "year": 2026,
+        "gdp": 3596094000000,
+        "gdpPerCapita": 52083.33,
+        "growthRate": 0.9,
+        "debtRatio": 118.4
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "ITA": {
+    "countryId": "ITA",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 2382718000000,
+        "gdpPerCapitaUsd": 40404.75,
+        "growthRatePct": 0.8,
+        "debtRatioPct": 134.7
+      },
+      "2025": {
+        "totalGdpUsd": 2550111000000,
+        "gdpPerCapitaUsd": 43270.36,
+        "growthRatePct": 0.5,
+        "debtRatioPct": 137.1
+      },
+      "2026": {
+        "totalGdpUsd": 2738164000000,
+        "gdpPerCapitaUsd": 46505.09,
+        "growthRatePct": 0.5,
+        "debtRatioPct": 138.4
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 1845615000000,
+        "gdpPerCapita": 30609.5,
+        "growthRate": 0.9,
+        "debtRatio": 134.8
+      },
+      {
+        "year": 2016,
+        "gdp": 1886590000000,
+        "gdpPerCapita": 31357.6,
+        "growthRate": 1.2,
+        "debtRatio": 134.2
+      },
+      {
+        "year": 2017,
+        "gdp": 1970025000000,
+        "gdpPerCapita": 32797.28,
+        "growthRate": 1.6,
+        "debtRatio": 133.7
+      },
+      {
+        "year": 2018,
+        "gdp": 2100387000000,
+        "gdpPerCapita": 35042.79,
+        "growthRate": 0.8,
+        "debtRatio": 134.2
+      },
+      {
+        "year": 2019,
+        "gdp": 2019829000000,
+        "gdpPerCapita": 33766.99,
+        "growthRate": 0.4,
+        "debtRatio": 133.9
+      },
+      {
+        "year": 2020,
+        "gdp": 1905956000000,
+        "gdpPerCapita": 31956.87,
+        "growthRate": -8.9,
+        "debtRatio": 154.4
+      },
+      {
+        "year": 2021,
+        "gdp": 2180657000000,
+        "gdpPerCapita": 36812.91,
+        "growthRate": 8.9,
+        "debtRatio": 145.8
+      },
+      {
+        "year": 2022,
+        "gdp": 2105723000000,
+        "gdpPerCapita": 35672.01,
+        "growthRate": 4.8,
+        "debtRatio": 138.4
+      },
+      {
+        "year": 2023,
+        "gdp": 2317550000000,
+        "gdpPerCapita": 39282.37,
+        "growthRate": 0.9,
+        "debtRatio": 133.9
+      },
+      {
+        "year": 2024,
+        "gdp": 2382718000000,
+        "gdpPerCapita": 40404.75,
+        "growthRate": 0.8,
+        "debtRatio": 134.7
+      },
+      {
+        "year": 2025,
+        "gdp": 2550111000000,
+        "gdpPerCapita": 43270.36,
+        "growthRate": 0.5,
+        "debtRatio": 137.1
+      },
+      {
+        "year": 2026,
+        "gdp": 2738164000000,
+        "gdpPerCapita": 46505.09,
+        "growthRate": 0.5,
+        "debtRatio": 138.4
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "BRA": {
+    "countryId": "BRA",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 2185822000000,
+        "gdpPerCapitaUsd": 10282.17,
+        "growthRatePct": 3.4,
+        "debtRatioPct": 87
+      },
+      "2025": {
+        "totalGdpUsd": 2279918000000,
+        "gdpPerCapitaUsd": 10685.69,
+        "growthRatePct": 2.3,
+        "debtRatioPct": 93.3
+      },
+      "2026": {
+        "totalGdpUsd": 2635912000000,
+        "gdpPerCapitaUsd": 12312.57,
+        "growthRatePct": 1.9,
+        "debtRatioPct": 96.5
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 1800046000000,
+        "gdpPerCapita": 8893.35,
+        "growthRate": -3.5,
+        "debtRatio": 71.7
+      },
+      {
+        "year": 2016,
+        "gdp": 1796622000000,
+        "gdpPerCapita": 8812.5,
+        "growthRate": -3.3,
+        "debtRatio": 77.4
+      },
+      {
+        "year": 2017,
+        "gdp": 2063519000000,
+        "gdpPerCapita": 10055.57,
+        "growthRate": 1.3,
+        "debtRatio": 82.7
+      },
+      {
+        "year": 2018,
+        "gdp": 1916934000000,
+        "gdpPerCapita": 9281.67,
+        "growthRate": 1.8,
+        "debtRatio": 84.8
+      },
+      {
+        "year": 2019,
+        "gdp": 1873286000000,
+        "gdpPerCapita": 9010.51,
+        "growthRate": 1.2,
+        "debtRatio": 87.1
+      },
+      {
+        "year": 2020,
+        "gdp": 1476092000000,
+        "gdpPerCapita": 7057.07,
+        "growthRate": -3.3,
+        "debtRatio": 96
+      },
+      {
+        "year": 2021,
+        "gdp": 1670650000000,
+        "gdpPerCapita": 7951.55,
+        "growthRate": 4.8,
+        "debtRatio": 88.9
+      },
+      {
+        "year": 2022,
+        "gdp": 1951849000000,
+        "gdpPerCapita": 9256.48,
+        "growthRate": 3,
+        "debtRatio": 83.9
+      },
+      {
+        "year": 2023,
+        "gdp": 2191137000000,
+        "gdpPerCapita": 10350.44,
+        "growthRate": 3.2,
+        "debtRatio": 84
+      },
+      {
+        "year": 2024,
+        "gdp": 2185822000000,
+        "gdpPerCapita": 10282.17,
+        "growthRate": 3.4,
+        "debtRatio": 87
+      },
+      {
+        "year": 2025,
+        "gdp": 2279918000000,
+        "gdpPerCapita": 10685.69,
+        "growthRate": 2.3,
+        "debtRatio": 93.3
+      },
+      {
+        "year": 2026,
+        "gdp": 2635912000000,
+        "gdpPerCapita": 12312.57,
+        "growthRate": 1.9,
+        "debtRatio": 96.5
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "CAN": {
+    "countryId": "CAN",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 2270076000000,
+        "gdpPerCapitaUsd": 55209.06,
+        "growthRatePct": 2,
+        "debtRatioPct": 110
+      },
+      "2025": {
+        "totalGdpUsd": 2319900000000,
+        "gdpPerCapitaUsd": 55764.71,
+        "growthRatePct": 1.7,
+        "debtRatioPct": 113.5
+      },
+      "2026": {
+        "totalGdpUsd": 2507340000000,
+        "gdpPerCapitaUsd": 60304.56,
+        "growthRatePct": 1.5,
+        "debtRatioPct": 110.7
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 1556508000000,
+        "gdpPerCapita": 43628.43,
+        "growthRate": 0.6,
+        "debtRatio": 92.3
+      },
+      {
+        "year": 2016,
+        "gdp": 1527996000000,
+        "gdpPerCapita": 42382.5,
+        "growthRate": 1,
+        "debtRatio": 92.5
+      },
+      {
+        "year": 2017,
+        "gdp": 1649266000000,
+        "gdpPerCapita": 45192.37,
+        "growthRate": 3,
+        "debtRatio": 91
+      },
+      {
+        "year": 2018,
+        "gdp": 1725300000000,
+        "gdpPerCapita": 46617.97,
+        "growthRate": 2.7,
+        "debtRatio": 90.8
+      },
+      {
+        "year": 2019,
+        "gdp": 1743725000000,
+        "gdpPerCapita": 46430.97,
+        "growthRate": 1.9,
+        "debtRatio": 90.1
+      },
+      {
+        "year": 2020,
+        "gdp": 1655685000000,
+        "gdpPerCapita": 43573.19,
+        "growthRate": -5,
+        "debtRatio": 118.1
+      },
+      {
+        "year": 2021,
+        "gdp": 2022382000000,
+        "gdpPerCapita": 52907.54,
+        "growthRate": 6,
+        "debtRatio": 112.6
+      },
+      {
+        "year": 2022,
+        "gdp": 2200567000000,
+        "gdpPerCapita": 56608.78,
+        "growthRate": 4.7,
+        "debtRatio": 103.5
+      },
+      {
+        "year": 2023,
+        "gdp": 2196594000000,
+        "gdpPerCapita": 55002.36,
+        "growthRate": 2,
+        "debtRatio": 105.1
+      },
+      {
+        "year": 2024,
+        "gdp": 2270076000000,
+        "gdpPerCapita": 55209.06,
+        "growthRate": 2,
+        "debtRatio": 110
+      },
+      {
+        "year": 2025,
+        "gdp": 2319900000000,
+        "gdpPerCapita": 55764.71,
+        "growthRate": 1.7,
+        "debtRatio": 113.5
+      },
+      {
+        "year": 2026,
+        "gdp": 2507340000000,
+        "gdpPerCapita": 60304.56,
+        "growthRate": 1.5,
+        "debtRatio": 110.7
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "RUS": {
+    "countryId": "RUS",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 2185848000000,
+        "gdpPerCapitaUsd": 15093.5,
+        "growthRatePct": 4.9,
+        "debtRatioPct": 14.8
+      },
+      "2025": {
+        "totalGdpUsd": 2587938000000,
+        "gdpPerCapitaUsd": 17972.12,
+        "growthRatePct": 1,
+        "debtRatioPct": 17.2
+      },
+      "2026": {
+        "totalGdpUsd": 2656452000000,
+        "gdpPerCapitaUsd": 18525.49,
+        "growthRatePct": 1.1,
+        "debtRatioPct": 19.1
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 1356703000000,
+        "gdpPerCapita": 9336.77,
+        "growthRate": -2,
+        "debtRatio": 15.3
+      },
+      {
+        "year": 2016,
+        "gdp": 1280648000000,
+        "gdpPerCapita": 8784.88,
+        "growthRate": 0.2,
+        "debtRatio": 14.8
+      },
+      {
+        "year": 2017,
+        "gdp": 1575140000000,
+        "gdpPerCapita": 10774.84,
+        "growthRate": 1.8,
+        "debtRatio": 14.3
+      },
+      {
+        "year": 2018,
+        "gdp": 1653005000000,
+        "gdpPerCapita": 11288.69,
+        "growthRate": 2.8,
+        "debtRatio": 13.6
+      },
+      {
+        "year": 2019,
+        "gdp": 1695724000000,
+        "gdpPerCapita": 11572.3,
+        "growthRate": 2.2,
+        "debtRatio": 13.7
+      },
+      {
+        "year": 2020,
+        "gdp": 1488118000000,
+        "gdpPerCapita": 10166.73,
+        "growthRate": -2.7,
+        "debtRatio": 19.2
+      },
+      {
+        "year": 2021,
+        "gdp": 1828927000000,
+        "gdpPerCapita": 12540.97,
+        "growthRate": 5.9,
+        "debtRatio": 16.5
+      },
+      {
+        "year": 2022,
+        "gdp": 2296410000000,
+        "gdpPerCapita": 15774.23,
+        "growthRate": -1.4,
+        "debtRatio": 15.1
+      },
+      {
+        "year": 2023,
+        "gdp": 2034681000000,
+        "gdpPerCapita": 13989.78,
+        "growthRate": 4.1,
+        "debtRatio": 15.2
+      },
+      {
+        "year": 2024,
+        "gdp": 2185848000000,
+        "gdpPerCapita": 15093.5,
+        "growthRate": 4.9,
+        "debtRatio": 14.8
+      },
+      {
+        "year": 2025,
+        "gdp": 2587938000000,
+        "gdpPerCapita": 17972.12,
+        "growthRate": 1,
+        "debtRatio": 17.2
+      },
+      {
+        "year": 2026,
+        "gdp": 2656452000000,
+        "gdpPerCapita": 18525.49,
+        "growthRate": 1.1,
+        "debtRatio": 19.1
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "MEX": {
+    "countryId": "MEX",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 1830489000000,
+        "gdpPerCapitaUsd": 13838.57,
+        "growthRatePct": 1.4,
+        "debtRatioPct": 59.1
+      },
+      "2025": {
+        "totalGdpUsd": 1832641000000,
+        "gdpPerCapitaUsd": 13741.3,
+        "growthRatePct": 0.6,
+        "debtRatioPct": 61.8
+      },
+      "2026": {
+        "totalGdpUsd": 2120855000000,
+        "gdpPerCapitaUsd": 15779.32,
+        "growthRatePct": 1.6,
+        "debtRatioPct": 62.7
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 1213294000000,
+        "gdpPerCapita": 9915.09,
+        "growthRate": 2.7,
+        "debtRatio": 51
+      },
+      {
+        "year": 2016,
+        "gdp": 1112233000000,
+        "gdpPerCapita": 8999.57,
+        "growthRate": 1.8,
+        "debtRatio": 55
+      },
+      {
+        "year": 2017,
+        "gdp": 1190721000000,
+        "gdpPerCapita": 9542.78,
+        "growthRate": 1.9,
+        "debtRatio": 52.5
+      },
+      {
+        "year": 2018,
+        "gdp": 1256300000000,
+        "gdpPerCapita": 9970.97,
+        "growthRate": 2,
+        "debtRatio": 52.2
+      },
+      {
+        "year": 2019,
+        "gdp": 1304106000000,
+        "gdpPerCapita": 10251.15,
+        "growthRate": -0.4,
+        "debtRatio": 51.9
+      },
+      {
+        "year": 2020,
+        "gdp": 1121065000000,
+        "gdpPerCapita": 8744.03,
+        "growthRate": -8.4,
+        "debtRatio": 58.5
+      },
+      {
+        "year": 2021,
+        "gdp": 1316569000000,
+        "gdpPerCapita": 10207.32,
+        "growthRate": 6,
+        "debtRatio": 56.7
+      },
+      {
+        "year": 2022,
+        "gdp": 1466935000000,
+        "gdpPerCapita": 11287.53,
+        "growthRate": 3.7,
+        "debtRatio": 53.8
+      },
+      {
+        "year": 2023,
+        "gdp": 1794410000000,
+        "gdpPerCapita": 13683.65,
+        "growthRate": 3.1,
+        "debtRatio": 52.8
+      },
+      {
+        "year": 2024,
+        "gdp": 1830489000000,
+        "gdpPerCapita": 13838.57,
+        "growthRate": 1.4,
+        "debtRatio": 59.1
+      },
+      {
+        "year": 2025,
+        "gdp": 1832641000000,
+        "gdpPerCapita": 13741.3,
+        "growthRate": 0.6,
+        "debtRatio": 61.8
+      },
+      {
+        "year": 2026,
+        "gdp": 2120855000000,
+        "gdpPerCapita": 15779.32,
+        "growthRate": 1.6,
+        "debtRatio": 62.7
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "AUS": {
+    "countryId": "AUS",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 1799418000000,
+        "gdpPerCapitaUsd": 65700.94,
+        "growthRatePct": 1,
+        "debtRatioPct": 50.6
+      },
+      "2025": {
+        "totalGdpUsd": 1839961000000,
+        "gdpPerCapitaUsd": 66351.86,
+        "growthRatePct": 2,
+        "debtRatioPct": 51
+      },
+      "2026": {
+        "totalGdpUsd": 2123963000000,
+        "gdpPerCapitaUsd": 75647.84,
+        "growthRatePct": 2,
+        "debtRatioPct": 50.6
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 1238863000000,
+        "gdpPerCapita": 51652.46,
+        "growthRate": 2.3,
+        "debtRatio": 37.6
+      },
+      {
+        "year": 2016,
+        "gdp": 1267660000000,
+        "gdpPerCapita": 51985.08,
+        "growthRate": 2.7,
+        "debtRatio": 40.5
+      },
+      {
+        "year": 2017,
+        "gdp": 1386367000000,
+        "gdpPerCapita": 55994.41,
+        "growthRate": 2.4,
+        "debtRatio": 41
+      },
+      {
+        "year": 2018,
+        "gdp": 1422597000000,
+        "gdpPerCapita": 56573.19,
+        "growthRate": 2.8,
+        "debtRatio": 41.6
+      },
+      {
+        "year": 2019,
+        "gdp": 1391987000000,
+        "gdpPerCapita": 54543.96,
+        "growthRate": 2,
+        "debtRatio": 46.5
+      },
+      {
+        "year": 2020,
+        "gdp": 1366669000000,
+        "gdpPerCapita": 53321.57,
+        "growthRate": -2,
+        "debtRatio": 56.9
+      },
+      {
+        "year": 2021,
+        "gdp": 1660123000000,
+        "gdpPerCapita": 64411.29,
+        "growthRate": 5.4,
+        "debtRatio": 55.4
+      },
+      {
+        "year": 2022,
+        "gdp": 1731233000000,
+        "gdpPerCapita": 65775.62,
+        "growthRate": 4.2,
+        "debtRatio": 50
+      },
+      {
+        "year": 2023,
+        "gdp": 1748175000000,
+        "gdpPerCapita": 64851.31,
+        "growthRate": 2.1,
+        "debtRatio": 49.4
+      },
+      {
+        "year": 2024,
+        "gdp": 1799418000000,
+        "gdpPerCapita": 65700.94,
+        "growthRate": 1,
+        "debtRatio": 50.6
+      },
+      {
+        "year": 2025,
+        "gdp": 1839961000000,
+        "gdpPerCapita": 66351.86,
+        "growthRate": 2,
+        "debtRatio": 51
+      },
+      {
+        "year": 2026,
+        "gdp": 2123963000000,
+        "gdpPerCapita": 75647.84,
+        "growthRate": 2,
+        "debtRatio": 50.6
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "KOR": {
+    "countryId": "KOR",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 1875388000000,
+        "gdpPerCapitaUsd": 36238.64,
+        "growthRatePct": 2,
+        "debtRatioPct": 49.7
+      },
+      "2025": {
+        "totalGdpUsd": 1872375000000,
+        "gdpPerCapitaUsd": 36226.96,
+        "growthRatePct": 1,
+        "debtRatioPct": 52.3
+      },
+      "2026": {
+        "totalGdpUsd": 1931008000000,
+        "gdpPerCapitaUsd": 37412.07,
+        "growthRatePct": 1.9,
+        "debtRatioPct": 54.4
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 1539212000000,
+        "gdpPerCapita": 30171.79,
+        "growthRate": 2.9,
+        "debtRatio": 38.8
+      },
+      {
+        "year": 2016,
+        "gdp": 1578816000000,
+        "gdpPerCapita": 30825.52,
+        "growthRate": 3.2,
+        "debtRatio": 39.1
+      },
+      {
+        "year": 2017,
+        "gdp": 1710197000000,
+        "gdpPerCapita": 33296.98,
+        "growthRate": 3.4,
+        "debtRatio": 38
+      },
+      {
+        "year": 2018,
+        "gdp": 1824251000000,
+        "gdpPerCapita": 35363.95,
+        "growthRate": 3.2,
+        "debtRatio": 37.9
+      },
+      {
+        "year": 2019,
+        "gdp": 1751046000000,
+        "gdpPerCapita": 33826.94,
+        "growthRate": 2.3,
+        "debtRatio": 39.7
+      },
+      {
+        "year": 2020,
+        "gdp": 1744455000000,
+        "gdpPerCapita": 33653.2,
+        "growthRate": -0.7,
+        "debtRatio": 45.9
+      },
+      {
+        "year": 2021,
+        "gdp": 1942314000000,
+        "gdpPerCapita": 37518.46,
+        "growthRate": 4.6,
+        "debtRatio": 48
+      },
+      {
+        "year": 2022,
+        "gdp": 1799363000000,
+        "gdpPerCapita": 34822.41,
+        "growthRate": 2.7,
+        "debtRatio": 49.8
+      },
+      {
+        "year": 2023,
+        "gdp": 1844801000000,
+        "gdpPerCapita": 35674.1,
+        "growthRate": 1.6,
+        "debtRatio": 50.5
+      },
+      {
+        "year": 2024,
+        "gdp": 1875388000000,
+        "gdpPerCapita": 36238.64,
+        "growthRate": 2,
+        "debtRatio": 49.7
+      },
+      {
+        "year": 2025,
+        "gdp": 1872375000000,
+        "gdpPerCapita": 36226.96,
+        "growthRate": 1,
+        "debtRatio": 52.3
+      },
+      {
+        "year": 2026,
+        "gdp": 1931008000000,
+        "gdpPerCapita": 37412.07,
+        "growthRate": 1.9,
+        "debtRatio": 54.4
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "ESP": {
+    "countryId": "ESP",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 1725152000000,
+        "gdpPerCapitaUsd": 35151.24,
+        "growthRatePct": 3.5,
+        "debtRatioPct": 101.6
+      },
+      "2025": {
+        "totalGdpUsd": 1903826000000,
+        "gdpPerCapitaUsd": 38290.39,
+        "growthRatePct": 2.8,
+        "debtRatioPct": 100.4
+      },
+      "2026": {
+        "totalGdpUsd": 2091222000000,
+        "gdpPerCapitaUsd": 41563.18,
+        "growthRatePct": 2.1,
+        "debtRatioPct": 98.2
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 1206287000000,
+        "gdpPerCapita": 25986.99,
+        "growthRate": 4.1,
+        "debtRatio": 102.4
+      },
+      {
+        "year": 2016,
+        "gdp": 1242673000000,
+        "gdpPerCapita": 26725.64,
+        "growthRate": 2.9,
+        "debtRatio": 102
+      },
+      {
+        "year": 2017,
+        "gdp": 1321288000000,
+        "gdpPerCapita": 28326.42,
+        "growthRate": 2.9,
+        "debtRatio": 101.1
+      },
+      {
+        "year": 2018,
+        "gdp": 1432292000000,
+        "gdpPerCapita": 30526.94,
+        "growthRate": 2.4,
+        "debtRatio": 99.7
+      },
+      {
+        "year": 2019,
+        "gdp": 1403651000000,
+        "gdpPerCapita": 29664.18,
+        "growthRate": 2,
+        "debtRatio": 97.6
+      },
+      {
+        "year": 2020,
+        "gdp": 1288751000000,
+        "gdpPerCapita": 27188.39,
+        "growthRate": -10.9,
+        "debtRatio": 119.2
+      },
+      {
+        "year": 2021,
+        "gdp": 1462216000000,
+        "gdpPerCapita": 30792.11,
+        "growthRate": 6.7,
+        "debtRatio": 115.6
+      },
+      {
+        "year": 2022,
+        "gdp": 1449990000000,
+        "gdpPerCapita": 30154.51,
+        "growthRate": 6.4,
+        "debtRatio": 109.2
+      },
+      {
+        "year": 2023,
+        "gdp": 1619949000000,
+        "gdpPerCapita": 33312.92,
+        "growthRate": 2.5,
+        "debtRatio": 105.1
+      },
+      {
+        "year": 2024,
+        "gdp": 1725152000000,
+        "gdpPerCapita": 35151.24,
+        "growthRate": 3.5,
+        "debtRatio": 101.6
+      },
+      {
+        "year": 2025,
+        "gdp": 1903826000000,
+        "gdpPerCapita": 38290.39,
+        "growthRate": 2.8,
+        "debtRatio": 100.4
+      },
+      {
+        "year": 2026,
+        "gdp": 2091222000000,
+        "gdpPerCapita": 41563.18,
+        "growthRate": 2.1,
+        "debtRatio": 98.2
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "IDN": {
+    "countryId": "IDN",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 1396302000000,
+        "gdpPerCapitaUsd": 4958.39,
+        "growthRatePct": 5,
+        "debtRatioPct": 40.2
+      },
+      "2025": {
+        "totalGdpUsd": 1445642000000,
+        "gdpPerCapitaUsd": 5082.44,
+        "growthRatePct": 5.1,
+        "debtRatioPct": 41
+      },
+      "2026": {
+        "totalGdpUsd": 1539872000000,
+        "gdpPerCapitaUsd": 5361.7,
+        "growthRatePct": 5,
+        "debtRatioPct": 41.5
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 860854000000,
+        "gdpPerCapita": 3373.49,
+        "growthRate": 4.9,
+        "debtRatio": 27
+      },
+      {
+        "year": 2016,
+        "gdp": 931877000000,
+        "gdpPerCapita": 3604.99,
+        "growthRate": 5,
+        "debtRatio": 28
+      },
+      {
+        "year": 2017,
+        "gdp": 1015619000000,
+        "gdpPerCapita": 3885.97,
+        "growthRate": 5.1,
+        "debtRatio": 29.4
+      },
+      {
+        "year": 2018,
+        "gdp": 1042272000000,
+        "gdpPerCapita": 3945.58,
+        "growthRate": 5.2,
+        "debtRatio": 30.4
+      },
+      {
+        "year": 2019,
+        "gdp": 1119100000000,
+        "gdpPerCapita": 4192.77,
+        "growthRate": 5,
+        "debtRatio": 30.6
+      },
+      {
+        "year": 2020,
+        "gdp": 1059055000000,
+        "gdpPerCapita": 3919.47,
+        "growthRate": -2.1,
+        "debtRatio": 39.7
+      },
+      {
+        "year": 2021,
+        "gdp": 1186510000000,
+        "gdpPerCapita": 4351.3,
+        "growthRate": 3.7,
+        "debtRatio": 41.1
+      },
+      {
+        "year": 2022,
+        "gdp": 1319101000000,
+        "gdpPerCapita": 4784.21,
+        "growthRate": 5.3,
+        "debtRatio": 40.1
+      },
+      {
+        "year": 2023,
+        "gdp": 1371167000000,
+        "gdpPerCapita": 4919.93,
+        "growthRate": 5,
+        "debtRatio": 39.6
+      },
+      {
+        "year": 2024,
+        "gdp": 1396302000000,
+        "gdpPerCapita": 4958.39,
+        "growthRate": 5,
+        "debtRatio": 40.2
+      },
+      {
+        "year": 2025,
+        "gdp": 1445642000000,
+        "gdpPerCapita": 5082.44,
+        "growthRate": 5.1,
+        "debtRatio": 41
+      },
+      {
+        "year": 2026,
+        "gdp": 1539872000000,
+        "gdpPerCapita": 5361.7,
+        "growthRate": 5,
+        "debtRatio": 41.5
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "TUR": {
+    "countryId": "TUR",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 1358251000000,
+        "gdpPerCapitaUsd": 15882.63,
+        "growthRatePct": 3.3,
+        "debtRatioPct": 23.6
+      },
+      "2025": {
+        "totalGdpUsd": 1597301000000,
+        "gdpPerCapitaUsd": 18611.14,
+        "growthRatePct": 3.6,
+        "debtRatioPct": 23.5
+      },
+      "2026": {
+        "totalGdpUsd": 1640223000000,
+        "gdpPerCapitaUsd": 19018.18,
+        "growthRatePct": 3.4,
+        "debtRatioPct": 25.5
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 868204000000,
+        "gdpPerCapita": 11099.8,
+        "growthRate": 5.8,
+        "debtRatio": 26.5
+      },
+      {
+        "year": 2016,
+        "gdp": 870339000000,
+        "gdpPerCapita": 10978.31,
+        "growthRate": 3.3,
+        "debtRatio": 27
+      },
+      {
+        "year": 2017,
+        "gdp": 863906000000,
+        "gdpPerCapita": 10756.74,
+        "growthRate": 7.8,
+        "debtRatio": 26.9
+      },
+      {
+        "year": 2018,
+        "gdp": 807318000000,
+        "gdpPerCapita": 9917.05,
+        "growthRate": 3.5,
+        "debtRatio": 28.8
+      },
+      {
+        "year": 2019,
+        "gdp": 775223000000,
+        "gdpPerCapita": 9387.65,
+        "growthRate": 1.3,
+        "debtRatio": 31.2
+      },
+      {
+        "year": 2020,
+        "gdp": 730345000000,
+        "gdpPerCapita": 8758.7,
+        "growthRate": 1.8,
+        "debtRatio": 38.3
+      },
+      {
+        "year": 2021,
+        "gdp": 827673000000,
+        "gdpPerCapita": 9836.04,
+        "growthRate": 11.8,
+        "debtRatio": 38.9
+      },
+      {
+        "year": 2022,
+        "gdp": 924752000000,
+        "gdpPerCapita": 10881.99,
+        "growthRate": 5.4,
+        "debtRatio": 29.4
+      },
+      {
+        "year": 2023,
+        "gdp": 1153295000000,
+        "gdpPerCapita": 13516.33,
+        "growthRate": 5,
+        "debtRatio": 28.2
+      },
+      {
+        "year": 2024,
+        "gdp": 1358251000000,
+        "gdpPerCapita": 15882.63,
+        "growthRate": 3.3,
+        "debtRatio": 23.6
+      },
+      {
+        "year": 2025,
+        "gdp": 1597301000000,
+        "gdpPerCapita": 18611.14,
+        "growthRate": 3.6,
+        "debtRatio": 23.5
+      },
+      {
+        "year": 2026,
+        "gdp": 1640223000000,
+        "gdpPerCapita": 19018.18,
+        "growthRate": 3.4,
+        "debtRatio": 25.5
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "NLD": {
+    "countryId": "NLD",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 1214562000000,
+        "gdpPerCapitaUsd": 67690.23,
+        "growthRatePct": 1.1,
+        "debtRatioPct": 43.7
+      },
+      "2025": {
+        "totalGdpUsd": 1332240000000,
+        "gdpPerCapitaUsd": 73832.75,
+        "growthRatePct": 1.9,
+        "debtRatioPct": 43.3
+      },
+      "2026": {
+        "totalGdpUsd": 1449704000000,
+        "gdpPerCapitaUsd": 79917.5,
+        "growthRatePct": 1.2,
+        "debtRatioPct": 44.1
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 775822000000,
+        "gdpPerCapita": 45904.67,
+        "growthRate": 2.1,
+        "debtRatio": 63.8
+      },
+      {
+        "year": 2016,
+        "gdp": 796944000000,
+        "gdpPerCapita": 46936.71,
+        "growthRate": 2.4,
+        "debtRatio": 60.9
+      },
+      {
+        "year": 2017,
+        "gdp": 847934000000,
+        "gdpPerCapita": 49640.48,
+        "growthRate": 2.8,
+        "debtRatio": 56
+      },
+      {
+        "year": 2018,
+        "gdp": 930155000000,
+        "gdpPerCapita": 54138.33,
+        "growthRate": 2.3,
+        "debtRatio": 51.6
+      },
+      {
+        "year": 2019,
+        "gdp": 929006000000,
+        "gdpPerCapita": 53755.17,
+        "growthRate": 2.3,
+        "debtRatio": 47.7
+      },
+      {
+        "year": 2020,
+        "gdp": 931814000000,
+        "gdpPerCapita": 53529.22,
+        "growthRate": -3.9,
+        "debtRatio": 53.4
+      },
+      {
+        "year": 2021,
+        "gdp": 1055173000000,
+        "gdpPerCapita": 60380.43,
+        "growthRate": 6.3,
+        "debtRatio": 50.5
+      },
+      {
+        "year": 2022,
+        "gdp": 1047364000000,
+        "gdpPerCapita": 59540.88,
+        "growthRate": 5,
+        "debtRatio": 48.4
+      },
+      {
+        "year": 2023,
+        "gdp": 1135803000000,
+        "gdpPerCapita": 63768.73,
+        "growthRate": -0.6,
+        "debtRatio": 45.8
+      },
+      {
+        "year": 2024,
+        "gdp": 1214562000000,
+        "gdpPerCapita": 67690.23,
+        "growthRate": 1.1,
+        "debtRatio": 43.7
+      },
+      {
+        "year": 2025,
+        "gdp": 1332240000000,
+        "gdpPerCapita": 73832.75,
+        "growthRate": 1.9,
+        "debtRatio": 43.3
+      },
+      {
+        "year": 2026,
+        "gdp": 1449704000000,
+        "gdpPerCapita": 79917.5,
+        "growthRate": 1.2,
+        "debtRatio": 44.1
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "SAU": {
+    "countryId": "SAU",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 1254141000000,
+        "gdpPerCapitaUsd": 35527.79,
+        "growthRatePct": 2.6,
+        "debtRatioPct": 25.9
+      },
+      "2025": {
+        "totalGdpUsd": 1276943000000,
+        "gdpPerCapitaUsd": 35464.44,
+        "growthRatePct": 4.5,
+        "debtRatioPct": 31.7
+      },
+      "2026": {
+        "totalGdpUsd": 1388676000000,
+        "gdpPerCapitaUsd": 37811.37,
+        "growthRatePct": 3.1,
+        "debtRatioPct": 32.1
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 693415000000,
+        "gdpPerCapita": 23256.17,
+        "growthRate": 4.7,
+        "debtRatio": 5.5
+      },
+      {
+        "year": 2016,
+        "gdp": 689279000000,
+        "gdpPerCapita": 22267.72,
+        "growthRate": 1.7,
+        "debtRatio": 12.2
+      },
+      {
+        "year": 2017,
+        "gdp": 741266000000,
+        "gdpPerCapita": 23929.28,
+        "growthRate": 1.2,
+        "debtRatio": 15.9
+      },
+      {
+        "year": 2018,
+        "gdp": 886564000000,
+        "gdpPerCapita": 29360.03,
+        "growthRate": 3.2,
+        "debtRatio": 16.8
+      },
+      {
+        "year": 2019,
+        "gdp": 888888000000,
+        "gdpPerCapita": 29566.71,
+        "growthRate": 1.7,
+        "debtRatio": 20.3
+      },
+      {
+        "year": 2020,
+        "gdp": 767303000000,
+        "gdpPerCapita": 24318.28,
+        "growthRate": -3.8,
+        "debtRatio": 29.7
+      },
+      {
+        "year": 2021,
+        "gdp": 982661000000,
+        "gdpPerCapita": 31920.76,
+        "growthRate": 6.5,
+        "debtRatio": 25.5
+      },
+      {
+        "year": 2022,
+        "gdp": 1239075000000,
+        "gdpPerCapita": 38510.24,
+        "growthRate": 12,
+        "debtRatio": 21.3
+      },
+      {
+        "year": 2023,
+        "gdp": 1218585000000,
+        "gdpPerCapita": 36156.85,
+        "growthRate": 0.5,
+        "debtRatio": 23
+      },
+      {
+        "year": 2024,
+        "gdp": 1254141000000,
+        "gdpPerCapita": 35527.79,
+        "growthRate": 2.6,
+        "debtRatio": 25.9
+      },
+      {
+        "year": 2025,
+        "gdp": 1276943000000,
+        "gdpPerCapita": 35464.44,
+        "growthRate": 4.5,
+        "debtRatio": 31.7
+      },
+      {
+        "year": 2026,
+        "gdp": 1388676000000,
+        "gdpPerCapita": 37811.37,
+        "growthRate": 3.1,
+        "debtRatio": 32.1
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "CHE": {
+    "countryId": "CHE",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 970190000000,
+        "gdpPerCapitaUsd": 108255.92,
+        "growthRatePct": 1.4,
+        "debtRatioPct": 40.5
+      },
+      "2025": {
+        "totalGdpUsd": 1043544000000,
+        "gdpPerCapitaUsd": 115620.13,
+        "growthRatePct": 1.3,
+        "debtRatioPct": 39.4
+      },
+      "2026": {
+        "totalGdpUsd": 1146911000000,
+        "gdpPerCapitaUsd": 126176.83,
+        "growthRatePct": 1.3,
+        "debtRatioPct": 38.5
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 705861000000,
+        "gdpPerCapita": 85683.48,
+        "growthRate": 1.4,
+        "debtRatio": 41.4
+      },
+      {
+        "year": 2016,
+        "gdp": 698552000000,
+        "gdpPerCapita": 83889.96,
+        "growthRate": 2,
+        "debtRatio": 40.3
+      },
+      {
+        "year": 2017,
+        "gdp": 706894000000,
+        "gdpPerCapita": 83954.21,
+        "growthRate": 1.5,
+        "debtRatio": 41.1
+      },
+      {
+        "year": 2018,
+        "gdp": 741219000000,
+        "gdpPerCapita": 87366.69,
+        "growthRate": 3.4,
+        "debtRatio": 39
+      },
+      {
+        "year": 2019,
+        "gdp": 736850000000,
+        "gdpPerCapita": 86231.74,
+        "growthRate": 1.1,
+        "debtRatio": 38.8
+      },
+      {
+        "year": 2020,
+        "gdp": 755582000000,
+        "gdpPerCapita": 87797.15,
+        "growthRate": -2.4,
+        "debtRatio": 42.4
+      },
+      {
+        "year": 2021,
+        "gdp": 840084000000,
+        "gdpPerCapita": 96895.47,
+        "growthRate": 6.2,
+        "debtRatio": 39.7
+      },
+      {
+        "year": 2022,
+        "gdp": 858345000000,
+        "gdpPerCapita": 98220.06,
+        "growthRate": 3.6,
+        "debtRatio": 35.9
+      },
+      {
+        "year": 2023,
+        "gdp": 928689000000,
+        "gdpPerCapita": 105353.24,
+        "growthRate": 0.9,
+        "debtRatio": 37.3
+      },
+      {
+        "year": 2024,
+        "gdp": 970190000000,
+        "gdpPerCapita": 108255.92,
+        "growthRate": 1.4,
+        "debtRatio": 40.5
+      },
+      {
+        "year": 2025,
+        "gdp": 1043544000000,
+        "gdpPerCapita": 115620.13,
+        "growthRate": 1.3,
+        "debtRatio": 39.4
+      },
+      {
+        "year": 2026,
+        "gdp": 1146911000000,
+        "gdpPerCapita": 126176.83,
+        "growthRate": 1.3,
+        "debtRatio": 38.5
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "POL": {
+    "countryId": "POL",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 917623000000,
+        "gdpPerCapitaUsd": 25057.31,
+        "growthRatePct": 3,
+        "debtRatioPct": 55.1
+      },
+      "2025": {
+        "totalGdpUsd": 1035586000000,
+        "gdpPerCapitaUsd": 28374.17,
+        "growthRatePct": 3.6,
+        "debtRatioPct": 58.8
+      },
+      "2026": {
+        "totalGdpUsd": 1134248000000,
+        "gdpPerCapitaUsd": 31335.95,
+        "growthRatePct": 3.3,
+        "debtRatioPct": 65.7
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 479729000000,
+        "gdpPerCapita": 12622.57,
+        "growthRate": 4.4,
+        "debtRatio": 51.1
+      },
+      {
+        "year": 2016,
+        "gdp": 472883000000,
+        "gdpPerCapita": 12455.03,
+        "growthRate": 3,
+        "debtRatio": 54.1
+      },
+      {
+        "year": 2017,
+        "gdp": 528497000000,
+        "gdpPerCapita": 13917.7,
+        "growthRate": 5.2,
+        "debtRatio": 50.4
+      },
+      {
+        "year": 2018,
+        "gdp": 594641000000,
+        "gdpPerCapita": 15658.06,
+        "growthRate": 6.2,
+        "debtRatio": 48.2
+      },
+      {
+        "year": 2019,
+        "gdp": 602592000000,
+        "gdpPerCapita": 15869.04,
+        "growthRate": 4.6,
+        "debtRatio": 45.2
+      },
+      {
+        "year": 2020,
+        "gdp": 605930000000,
+        "gdpPerCapita": 15963.1,
+        "growthRate": -2,
+        "debtRatio": 56.6
+      },
+      {
+        "year": 2021,
+        "gdp": 689253000000,
+        "gdpPerCapita": 18591.61,
+        "growthRate": 6.9,
+        "debtRatio": 53
+      },
+      {
+        "year": 2022,
+        "gdp": 695734000000,
+        "gdpPerCapita": 18859.8,
+        "growthRate": 5.3,
+        "debtRatio": 48.8
+      },
+      {
+        "year": 2023,
+        "gdp": 812959000000,
+        "gdpPerCapita": 22119.08,
+        "growthRate": 0.2,
+        "debtRatio": 49.5
+      },
+      {
+        "year": 2024,
+        "gdp": 917623000000,
+        "gdpPerCapita": 25057.31,
+        "growthRate": 3,
+        "debtRatio": 55.1
+      },
+      {
+        "year": 2025,
+        "gdp": 1035586000000,
+        "gdpPerCapita": 28374.17,
+        "growthRate": 3.6,
+        "debtRatio": 58.8
+      },
+      {
+        "year": 2026,
+        "gdp": 1134248000000,
+        "gdpPerCapita": 31335.95,
+        "growthRate": 3.3,
+        "debtRatio": 65.7
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "SWE": {
+    "countryId": "SWE",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 604827000000,
+        "gdpPerCapitaUsd": 57125.42,
+        "growthRatePct": 1,
+        "debtRatioPct": 33.9
+      },
+      "2025": {
+        "totalGdpUsd": 668999000000,
+        "gdpPerCapitaUsd": 62661.79,
+        "growthRatePct": 1.5,
+        "debtRatioPct": 34.9
+      },
+      "2026": {
+        "totalGdpUsd": 760481000000,
+        "gdpPerCapitaUsd": 70675.66,
+        "growthRatePct": 2,
+        "debtRatioPct": 36.7
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 501602000000,
+        "gdpPerCapita": 50918.84,
+        "growthRate": 4.4,
+        "debtRatio": 44.5
+      },
+      {
+        "year": 2016,
+        "gdp": 513058000000,
+        "gdpPerCapita": 51330.71,
+        "growthRate": 2.1,
+        "debtRatio": 42.9
+      },
+      {
+        "year": 2017,
+        "gdp": 535172000000,
+        "gdpPerCapita": 52881.38,
+        "growthRate": 1.9,
+        "debtRatio": 41.6
+      },
+      {
+        "year": 2018,
+        "gdp": 549649000000,
+        "gdpPerCapita": 53728.19,
+        "growthRate": 1.8,
+        "debtRatio": 39.9
+      },
+      {
+        "year": 2019,
+        "gdp": 530894000000,
+        "gdpPerCapita": 51405.43,
+        "growthRate": 2.6,
+        "debtRatio": 35.8
+      },
+      {
+        "year": 2020,
+        "gdp": 544266000000,
+        "gdpPerCapita": 52437.63,
+        "growthRate": -1.9,
+        "debtRatio": 40.4
+      },
+      {
+        "year": 2021,
+        "gdp": 631693000000,
+        "gdpPerCapita": 60435.67,
+        "growthRate": 5.2,
+        "debtRatio": 37.3
+      },
+      {
+        "year": 2022,
+        "gdp": 575071000000,
+        "gdpPerCapita": 54656.48,
+        "growthRate": 1.3,
+        "debtRatio": 34.2
+      },
+      {
+        "year": 2023,
+        "gdp": 578991000000,
+        "gdpPerCapita": 54871.78,
+        "growthRate": -0.2,
+        "debtRatio": 32.1
+      },
+      {
+        "year": 2024,
+        "gdp": 604827000000,
+        "gdpPerCapita": 57125.42,
+        "growthRate": 1,
+        "debtRatio": 33.9
+      },
+      {
+        "year": 2025,
+        "gdp": 668999000000,
+        "gdpPerCapita": 62661.79,
+        "growthRate": 1.5,
+        "debtRatio": 34.9
+      },
+      {
+        "year": 2026,
+        "gdp": 760481000000,
+        "gdpPerCapita": 70675.66,
+        "growthRate": 2,
+        "debtRatio": 36.7
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "BEL": {
+    "countryId": "BEL",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 671168000000,
+        "gdpPerCapitaUsd": 56796.37,
+        "growthRatePct": 1.1,
+        "debtRatioPct": 103.9
+      },
+      "2025": {
+        "totalGdpUsd": 724917000000,
+        "gdpPerCapitaUsd": 61002.01,
+        "growthRatePct": 1,
+        "debtRatioPct": 106.3
+      },
+      "2026": {
+        "totalGdpUsd": 776730000000,
+        "gdpPerCapitaUsd": 65111.57,
+        "growthRatePct": 0.7,
+        "debtRatioPct": 109.2
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 461091000000,
+        "gdpPerCapita": 41032.32,
+        "growthRate": 1.5,
+        "debtRatio": 105.6
+      },
+      {
+        "year": 2016,
+        "gdp": 474141000000,
+        "gdpPerCapita": 41918.1,
+        "growthRate": 1.2,
+        "debtRatio": 105.5
+      },
+      {
+        "year": 2017,
+        "gdp": 500733000000,
+        "gdpPerCapita": 44110.72,
+        "growthRate": 1.5,
+        "debtRatio": 102.5
+      },
+      {
+        "year": 2018,
+        "gdp": 542885000000,
+        "gdpPerCapita": 47627.41,
+        "growthRate": 1.9,
+        "debtRatio": 100.1
+      },
+      {
+        "year": 2019,
+        "gdp": 536787000000,
+        "gdpPerCapita": 46858.36,
+        "growthRate": 2.4,
+        "debtRatio": 97.6
+      },
+      {
+        "year": 2020,
+        "gdp": 529269000000,
+        "gdpPerCapita": 45933.8,
+        "growthRate": -4.8,
+        "debtRatio": 111.2
+      },
+      {
+        "year": 2021,
+        "gdp": 598920000000,
+        "gdpPerCapita": 51833.16,
+        "growthRate": 6.3,
+        "debtRatio": 108.5
+      },
+      {
+        "year": 2022,
+        "gdp": 591551000000,
+        "gdpPerCapita": 50918.39,
+        "growthRate": 4,
+        "debtRatio": 103.1
+      },
+      {
+        "year": 2023,
+        "gdp": 651518000000,
+        "gdpPerCapita": 55482.37,
+        "growthRate": 1.7,
+        "debtRatio": 102.2
+      },
+      {
+        "year": 2024,
+        "gdp": 671168000000,
+        "gdpPerCapita": 56796.37,
+        "growthRate": 1.1,
+        "debtRatio": 103.9
+      },
+      {
+        "year": 2025,
+        "gdp": 724917000000,
+        "gdpPerCapita": 61002.01,
+        "growthRate": 1,
+        "debtRatio": 106.3
+      },
+      {
+        "year": 2026,
+        "gdp": 776730000000,
+        "gdpPerCapita": 65111.57,
+        "growthRate": 0.7,
+        "debtRatio": 109.2
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "ARG": {
+    "countryId": "ARG",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 637234000000,
+        "gdpPerCapitaUsd": 13538.69,
+        "growthRatePct": -1.3,
+        "debtRatioPct": 84.7
+      },
+      "2025": {
+        "totalGdpUsd": 681485000000,
+        "gdpPerCapitaUsd": 14354.99,
+        "growthRatePct": 4.4,
+        "debtRatioPct": 80.3
+      },
+      "2026": {
+        "totalGdpUsd": 688378000000,
+        "gdpPerCapitaUsd": 14356.62,
+        "growthRatePct": 3.5,
+        "debtRatioPct": 70.4
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 642464000000,
+        "gdpPerCapita": 14895.32,
+        "growthRate": 2.7,
+        "debtRatio": 52.6
+      },
+      {
+        "year": 2016,
+        "gdp": 556774000000,
+        "gdpPerCapita": 12772.87,
+        "growthRate": -2.1,
+        "debtRatio": 53.1
+      },
+      {
+        "year": 2017,
+        "gdp": 643861000000,
+        "gdpPerCapita": 14618.33,
+        "growthRate": 2.8,
+        "debtRatio": 57
+      },
+      {
+        "year": 2018,
+        "gdp": 524431000000,
+        "gdpPerCapita": 11786.43,
+        "growthRate": -2.6,
+        "debtRatio": 85.2
+      },
+      {
+        "year": 2019,
+        "gdp": 446762000000,
+        "gdpPerCapita": 9941.59,
+        "growthRate": -2,
+        "debtRatio": 89.8
+      },
+      {
+        "year": 2020,
+        "gdp": 385218000000,
+        "gdpPerCapita": 8489.33,
+        "growthRate": -9.9,
+        "debtRatio": 103.8
+      },
+      {
+        "year": 2021,
+        "gdp": 486040000000,
+        "gdpPerCapita": 10610.19,
+        "growthRate": 10.4,
+        "debtRatio": 81
+      },
+      {
+        "year": 2022,
+        "gdp": 633520000000,
+        "gdpPerCapita": 13702.23,
+        "growthRate": 6,
+        "debtRatio": 84.3
+      },
+      {
+        "year": 2023,
+        "gdp": 648895000000,
+        "gdpPerCapita": 13908.49,
+        "growthRate": -1.9,
+        "debtRatio": 154.6
+      },
+      {
+        "year": 2024,
+        "gdp": 637234000000,
+        "gdpPerCapita": 13538.69,
+        "growthRate": -1.3,
+        "debtRatio": 84.7
+      },
+      {
+        "year": 2025,
+        "gdp": 681485000000,
+        "gdpPerCapita": 14354.99,
+        "growthRate": 4.4,
+        "debtRatio": 80.3
+      },
+      {
+        "year": 2026,
+        "gdp": 688378000000,
+        "gdpPerCapita": 14356.62,
+        "growthRate": 3.5,
+        "debtRatio": 70.4
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "IRL": {
+    "countryId": "IRL",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 608974000000,
+        "gdpPerCapitaUsd": 112355.76,
+        "growthRatePct": 2.6,
+        "debtRatioPct": 38.3
+      },
+      "2025": {
+        "totalGdpUsd": 718140000000,
+        "gdpPerCapitaUsd": 130652.36,
+        "growthRatePct": 12.3,
+        "debtRatioPct": 32.9
+      },
+      "2026": {
+        "totalGdpUsd": 779381000000,
+        "gdpPerCapitaUsd": 140185.68,
+        "growthRatePct": 2.5,
+        "debtRatioPct": 31.6
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 302133000000,
+        "gdpPerCapita": 64093.56,
+        "growthRate": 24.6,
+        "debtRatio": 74
+      },
+      {
+        "year": 2016,
+        "gdp": 305347000000,
+        "gdpPerCapita": 63870.73,
+        "growthRate": 1.2,
+        "debtRatio": 72.7
+      },
+      {
+        "year": 2017,
+        "gdp": 348232000000,
+        "gdpPerCapita": 71831.44,
+        "growthRate": 10.1,
+        "debtRatio": 65.2
+      },
+      {
+        "year": 2018,
+        "gdp": 395960000000,
+        "gdpPerCapita": 80475.23,
+        "growthRate": 7.7,
+        "debtRatio": 61.3
+      },
+      {
+        "year": 2019,
+        "gdp": 407256000000,
+        "gdpPerCapita": 81525.56,
+        "growthRate": 5,
+        "debtRatio": 55.8
+      },
+      {
+        "year": 2020,
+        "gdp": 435659000000,
+        "gdpPerCapita": 86216.91,
+        "growthRate": 7.2,
+        "debtRatio": 56.9
+      },
+      {
+        "year": 2021,
+        "gdp": 530747000000,
+        "gdpPerCapita": 103624.4,
+        "growthRate": 16.3,
+        "debtRatio": 52.4
+      },
+      {
+        "year": 2022,
+        "gdp": 548773000000,
+        "gdpPerCapita": 104719.83,
+        "growthRate": 7.5,
+        "debtRatio": 42.9
+      },
+      {
+        "year": 2023,
+        "gdp": 567537000000,
+        "gdpPerCapita": 106501.45,
+        "growthRate": -2.5,
+        "debtRatio": 41.8
+      },
+      {
+        "year": 2024,
+        "gdp": 608974000000,
+        "gdpPerCapita": 112355.76,
+        "growthRate": 2.6,
+        "debtRatio": 38.3
+      },
+      {
+        "year": 2025,
+        "gdp": 718140000000,
+        "gdpPerCapita": 130652.36,
+        "growthRate": 12.3,
+        "debtRatio": 32.9
+      },
+      {
+        "year": 2026,
+        "gdp": 779381000000,
+        "gdpPerCapita": 140185.68,
+        "growthRate": 2.5,
+        "debtRatio": 31.6
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "NOR": {
+    "countryId": "NOR",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 500886000000,
+        "gdpPerCapitaUsd": 89683.51,
+        "growthRatePct": 1.4,
+        "debtRatioPct": 52.8
+      },
+      "2025": {
+        "totalGdpUsd": 530756000000,
+        "gdpPerCapitaUsd": 94468.19,
+        "growthRatePct": 1.1,
+        "debtRatioPct": 45
+      },
+      "2026": {
+        "totalGdpUsd": 599406000000,
+        "gdpPerCapitaUsd": 105876.85,
+        "growthRatePct": 1.5,
+        "debtRatioPct": 42.9
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 400669000000,
+        "gdpPerCapita": 76971.21,
+        "growthRate": 2,
+        "debtRatio": 33.2
+      },
+      {
+        "year": 2016,
+        "gdp": 383284000000,
+        "gdpPerCapita": 72976.35,
+        "growthRate": 1.3,
+        "debtRatio": 36.7
+      },
+      {
+        "year": 2017,
+        "gdp": 415673000000,
+        "gdpPerCapita": 78572.84,
+        "growthRate": 2.7,
+        "debtRatio": 36.9
+      },
+      {
+        "year": 2018,
+        "gdp": 454589000000,
+        "gdpPerCapita": 85385.98,
+        "growthRate": 1.1,
+        "debtRatio": 38.1
+      },
+      {
+        "year": 2019,
+        "gdp": 424245000000,
+        "gdpPerCapita": 79197.65,
+        "growthRate": 1.5,
+        "debtRatio": 39
+      },
+      {
+        "year": 2020,
+        "gdp": 382253000000,
+        "gdpPerCapita": 70990.27,
+        "growthRate": -1.4,
+        "debtRatio": 44.3
+      },
+      {
+        "year": 2021,
+        "gdp": 521592000000,
+        "gdpPerCapita": 96320.63,
+        "growthRate": 4.1,
+        "debtRatio": 40.1
+      },
+      {
+        "year": 2022,
+        "gdp": 617322000000,
+        "gdpPerCapita": 112747.92,
+        "growthRate": 4.1,
+        "debtRatio": 34.8
+      },
+      {
+        "year": 2023,
+        "gdp": 502198000000,
+        "gdpPerCapita": 90754.51,
+        "growthRate": 0.4,
+        "debtRatio": 42.4
+      },
+      {
+        "year": 2024,
+        "gdp": 500886000000,
+        "gdpPerCapita": 89683.51,
+        "growthRate": 1.4,
+        "debtRatio": 52.8
+      },
+      {
+        "year": 2025,
+        "gdp": 530756000000,
+        "gdpPerCapita": 94468.19,
+        "growthRate": 1.1,
+        "debtRatio": 45
+      },
+      {
+        "year": 2026,
+        "gdp": 599406000000,
+        "gdpPerCapita": 105876.85,
+        "growthRate": 1.5,
+        "debtRatio": 42.9
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "AUT": {
+    "countryId": "AUT",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 534630000000,
+        "gdpPerCapitaUsd": 58373.33,
+        "growthRatePct": -0.7,
+        "debtRatioPct": 79.2
+      },
+      "2025": {
+        "totalGdpUsd": 579928000000,
+        "gdpPerCapitaUsd": 63161.35,
+        "growthRatePct": 0.6,
+        "debtRatioPct": 80.5
+      },
+      "2026": {
+        "totalGdpUsd": 623719000000,
+        "gdpPerCapitaUsd": 67761.24,
+        "growthRatePct": 0.7,
+        "debtRatioPct": 82.1
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 379584000000,
+        "gdpPerCapita": 43986.75,
+        "growthRate": 1.3,
+        "debtRatio": 85.6
+      },
+      {
+        "year": 2016,
+        "gdp": 393579000000,
+        "gdpPerCapita": 45032.9,
+        "growthRate": 2.1,
+        "debtRatio": 83.4
+      },
+      {
+        "year": 2017,
+        "gdp": 414780000000,
+        "gdpPerCapita": 47055.74,
+        "growthRate": 2.3,
+        "debtRatio": 79.1
+      },
+      {
+        "year": 2018,
+        "gdp": 452787000000,
+        "gdpPerCapita": 50963.21,
+        "growthRate": 2.5,
+        "debtRatio": 74.6
+      },
+      {
+        "year": 2019,
+        "gdp": 443033000000,
+        "gdpPerCapita": 50010.45,
+        "growthRate": 1.8,
+        "debtRatio": 71
+      },
+      {
+        "year": 2020,
+        "gdp": 434050000000,
+        "gdpPerCapita": 48764.18,
+        "growthRate": -6.3,
+        "debtRatio": 83.2
+      },
+      {
+        "year": 2021,
+        "gdp": 480786000000,
+        "gdpPerCapita": 53827.34,
+        "growthRate": 4.9,
+        "debtRatio": 82.4
+      },
+      {
+        "year": 2022,
+        "gdp": 473594000000,
+        "gdpPerCapita": 52748.75,
+        "growthRate": 5.3,
+        "debtRatio": 78.1
+      },
+      {
+        "year": 2023,
+        "gdp": 516820000000,
+        "gdpPerCapita": 56763.6,
+        "growthRate": -0.8,
+        "debtRatio": 77.8
+      },
+      {
+        "year": 2024,
+        "gdp": 534630000000,
+        "gdpPerCapita": 58373.33,
+        "growthRate": -0.7,
+        "debtRatio": 79.2
+      },
+      {
+        "year": 2025,
+        "gdp": 579928000000,
+        "gdpPerCapita": 63161.35,
+        "growthRate": 0.6,
+        "debtRatio": 80.5
+      },
+      {
+        "year": 2026,
+        "gdp": 623719000000,
+        "gdpPerCapita": 67761.24,
+        "growthRate": 0.7,
+        "debtRatio": 82.1
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "ISR": {
+    "countryId": "ISR",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 542285000000,
+        "gdpPerCapitaUsd": 54294.19,
+        "growthRatePct": 1,
+        "debtRatioPct": 67.7
+      },
+      "2025": {
+        "totalGdpUsd": 610778000000,
+        "gdpPerCapitaUsd": 60334.81,
+        "growthRatePct": 2.9,
+        "debtRatioPct": 68.5
+      },
+      "2026": {
+        "totalGdpUsd": 719848000000,
+        "gdpPerCapitaUsd": 69803.85,
+        "growthRatePct": 3.5,
+        "debtRatioPct": 69.8
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 302839000000,
+        "gdpPerCapita": 36152.47,
+        "growthRate": 2.2,
+        "debtRatio": 62.8
+      },
+      {
+        "year": 2016,
+        "gdp": 321083000000,
+        "gdpPerCapita": 37582.52,
+        "growthRate": 4.5,
+        "debtRatio": 61.7
+      },
+      {
+        "year": 2017,
+        "gdp": 357361000000,
+        "gdpPerCapita": 41030.16,
+        "growthRate": 4.3,
+        "debtRatio": 59.8
+      },
+      {
+        "year": 2018,
+        "gdp": 375471000000,
+        "gdpPerCapita": 42285.34,
+        "growthRate": 4.1,
+        "debtRatio": 60.1
+      },
+      {
+        "year": 2019,
+        "gdp": 399209000000,
+        "gdpPerCapita": 44106.47,
+        "growthRate": 3.6,
+        "debtRatio": 59.3
+      },
+      {
+        "year": 2020,
+        "gdp": 410909000000,
+        "gdpPerCapita": 44594.51,
+        "growthRate": -1.8,
+        "debtRatio": 71.1
+      },
+      {
+        "year": 2021,
+        "gdp": 489736000000,
+        "gdpPerCapita": 52280.98,
+        "growthRate": 9.3,
+        "debtRatio": 67.7
+      },
+      {
+        "year": 2022,
+        "gdp": 525159000000,
+        "gdpPerCapita": 54983.86,
+        "growthRate": 6.4,
+        "debtRatio": 60.3
+      },
+      {
+        "year": 2023,
+        "gdp": 513394000000,
+        "gdpPerCapita": 52146.48,
+        "growthRate": 2.1,
+        "debtRatio": 61.3
+      },
+      {
+        "year": 2024,
+        "gdp": 542285000000,
+        "gdpPerCapita": 54294.19,
+        "growthRate": 1,
+        "debtRatio": 67.7
+      },
+      {
+        "year": 2025,
+        "gdp": 610778000000,
+        "gdpPerCapita": 60334.81,
+        "growthRate": 2.9,
+        "debtRatio": 68.5
+      },
+      {
+        "year": 2026,
+        "gdp": 719848000000,
+        "gdpPerCapita": 69803.85,
+        "growthRate": 3.5,
+        "debtRatio": 69.8
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "ARE": {
+    "countryId": "ARE",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 552325000000,
+        "gdpPerCapitaUsd": 48905.83,
+        "growthRatePct": 4,
+        "debtRatioPct": 34.9
+      },
+      "2025": {
+        "totalGdpUsd": 571643000000,
+        "gdpPerCapitaUsd": 50231.64,
+        "growthRatePct": 5.8,
+        "debtRatioPct": 34.3
+      },
+      "2026": {
+        "totalGdpUsd": 621546000000,
+        "gdpPerCapitaUsd": 54214.4,
+        "growthRatePct": 3.1,
+        "debtRatioPct": 31.4
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 381973000000,
+        "gdpPerCapita": 43712.26,
+        "growthRate": 7.1,
+        "debtRatio": 15.6
+      },
+      {
+        "year": 2016,
+        "gdp": 381717000000,
+        "gdpPerCapita": 41800.68,
+        "growthRate": 5.7,
+        "debtRatio": 18.6
+      },
+      {
+        "year": 2017,
+        "gdp": 403365000000,
+        "gdpPerCapita": 43304.55,
+        "growthRate": -1.1,
+        "debtRatio": 21.2
+      },
+      {
+        "year": 2018,
+        "gdp": 440560000000,
+        "gdpPerCapita": 46974.08,
+        "growthRate": 1.5,
+        "debtRatio": 20.7
+      },
+      {
+        "year": 2019,
+        "gdp": 433926000000,
+        "gdpPerCapita": 45615.09,
+        "growthRate": 1.3,
+        "debtRatio": 25.8
+      },
+      {
+        "year": 2020,
+        "gdp": 357162000000,
+        "gdpPerCapita": 38448.75,
+        "growthRate": -8.7,
+        "debtRatio": 30.1
+      },
+      {
+        "year": 2021,
+        "gdp": 422441000000,
+        "gdpPerCapita": 42839.58,
+        "growthRate": 4.6,
+        "debtRatio": 35.7
+      },
+      {
+        "year": 2022,
+        "gdp": 511403000000,
+        "gdpPerCapita": 49704.16,
+        "growthRate": 7.5,
+        "debtRatio": 31.5
+      },
+      {
+        "year": 2023,
+        "gdp": 522622000000,
+        "gdpPerCapita": 48941.28,
+        "growthRate": 4.3,
+        "debtRatio": 31.9
+      },
+      {
+        "year": 2024,
+        "gdp": 552325000000,
+        "gdpPerCapita": 48905.83,
+        "growthRate": 4,
+        "debtRatio": 34.9
+      },
+      {
+        "year": 2025,
+        "gdp": 571643000000,
+        "gdpPerCapita": 50231.64,
+        "growthRate": 5.8,
+        "debtRatio": 34.3
+      },
+      {
+        "year": 2026,
+        "gdp": 621546000000,
+        "gdpPerCapita": 54214.4,
+        "growthRate": 3.1,
+        "debtRatio": 31.4
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "SGP": {
+    "countryId": "SGP",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 572877000000,
+        "gdpPerCapitaUsd": 94896.54,
+        "growthRatePct": 5.3,
+        "debtRatioPct": 166
+      },
+      "2025": {
+        "totalGdpUsd": 603870000000,
+        "gdpPerCapitaUsd": 99365.29,
+        "growthRatePct": 5,
+        "debtRatioPct": 171.3
+      },
+      "2026": {
+        "totalGdpUsd": 659572000000,
+        "gdpPerCapitaUsd": 107758.03,
+        "growthRatePct": 3.5,
+        "debtRatioPct": 171.9
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 307999000000,
+        "gdpPerCapita": 55645.61,
+        "growthRate": 3,
+        "debtRatio": 102.1
+      },
+      {
+        "year": 2016,
+        "gdp": 320759000000,
+        "gdpPerCapita": 57204.02,
+        "growthRate": 3.9,
+        "debtRatio": 105.9
+      },
+      {
+        "year": 2017,
+        "gdp": 344795000000,
+        "gdpPerCapita": 61436.13,
+        "growthRate": 4.3,
+        "debtRatio": 107.3
+      },
+      {
+        "year": 2018,
+        "gdp": 377976000000,
+        "gdpPerCapita": 67032.84,
+        "growthRate": 3.2,
+        "debtRatio": 109.2
+      },
+      {
+        "year": 2019,
+        "gdp": 376827000000,
+        "gdpPerCapita": 66068.68,
+        "growthRate": 1.2,
+        "debtRatio": 127.7
+      },
+      {
+        "year": 2020,
+        "gdp": 351227000000,
+        "gdpPerCapita": 61772.52,
+        "growthRate": -3.6,
+        "debtRatio": 147.1
+      },
+      {
+        "year": 2021,
+        "gdp": 441111000000,
+        "gdpPerCapita": 80884.84,
+        "growthRate": 10.1,
+        "debtRatio": 139.9
+      },
+      {
+        "year": 2022,
+        "gdp": 514253000000,
+        "gdpPerCapita": 91227.72,
+        "growthRate": 4,
+        "debtRatio": 153.3
+      },
+      {
+        "year": 2023,
+        "gdp": 511182000000,
+        "gdpPerCapita": 86382.61,
+        "growthRate": 1.5,
+        "debtRatio": 170.4
+      },
+      {
+        "year": 2024,
+        "gdp": 572877000000,
+        "gdpPerCapita": 94896.54,
+        "growthRate": 5.3,
+        "debtRatio": 166
+      },
+      {
+        "year": 2025,
+        "gdp": 603870000000,
+        "gdpPerCapita": 99365.29,
+        "growthRate": 5,
+        "debtRatio": 171.3
+      },
+      {
+        "year": 2026,
+        "gdp": 659572000000,
+        "gdpPerCapita": 107758.03,
+        "growthRate": 3.5,
+        "debtRatio": 171.9
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "MYS": {
+    "countryId": "MYS",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 422227000000,
+        "gdpPerCapitaUsd": 12618.72,
+        "growthRatePct": 5.1,
+        "debtRatioPct": 69.8
+      },
+      "2025": {
+        "totalGdpUsd": 472193000000,
+        "gdpPerCapitaUsd": 13948.74,
+        "growthRatePct": 5.2,
+        "debtRatioPct": 70.7
+      },
+      "2026": {
+        "totalGdpUsd": 516428000000,
+        "gdpPerCapitaUsd": 15085.38,
+        "growthRatePct": 4.7,
+        "debtRatioPct": 69.5
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 301355000000,
+        "gdpPerCapita": 9663.13,
+        "growthRate": 5,
+        "debtRatio": 57
+      },
+      {
+        "year": 2016,
+        "gdp": 301256000000,
+        "gdpPerCapita": 9523.32,
+        "growthRate": 4.4,
+        "debtRatio": 55.8
+      },
+      {
+        "year": 2017,
+        "gdp": 319109000000,
+        "gdpPerCapita": 9965.12,
+        "growthRate": 5.8,
+        "debtRatio": 54.4
+      },
+      {
+        "year": 2018,
+        "gdp": 358783000000,
+        "gdpPerCapita": 11079.61,
+        "growthRate": 4.8,
+        "debtRatio": 55.6
+      },
+      {
+        "year": 2019,
+        "gdp": 365178000000,
+        "gdpPerCapita": 11228.29,
+        "growthRate": 4.4,
+        "debtRatio": 57.1
+      },
+      {
+        "year": 2020,
+        "gdp": 337456000000,
+        "gdpPerCapita": 10400.23,
+        "growthRate": -5.5,
+        "debtRatio": 67.7
+      },
+      {
+        "year": 2021,
+        "gdp": 373785000000,
+        "gdpPerCapita": 11474.23,
+        "growthRate": 3.3,
+        "debtRatio": 69.2
+      },
+      {
+        "year": 2022,
+        "gdp": 407830000000,
+        "gdpPerCapita": 12490.21,
+        "growthRate": 9,
+        "debtRatio": 65.5
+      },
+      {
+        "year": 2023,
+        "gdp": 399949000000,
+        "gdpPerCapita": 12097.99,
+        "growthRate": 3.5,
+        "debtRatio": 69.7
+      },
+      {
+        "year": 2024,
+        "gdp": 422227000000,
+        "gdpPerCapita": 12618.72,
+        "growthRate": 5.1,
+        "debtRatio": 69.8
+      },
+      {
+        "year": 2025,
+        "gdp": 472193000000,
+        "gdpPerCapita": 13948.74,
+        "growthRate": 5.2,
+        "debtRatio": 70.7
+      },
+      {
+        "year": 2026,
+        "gdp": 516428000000,
+        "gdpPerCapita": 15085.38,
+        "growthRate": 4.7,
+        "debtRatio": 69.5
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "ZAF": {
+    "countryId": "ZAF",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 401076000000,
+        "gdpPerCapitaUsd": 6434.85,
+        "growthRatePct": 0.5,
+        "debtRatioPct": 76
+      },
+      "2025": {
+        "totalGdpUsd": 427141000000,
+        "gdpPerCapitaUsd": 6769.16,
+        "growthRatePct": 1.1,
+        "debtRatioPct": 78.6
+      },
+      "2026": {
+        "totalGdpUsd": 479964000000,
+        "gdpPerCapitaUsd": 7502.97,
+        "growthRatePct": 1,
+        "debtRatioPct": 78.9
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 346663000000,
+        "gdpPerCapita": 6227.17,
+        "growthRate": 1.3,
+        "debtRatio": 45.2
+      },
+      {
+        "year": 2016,
+        "gdp": 323493000000,
+        "gdpPerCapita": 5732.03,
+        "growthRate": 0.7,
+        "debtRatio": 47.1
+      },
+      {
+        "year": 2017,
+        "gdp": 381317000000,
+        "gdpPerCapita": 6665.13,
+        "growthRate": 1.2,
+        "debtRatio": 48.6
+      },
+      {
+        "year": 2018,
+        "gdp": 405093000000,
+        "gdpPerCapita": 6979.68,
+        "growthRate": 1.6,
+        "debtRatio": 51.5
+      },
+      {
+        "year": 2019,
+        "gdp": 389245000000,
+        "gdpPerCapita": 6609.72,
+        "growthRate": 0.3,
+        "debtRatio": 56.1
+      },
+      {
+        "year": 2020,
+        "gdp": 337876000000,
+        "gdpPerCapita": 5660.11,
+        "growthRate": -6.2,
+        "debtRatio": 68.9
+      },
+      {
+        "year": 2021,
+        "gdp": 419878000000,
+        "gdpPerCapita": 6970.69,
+        "growthRate": 4.9,
+        "debtRatio": 68.8
+      },
+      {
+        "year": 2022,
+        "gdp": 407430000000,
+        "gdpPerCapita": 6693.78,
+        "growthRate": 2.1,
+        "debtRatio": 70.7
+      },
+      {
+        "year": 2023,
+        "gdp": 381334000000,
+        "gdpPerCapita": 6192.66,
+        "growthRate": 0.8,
+        "debtRatio": 73.2
+      },
+      {
+        "year": 2024,
+        "gdp": 401076000000,
+        "gdpPerCapita": 6434.85,
+        "growthRate": 0.5,
+        "debtRatio": 76
+      },
+      {
+        "year": 2025,
+        "gdp": 427141000000,
+        "gdpPerCapita": 6769.16,
+        "growthRate": 1.1,
+        "debtRatio": 78.6
+      },
+      {
+        "year": 2026,
+        "gdp": 479964000000,
+        "gdpPerCapita": 7502.97,
+        "growthRate": 1,
+        "debtRatio": 78.9
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "PHL": {
+    "countryId": "PHL",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 461617000000,
+        "gdpPerCapitaUsd": 4089.27,
+        "growthRatePct": 5.7,
+        "debtRatioPct": 56.6
+      },
+      "2025": {
+        "totalGdpUsd": 487161000000,
+        "gdpPerCapitaUsd": 4270.14,
+        "growthRatePct": 4.4,
+        "debtRatioPct": 59.4
+      },
+      "2026": {
+        "totalGdpUsd": 512222000000,
+        "gdpPerCapitaUsd": 4442.55,
+        "growthRatePct": 4.1,
+        "debtRatioPct": 60.2
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 306446000000,
+        "gdpPerCapita": 3039.23,
+        "growthRate": 6.3,
+        "debtRatio": 39.7
+      },
+      {
+        "year": 2016,
+        "gdp": 318627000000,
+        "gdpPerCapita": 3107.65,
+        "growthRate": 7.1,
+        "debtRatio": 37.4
+      },
+      {
+        "year": 2017,
+        "gdp": 328481000000,
+        "gdpPerCapita": 3153.31,
+        "growthRate": 6.9,
+        "debtRatio": 38.1
+      },
+      {
+        "year": 2018,
+        "gdp": 346842000000,
+        "gdpPerCapita": 3279.52,
+        "growthRate": 6.3,
+        "debtRatio": 37.1
+      },
+      {
+        "year": 2019,
+        "gdp": 376823000000,
+        "gdpPerCapita": 3512.2,
+        "growthRate": 6.1,
+        "debtRatio": 37
+      },
+      {
+        "year": 2020,
+        "gdp": 361751000000,
+        "gdpPerCapita": 3312.74,
+        "growthRate": -9.5,
+        "debtRatio": 51.6
+      },
+      {
+        "year": 2021,
+        "gdp": 394087000000,
+        "gdpPerCapita": 3580.01,
+        "growthRate": 5.7,
+        "debtRatio": 57
+      },
+      {
+        "year": 2022,
+        "gdp": 404353000000,
+        "gdpPerCapita": 3644.79,
+        "growthRate": 7.6,
+        "debtRatio": 57.4
+      },
+      {
+        "year": 2023,
+        "gdp": 437055000000,
+        "gdpPerCapita": 3905.42,
+        "growthRate": 5.5,
+        "debtRatio": 56.5
+      },
+      {
+        "year": 2024,
+        "gdp": 461617000000,
+        "gdpPerCapita": 4089.27,
+        "growthRate": 5.7,
+        "debtRatio": 56.6
+      },
+      {
+        "year": 2025,
+        "gdp": 487161000000,
+        "gdpPerCapita": 4270.14,
+        "growthRate": 4.4,
+        "debtRatio": 59.4
+      },
+      {
+        "year": 2026,
+        "gdp": 512222000000,
+        "gdpPerCapita": 4442.55,
+        "growthRate": 4.1,
+        "debtRatio": 60.2
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "DNK": {
+    "countryId": "DNK",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 424525000000,
+        "gdpPerCapitaUsd": 71214.06,
+        "growthRatePct": 3.5,
+        "debtRatioPct": 30.5
+      },
+      "2025": {
+        "totalGdpUsd": 461718000000,
+        "gdpPerCapitaUsd": 77046.36,
+        "growthRatePct": 2.9,
+        "debtRatioPct": 27.5
+      },
+      "2026": {
+        "totalGdpUsd": 503772000000,
+        "gdpPerCapitaUsd": 83445.33,
+        "growthRatePct": 2,
+        "debtRatioPct": 27.4
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 301759000000,
+        "gdpPerCapita": 53316.98,
+        "growthRate": 2.1,
+        "debtRatio": 44.6
+      },
+      {
+        "year": 2016,
+        "gdp": 312182000000,
+        "gdpPerCapita": 54699.18,
+        "growthRate": 3.1,
+        "debtRatio": 41.7
+      },
+      {
+        "year": 2017,
+        "gdp": 331611000000,
+        "gdpPerCapita": 57683.75,
+        "growthRate": 3.1,
+        "debtRatio": 40.2
+      },
+      {
+        "year": 2018,
+        "gdp": 355293000000,
+        "gdpPerCapita": 61456.78,
+        "growthRate": 1.9,
+        "debtRatio": 38.5
+      },
+      {
+        "year": 2019,
+        "gdp": 345402000000,
+        "gdpPerCapita": 59489.61,
+        "growthRate": 1.7,
+        "debtRatio": 38.3
+      },
+      {
+        "year": 2020,
+        "gdp": 355631000000,
+        "gdpPerCapita": 61075.93,
+        "growthRate": -1.8,
+        "debtRatio": 45.2
+      },
+      {
+        "year": 2021,
+        "gdp": 406110000000,
+        "gdpPerCapita": 69538.86,
+        "growthRate": 6.5,
+        "debtRatio": 39.6
+      },
+      {
+        "year": 2022,
+        "gdp": 400115000000,
+        "gdpPerCapita": 68122.94,
+        "growthRate": 0.4,
+        "debtRatio": 33.3
+      },
+      {
+        "year": 2023,
+        "gdp": 404652000000,
+        "gdpPerCapita": 68207.56,
+        "growthRate": 0.6,
+        "debtRatio": 33
+      },
+      {
+        "year": 2024,
+        "gdp": 424525000000,
+        "gdpPerCapita": 71214.06,
+        "growthRate": 3.5,
+        "debtRatio": 30.5
+      },
+      {
+        "year": 2025,
+        "gdp": 461718000000,
+        "gdpPerCapita": 77046.36,
+        "growthRate": 2.9,
+        "debtRatio": 27.5
+      },
+      {
+        "year": 2026,
+        "gdp": 503772000000,
+        "gdpPerCapita": 83445.33,
+        "growthRate": 2,
+        "debtRatio": 27.4
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "EGY": {
+    "countryId": "EGY",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 383105000000,
+        "gdpPerCapitaUsd": 3593.86,
+        "growthRatePct": 2.4,
+        "debtRatioPct": 90.9
+      },
+      "2025": {
+        "totalGdpUsd": 364640000000,
+        "gdpPerCapitaUsd": 3379.43,
+        "growthRatePct": 4.4,
+        "debtRatioPct": 86.8
+      },
+      "2026": {
+        "totalGdpUsd": 429645000000,
+        "gdpPerCapitaUsd": 3903.81,
+        "growthRatePct": 4.2,
+        "debtRatioPct": 87
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 350119000000,
+        "gdpPerCapita": 3933.93,
+        "growthRate": 4.4,
+        "debtRatio": 83.8
+      },
+      {
+        "year": 2016,
+        "gdp": 351443000000,
+        "gdpPerCapita": 3862.01,
+        "growthRate": 4.3,
+        "debtRatio": 91.6
+      },
+      {
+        "year": 2017,
+        "gdp": 246826000000,
+        "gdpPerCapita": 2592.71,
+        "growthRate": 4.2,
+        "debtRatio": 97.8
+      },
+      {
+        "year": 2018,
+        "gdp": 263156000000,
+        "gdpPerCapita": 2710.16,
+        "growthRate": 5.3,
+        "debtRatio": 87.9
+      },
+      {
+        "year": 2019,
+        "gdp": 317894000000,
+        "gdpPerCapita": 3214.3,
+        "growthRate": 5.5,
+        "debtRatio": 80.1
+      },
+      {
+        "year": 2020,
+        "gdp": 382525000000,
+        "gdpPerCapita": 3802.44,
+        "growthRate": 3.6,
+        "debtRatio": 86.2
+      },
+      {
+        "year": 2021,
+        "gdp": 423300000000,
+        "gdpPerCapita": 4145.94,
+        "growthRate": 3.3,
+        "debtRatio": 89.9
+      },
+      {
+        "year": 2022,
+        "gdp": 475231000000,
+        "gdpPerCapita": 4587.17,
+        "growthRate": 6.7,
+        "debtRatio": 88.5
+      },
+      {
+        "year": 2023,
+        "gdp": 393828000000,
+        "gdpPerCapita": 3743.61,
+        "growthRate": 3.8,
+        "debtRatio": 95.9
+      },
+      {
+        "year": 2024,
+        "gdp": 383105000000,
+        "gdpPerCapita": 3593.86,
+        "growthRate": 2.4,
+        "debtRatio": 90.9
+      },
+      {
+        "year": 2025,
+        "gdp": 364640000000,
+        "gdpPerCapita": 3379.43,
+        "growthRate": 4.4,
+        "debtRatio": 86.8
+      },
+      {
+        "year": 2026,
+        "gdp": 429645000000,
+        "gdpPerCapita": 3903.81,
+        "growthRate": 4.2,
+        "debtRatio": 87
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "BGD": {
+    "countryId": "BGD",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 450461000000,
+        "gdpPerCapitaUsd": 2618.68,
+        "growthRatePct": 4.2,
+        "debtRatioPct": 41
+      },
+      "2025": {
+        "totalGdpUsd": 457904000000,
+        "gdpPerCapitaUsd": 2635.63,
+        "growthRatePct": 3.5,
+        "debtRatioPct": 42
+      },
+      "2026": {
+        "totalGdpUsd": 510705000000,
+        "gdpPerCapitaUsd": 2911.27,
+        "growthRatePct": 4.7,
+        "debtRatioPct": 41.8
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 233687000000,
+        "gdpPerCapita": 1495.54,
+        "growthRate": 6.6,
+        "debtRatio": 28.2
+      },
+      {
+        "year": 2016,
+        "gdp": 265236000000,
+        "gdpPerCapita": 1679.02,
+        "growthRate": 7.1,
+        "debtRatio": 27.7
+      },
+      {
+        "year": 2017,
+        "gdp": 293755000000,
+        "gdpPerCapita": 1839.76,
+        "growthRate": 6.6,
+        "debtRatio": 28.3
+      },
+      {
+        "year": 2018,
+        "gdp": 321379000000,
+        "gdpPerCapita": 1991.74,
+        "growthRate": 7.3,
+        "debtRatio": 29.6
+      },
+      {
+        "year": 2019,
+        "gdp": 351238000000,
+        "gdpPerCapita": 2154.23,
+        "growthRate": 7.9,
+        "debtRatio": 32
+      },
+      {
+        "year": 2020,
+        "gdp": 373902000000,
+        "gdpPerCapita": 2270.35,
+        "growthRate": 3.4,
+        "debtRatio": 34.5
+      },
+      {
+        "year": 2021,
+        "gdp": 416265000000,
+        "gdpPerCapita": 2497.74,
+        "growthRate": 6.9,
+        "debtRatio": 35.6
+      },
+      {
+        "year": 2022,
+        "gdp": 460201000000,
+        "gdpPerCapita": 2730.85,
+        "growthRate": 7.1,
+        "debtRatio": 37.9
+      },
+      {
+        "year": 2023,
+        "gdp": 451534000000,
+        "gdpPerCapita": 2651.74,
+        "growthRate": 5.8,
+        "debtRatio": 39.7
+      },
+      {
+        "year": 2024,
+        "gdp": 450461000000,
+        "gdpPerCapita": 2618.68,
+        "growthRate": 4.2,
+        "debtRatio": 41
+      },
+      {
+        "year": 2025,
+        "gdp": 457904000000,
+        "gdpPerCapita": 2635.63,
+        "growthRate": 3.5,
+        "debtRatio": 42
+      },
+      {
+        "year": 2026,
+        "gdp": 510705000000,
+        "gdpPerCapita": 2911.27,
+        "growthRate": 4.7,
+        "debtRatio": 41.8
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "VNM": {
+    "countryId": "VNM",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 459448000000,
+        "gdpPerCapitaUsd": 4535.52,
+        "growthRatePct": 7,
+        "debtRatioPct": 31.2
+      },
+      "2025": {
+        "totalGdpUsd": 494046000000,
+        "gdpPerCapitaUsd": 4829.38,
+        "growthRatePct": 8,
+        "debtRatioPct": 30.3
+      },
+      "2026": {
+        "totalGdpUsd": 527266000000,
+        "gdpPerCapitaUsd": 5115.24,
+        "growthRatePct": 7.1,
+        "debtRatioPct": 29.8
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 236839000000,
+        "gdpPerCapita": 2582.38,
+        "growthRate": 7,
+        "debtRatio": 46.1
+      },
+      {
+        "year": 2016,
+        "gdp": 252139000000,
+        "gdpPerCapita": 2720.09,
+        "growthRate": 6.7,
+        "debtRatio": 47.9
+      },
+      {
+        "year": 2017,
+        "gdp": 277076000000,
+        "gdpPerCapita": 2957.95,
+        "growthRate": 6.9,
+        "debtRatio": 46.6
+      },
+      {
+        "year": 2018,
+        "gdp": 304474000000,
+        "gdpPerCapita": 3216.3,
+        "growthRate": 7.5,
+        "debtRatio": 43.8
+      },
+      {
+        "year": 2019,
+        "gdp": 331811000000,
+        "gdpPerCapita": 3439.03,
+        "growthRate": 7.4,
+        "debtRatio": 41
+      },
+      {
+        "year": 2020,
+        "gdp": 346283000000,
+        "gdpPerCapita": 3548.61,
+        "growthRate": 2.9,
+        "debtRatio": 41.3
+      },
+      {
+        "year": 2021,
+        "gdp": 370065000000,
+        "gdpPerCapita": 3756.77,
+        "growthRate": 2.6,
+        "debtRatio": 39.2
+      },
+      {
+        "year": 2022,
+        "gdp": 411031000000,
+        "gdpPerCapita": 4132.55,
+        "growthRate": 8.5,
+        "debtRatio": 34.9
+      },
+      {
+        "year": 2023,
+        "gdp": 432981000000,
+        "gdpPerCapita": 4316.47,
+        "growthRate": 5.1,
+        "debtRatio": 34.3
+      },
+      {
+        "year": 2024,
+        "gdp": 459448000000,
+        "gdpPerCapita": 4535.52,
+        "growthRate": 7,
+        "debtRatio": 31.2
+      },
+      {
+        "year": 2025,
+        "gdp": 494046000000,
+        "gdpPerCapita": 4829.38,
+        "growthRate": 8,
+        "debtRatio": 30.3
+      },
+      {
+        "year": 2026,
+        "gdp": 527266000000,
+        "gdpPerCapita": 5115.24,
+        "growthRate": 7.1,
+        "debtRatio": 29.8
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "NGA": {
+    "countryId": "NGA",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 252109000000,
+        "gdpPerCapitaUsd": 1083.51,
+        "growthRatePct": 4.1,
+        "debtRatioPct": 39.3
+      },
+      "2025": {
+        "totalGdpUsd": 290491000000,
+        "gdpPerCapitaUsd": 1222.72,
+        "growthRatePct": 4,
+        "debtRatioPct": 35.5
+      },
+      "2026": {
+        "totalGdpUsd": 377365000000,
+        "gdpPerCapitaUsd": 1555.64,
+        "growthRatePct": 4.1,
+        "debtRatioPct": 32.3
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 696088000000,
+        "gdpPerCapita": 3650.71,
+        "growthRate": 2.7,
+        "debtRatio": 14.9
+      },
+      {
+        "year": 2016,
+        "gdp": 570351000000,
+        "gdpPerCapita": 2918.24,
+        "growthRate": -1.6,
+        "debtRatio": 17.4
+      },
+      {
+        "year": 2017,
+        "gdp": 529144000000,
+        "gdpPerCapita": 2642.36,
+        "growthRate": 0.8,
+        "debtRatio": 18
+      },
+      {
+        "year": 2018,
+        "gdp": 593897000000,
+        "gdpPerCapita": 2897.93,
+        "growthRate": 1.9,
+        "debtRatio": 20.4
+      },
+      {
+        "year": 2019,
+        "gdp": 668219000000,
+        "gdpPerCapita": 3189.81,
+        "growthRate": 2.2,
+        "debtRatio": 21.4
+      },
+      {
+        "year": 2020,
+        "gdp": 598725000000,
+        "gdpPerCapita": 2797.83,
+        "growthRate": -6.4,
+        "debtRatio": 25.7
+      },
+      {
+        "year": 2021,
+        "gdp": 609479000000,
+        "gdpPerCapita": 2789.01,
+        "growthRate": 1.1,
+        "debtRatio": 26.6
+      },
+      {
+        "year": 2022,
+        "gdp": 645682000000,
+        "gdpPerCapita": 2893.48,
+        "growthRate": 4.3,
+        "debtRatio": 29.8
+      },
+      {
+        "year": 2023,
+        "gdp": 487347000000,
+        "gdpPerCapita": 2138.59,
+        "growthRate": 3.3,
+        "debtRatio": 36.3
+      },
+      {
+        "year": 2024,
+        "gdp": 252109000000,
+        "gdpPerCapita": 1083.51,
+        "growthRate": 4.1,
+        "debtRatio": 39.3
+      },
+      {
+        "year": 2025,
+        "gdp": 290491000000,
+        "gdpPerCapita": 1222.72,
+        "growthRate": 4,
+        "debtRatio": 35.5
+      },
+      {
+        "year": 2026,
+        "gdp": 377365000000,
+        "gdpPerCapita": 1555.64,
+        "growthRate": 4.1,
+        "debtRatio": 32.3
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "THA": {
+    "countryId": "THA",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 529386000000,
+        "gdpPerCapitaUsd": 7386.64,
+        "growthRatePct": 2.9,
+        "debtRatioPct": 62.9
+      },
+      "2025": {
+        "totalGdpUsd": 577010000000,
+        "gdpPerCapitaUsd": 8056.57,
+        "growthRatePct": 2.4,
+        "debtRatioPct": 64.7
+      },
+      "2026": {
+        "totalGdpUsd": 579996000000,
+        "gdpPerCapitaUsd": 8105.07,
+        "growthRatePct": 1.5,
+        "debtRatioPct": 66.8
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 401296000000,
+        "gdpPerCapita": 5688.85,
+        "growthRate": 3.1,
+        "debtRatio": 42.6
+      },
+      {
+        "year": 2016,
+        "gdp": 413366000000,
+        "gdpPerCapita": 5833.58,
+        "growthRate": 3.4,
+        "debtRatio": 41.7
+      },
+      {
+        "year": 2017,
+        "gdp": 456357000000,
+        "gdpPerCapita": 6413.09,
+        "growthRate": 4.2,
+        "debtRatio": 41.8
+      },
+      {
+        "year": 2018,
+        "gdp": 506754000000,
+        "gdpPerCapita": 7099.78,
+        "growthRate": 4.2,
+        "debtRatio": 41.9
+      },
+      {
+        "year": 2019,
+        "gdp": 543977000000,
+        "gdpPerCapita": 7605.7,
+        "growthRate": 2.1,
+        "debtRatio": 41.1
+      },
+      {
+        "year": 2020,
+        "gdp": 500275000000,
+        "gdpPerCapita": 6983.03,
+        "growthRate": -6.1,
+        "debtRatio": 49.4
+      },
+      {
+        "year": 2021,
+        "gdp": 506050000000,
+        "gdpPerCapita": 7055.19,
+        "growthRate": 1.6,
+        "debtRatio": 58.4
+      },
+      {
+        "year": 2022,
+        "gdp": 495692000000,
+        "gdpPerCapita": 6910.01,
+        "growthRate": 2.7,
+        "debtRatio": 60.5
+      },
+      {
+        "year": 2023,
+        "gdp": 517013000000,
+        "gdpPerCapita": 7210.54,
+        "growthRate": 2.2,
+        "debtRatio": 62.2
+      },
+      {
+        "year": 2024,
+        "gdp": 529386000000,
+        "gdpPerCapita": 7386.64,
+        "growthRate": 2.9,
+        "debtRatio": 62.9
+      },
+      {
+        "year": 2025,
+        "gdp": 577010000000,
+        "gdpPerCapita": 8056.57,
+        "growthRate": 2.4,
+        "debtRatio": 64.7
+      },
+      {
+        "year": 2026,
+        "gdp": 579996000000,
+        "gdpPerCapita": 8105.07,
+        "growthRate": 1.5,
+        "debtRatio": 66.8
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "HKG": {
+    "countryId": "HKG",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 408369000000,
+        "gdpPerCapitaUsd": 54444.8,
+        "growthRatePct": 2.6,
+        "debtRatioPct": 9.2
+      },
+      "2025": {
+        "totalGdpUsd": 427310000000,
+        "gdpPerCapitaUsd": 56892.78,
+        "growthRatePct": 3.5,
+        "debtRatioPct": 11.9
+      },
+      "2026": {
+        "totalGdpUsd": 450138000000,
+        "gdpPerCapitaUsd": 59640.14,
+        "growthRatePct": 2.4,
+        "debtRatioPct": 14.1
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 309386000000,
+        "gdpPerCapita": 42325.35,
+        "growthRate": 2.4,
+        "debtRatio": 0.1
+      },
+      {
+        "year": 2016,
+        "gdp": 320860000000,
+        "gdpPerCapita": 43488.2,
+        "growthRate": 2.2,
+        "debtRatio": 0.1
+      },
+      {
+        "year": 2017,
+        "gdp": 341271000000,
+        "gdpPerCapita": 46025.67,
+        "growthRate": 3.8,
+        "debtRatio": 0.1
+      },
+      {
+        "year": 2018,
+        "gdp": 361731000000,
+        "gdpPerCapita": 48310.04,
+        "growthRate": 2.8,
+        "debtRatio": 0.1
+      },
+      {
+        "year": 2019,
+        "gdp": 363075000000,
+        "gdpPerCapita": 48277.98,
+        "growthRate": -1.7,
+        "debtRatio": 0.3
+      },
+      {
+        "year": 2020,
+        "gdp": 344941000000,
+        "gdpPerCapita": 46446.06,
+        "growthRate": -6.5,
+        "debtRatio": 1
+      },
+      {
+        "year": 2021,
+        "gdp": 368954000000,
+        "gdpPerCapita": 49848.57,
+        "growthRate": 6.5,
+        "debtRatio": 1.9
+      },
+      {
+        "year": 2022,
+        "gdp": 358674000000,
+        "gdpPerCapita": 47998.49,
+        "growthRate": -3.7,
+        "debtRatio": 4.3
+      },
+      {
+        "year": 2023,
+        "gdp": 380762000000,
+        "gdpPerCapita": 50580.15,
+        "growthRate": 3.2,
+        "debtRatio": 6.3
+      },
+      {
+        "year": 2024,
+        "gdp": 408369000000,
+        "gdpPerCapita": 54444.8,
+        "growthRate": 2.6,
+        "debtRatio": 9.2
+      },
+      {
+        "year": 2025,
+        "gdp": 427310000000,
+        "gdpPerCapita": 56892.78,
+        "growthRate": 3.5,
+        "debtRatio": 11.9
+      },
+      {
+        "year": 2026,
+        "gdp": 450138000000,
+        "gdpPerCapita": 59640.14,
+        "growthRate": 2.4,
+        "debtRatio": 14.1
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "NZL": {
+    "countryId": "NZL",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 258827000000,
+        "gdpPerCapitaUsd": 48929.4,
+        "growthRatePct": -0.3,
+        "debtRatioPct": 51.4
+      },
+      "2025": {
+        "totalGdpUsd": 258832000000,
+        "gdpPerCapitaUsd": 48620.65,
+        "growthRatePct": 0.2,
+        "debtRatioPct": 54.7
+      },
+      "2026": {
+        "totalGdpUsd": 278636000000,
+        "gdpPerCapitaUsd": 52023.01,
+        "growthRatePct": 2.1,
+        "debtRatioPct": 56.7
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 176375000000,
+        "gdpPerCapita": 38235.26,
+        "growthRate": 3.6,
+        "debtRatio": 34.2
+      },
+      {
+        "year": 2016,
+        "gdp": 185978000000,
+        "gdpPerCapita": 39431.45,
+        "growthRate": 4,
+        "debtRatio": 33.4
+      },
+      {
+        "year": 2017,
+        "gdp": 203663000000,
+        "gdpPerCapita": 42297.64,
+        "growthRate": 3.3,
+        "debtRatio": 31.1
+      },
+      {
+        "year": 2018,
+        "gdp": 209489000000,
+        "gdpPerCapita": 42744.1,
+        "growthRate": 3.3,
+        "debtRatio": 28.1
+      },
+      {
+        "year": 2019,
+        "gdp": 210962000000,
+        "gdpPerCapita": 42389.97,
+        "growthRate": 3,
+        "debtRatio": 31.8
+      },
+      {
+        "year": 2020,
+        "gdp": 210840000000,
+        "gdpPerCapita": 41600.5,
+        "growthRate": -1.2,
+        "debtRatio": 43.2
+      },
+      {
+        "year": 2021,
+        "gdp": 249720000000,
+        "gdpPerCapita": 49115.96,
+        "growthRate": 5.5,
+        "debtRatio": 47.5
+      },
+      {
+        "year": 2022,
+        "gdp": 245165000000,
+        "gdpPerCapita": 48165.09,
+        "growthRate": 2.6,
+        "debtRatio": 46.9
+      },
+      {
+        "year": 2023,
+        "gdp": 253650000000,
+        "gdpPerCapita": 48787.26,
+        "growthRate": 2.2,
+        "debtRatio": 47.3
+      },
+      {
+        "year": 2024,
+        "gdp": 258827000000,
+        "gdpPerCapita": 48929.4,
+        "growthRate": -0.3,
+        "debtRatio": 51.4
+      },
+      {
+        "year": 2025,
+        "gdp": 258832000000,
+        "gdpPerCapita": 48620.65,
+        "growthRate": 0.2,
+        "debtRatio": 54.7
+      },
+      {
+        "year": 2026,
+        "gdp": 278636000000,
+        "gdpPerCapita": 52023.01,
+        "growthRate": 2.1,
+        "debtRatio": 56.7
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "FIN": {
+    "countryId": "FIN",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 298639000000,
+        "gdpPerCapitaUsd": 53291.83,
+        "growthRatePct": 0.4,
+        "debtRatioPct": 82.4
+      },
+      "2025": {
+        "totalGdpUsd": 316860000000,
+        "gdpPerCapitaUsd": 56464.36,
+        "growthRatePct": 0.2,
+        "debtRatioPct": 89.3
+      },
+      "2026": {
+        "totalGdpUsd": 337669000000,
+        "gdpPerCapitaUsd": 60129.69,
+        "growthRatePct": 1,
+        "debtRatioPct": 93.1
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 233234000000,
+        "gdpPerCapita": 42625.16,
+        "growthRate": 0.5,
+        "debtRatio": 68.8
+      },
+      {
+        "year": 2016,
+        "gdp": 238712000000,
+        "gdpPerCapita": 43502.56,
+        "growthRate": 2.6,
+        "debtRatio": 68.6
+      },
+      {
+        "year": 2017,
+        "gdp": 253757000000,
+        "gdpPerCapita": 46109.92,
+        "growthRate": 3.3,
+        "debtRatio": 66.6
+      },
+      {
+        "year": 2018,
+        "gdp": 273993000000,
+        "gdpPerCapita": 49698.35,
+        "growthRate": 1.2,
+        "debtRatio": 65.3
+      },
+      {
+        "year": 2019,
+        "gdp": 267044000000,
+        "gdpPerCapita": 48395.83,
+        "growthRate": 1.3,
+        "debtRatio": 65.3
+      },
+      {
+        "year": 2020,
+        "gdp": 269784000000,
+        "gdpPerCapita": 48827.14,
+        "growthRate": -2.5,
+        "debtRatio": 75.3
+      },
+      {
+        "year": 2021,
+        "gdp": 294419000000,
+        "gdpPerCapita": 53203.8,
+        "growthRate": 2.7,
+        "debtRatio": 73.1
+      },
+      {
+        "year": 2022,
+        "gdp": 280474000000,
+        "gdpPerCapita": 50551.8,
+        "growthRate": 0.8,
+        "debtRatio": 74
+      },
+      {
+        "year": 2023,
+        "gdp": 295277000000,
+        "gdpPerCapita": 53069.46,
+        "growthRate": -1.3,
+        "debtRatio": 77
+      },
+      {
+        "year": 2024,
+        "gdp": 298639000000,
+        "gdpPerCapita": 53291.83,
+        "growthRate": 0.4,
+        "debtRatio": 82.4
+      },
+      {
+        "year": 2025,
+        "gdp": 316860000000,
+        "gdpPerCapita": 56464.36,
+        "growthRate": 0.2,
+        "debtRatio": 89.3
+      },
+      {
+        "year": 2026,
+        "gdp": 337669000000,
+        "gdpPerCapita": 60129.69,
+        "growthRate": 1,
+        "debtRatio": 93.1
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "PRT": {
+    "countryId": "PRT",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 313562000000,
+        "gdpPerCapitaUsd": 29319.48,
+        "growthRatePct": 2.2,
+        "debtRatioPct": 93.5
+      },
+      "2025": {
+        "totalGdpUsd": 346412000000,
+        "gdpPerCapitaUsd": 32165.93,
+        "growthRatePct": 1.9,
+        "debtRatioPct": 89.9
+      },
+      "2026": {
+        "totalGdpUsd": 380637000000,
+        "gdpPerCapitaUsd": 35433.54,
+        "growthRatePct": 1.9,
+        "debtRatioPct": 85.6
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 199059000000,
+        "gdpPerCapita": 19173.73,
+        "growthRate": 1.6,
+        "debtRatio": 131
+      },
+      {
+        "year": 2016,
+        "gdp": 206249000000,
+        "gdpPerCapita": 19914.85,
+        "growthRate": 2,
+        "debtRatio": 131.2
+      },
+      {
+        "year": 2017,
+        "gdp": 220785000000,
+        "gdpPerCapita": 21352.27,
+        "growthRate": 3.3,
+        "debtRatio": 126
+      },
+      {
+        "year": 2018,
+        "gdp": 242203000000,
+        "gdpPerCapita": 23436.02,
+        "growthRate": 2.9,
+        "debtRatio": 121.1
+      },
+      {
+        "year": 2019,
+        "gdp": 240142000000,
+        "gdpPerCapita": 23192.2,
+        "growthRate": 2.7,
+        "debtRatio": 116.1
+      },
+      {
+        "year": 2020,
+        "gdp": 229435000000,
+        "gdpPerCapita": 22093.25,
+        "growthRate": -8.2,
+        "debtRatio": 134.1
+      },
+      {
+        "year": 2021,
+        "gdp": 256226000000,
+        "gdpPerCapita": 24618.88,
+        "growthRate": 5.6,
+        "debtRatio": 123.9
+      },
+      {
+        "year": 2022,
+        "gdp": 257101000000,
+        "gdpPerCapita": 24558.61,
+        "growthRate": 7,
+        "debtRatio": 111.2
+      },
+      {
+        "year": 2023,
+        "gdp": 292408000000,
+        "gdpPerCapita": 27642.6,
+        "growthRate": 3.1,
+        "debtRatio": 96.9
+      },
+      {
+        "year": 2024,
+        "gdp": 313562000000,
+        "gdpPerCapita": 29319.48,
+        "growthRate": 2.2,
+        "debtRatio": 93.5
+      },
+      {
+        "year": 2025,
+        "gdp": 346412000000,
+        "gdpPerCapita": 32165.93,
+        "growthRate": 1.9,
+        "debtRatio": 89.9
+      },
+      {
+        "year": 2026,
+        "gdp": 380637000000,
+        "gdpPerCapita": 35433.54,
+        "growthRate": 1.9,
+        "debtRatio": 85.6
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "COL": {
+    "countryId": "COL",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 420504000000,
+        "gdpPerCapitaUsd": 7979.81,
+        "growthRatePct": 1.5,
+        "debtRatioPct": 61
+      },
+      "2025": {
+        "totalGdpUsd": 457410000000,
+        "gdpPerCapitaUsd": 8622.57,
+        "growthRatePct": 2.6,
+        "debtRatioPct": 59.9
+      },
+      "2026": {
+        "totalGdpUsd": 539530000000,
+        "gdpPerCapitaUsd": 10103.71,
+        "growthRatePct": 2.3,
+        "debtRatioPct": 60.9
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 293493000000,
+        "gdpPerCapita": 6337.02,
+        "growthRate": 3,
+        "debtRatio": 50.4
+      },
+      {
+        "year": 2016,
+        "gdp": 282720000000,
+        "gdpPerCapita": 6037.15,
+        "growthRate": 2.1,
+        "debtRatio": 49.9
+      },
+      {
+        "year": 2017,
+        "gdp": 311890000000,
+        "gdpPerCapita": 6577.31,
+        "growthRate": 1.4,
+        "debtRatio": 49.4
+      },
+      {
+        "year": 2018,
+        "gdp": 334124000000,
+        "gdpPerCapita": 6923.71,
+        "growthRate": 2.6,
+        "debtRatio": 51.8
+      },
+      {
+        "year": 2019,
+        "gdp": 323055000000,
+        "gdpPerCapita": 6540.1,
+        "growthRate": 3.2,
+        "debtRatio": 51
+      },
+      {
+        "year": 2020,
+        "gdp": 270348000000,
+        "gdpPerCapita": 5363.2,
+        "growthRate": -7.2,
+        "debtRatio": 65.3
+      },
+      {
+        "year": 2021,
+        "gdp": 318525000000,
+        "gdpPerCapita": 6231.29,
+        "growthRate": 10.8,
+        "debtRatio": 64.4
+      },
+      {
+        "year": 2022,
+        "gdp": 345632000000,
+        "gdpPerCapita": 6687.55,
+        "growthRate": 7.3,
+        "debtRatio": 61.3
+      },
+      {
+        "year": 2023,
+        "gdp": 366901000000,
+        "gdpPerCapita": 7026.61,
+        "growthRate": 0.8,
+        "debtRatio": 55.4
+      },
+      {
+        "year": 2024,
+        "gdp": 420504000000,
+        "gdpPerCapita": 7979.81,
+        "growthRate": 1.5,
+        "debtRatio": 61
+      },
+      {
+        "year": 2025,
+        "gdp": 457410000000,
+        "gdpPerCapita": 8622.57,
+        "growthRate": 2.6,
+        "debtRatio": 59.9
+      },
+      {
+        "year": 2026,
+        "gdp": 539530000000,
+        "gdpPerCapita": 10103.71,
+        "growthRate": 2.3,
+        "debtRatio": 60.9
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "CHL": {
+    "countryId": "CHL",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 330210000000,
+        "gdpPerCapitaUsd": 16589.84,
+        "growthRatePct": 2.6,
+        "debtRatioPct": 41.7
+      },
+      "2025": {
+        "totalGdpUsd": 355346000000,
+        "gdpPerCapitaUsd": 17734.76,
+        "growthRatePct": 2.3,
+        "debtRatioPct": 41.8
+      },
+      "2026": {
+        "totalGdpUsd": 407850000000,
+        "gdpPerCapitaUsd": 20239.76,
+        "growthRatePct": 2.4,
+        "debtRatioPct": 42.5
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 242515000000,
+        "gdpPerCapita": 13506.93,
+        "growthRate": 2.2,
+        "debtRatio": 17.4
+      },
+      {
+        "year": 2016,
+        "gdp": 249306000000,
+        "gdpPerCapita": 13704.91,
+        "growthRate": 1.8,
+        "debtRatio": 21.1
+      },
+      {
+        "year": 2017,
+        "gdp": 276357000000,
+        "gdpPerCapita": 14970.17,
+        "growthRate": 1.4,
+        "debtRatio": 23.7
+      },
+      {
+        "year": 2018,
+        "gdp": 295428000000,
+        "gdpPerCapita": 15752.41,
+        "growthRate": 4,
+        "debtRatio": 25.8
+      },
+      {
+        "year": 2019,
+        "gdp": 278040000000,
+        "gdpPerCapita": 14602.92,
+        "growthRate": 0.6,
+        "debtRatio": 28.3
+      },
+      {
+        "year": 2020,
+        "gdp": 254060000000,
+        "gdpPerCapita": 13207.85,
+        "growthRate": -6.1,
+        "debtRatio": 32.4
+      },
+      {
+        "year": 2021,
+        "gdp": 315411000000,
+        "gdpPerCapita": 16265.34,
+        "growthRate": 11.3,
+        "debtRatio": 36.4
+      },
+      {
+        "year": 2022,
+        "gdp": 301270000000,
+        "gdpPerCapita": 15385.38,
+        "growthRate": 2.2,
+        "debtRatio": 37.9
+      },
+      {
+        "year": 2023,
+        "gdp": 335627000000,
+        "gdpPerCapita": 16988.27,
+        "growthRate": 0.5,
+        "debtRatio": 39.4
+      },
+      {
+        "year": 2024,
+        "gdp": 330210000000,
+        "gdpPerCapita": 16589.84,
+        "growthRate": 2.6,
+        "debtRatio": 41.7
+      },
+      {
+        "year": 2025,
+        "gdp": 355346000000,
+        "gdpPerCapita": 17734.76,
+        "growthRate": 2.3,
+        "debtRatio": 41.8
+      },
+      {
+        "year": 2026,
+        "gdp": 407850000000,
+        "gdpPerCapita": 20239.76,
+        "growthRate": 2.4,
+        "debtRatio": 42.5
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "CZE": {
+    "countryId": "CZE",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 347083000000,
+        "gdpPerCapitaUsd": 31739.61,
+        "growthRatePct": 1.3,
+        "debtRatioPct": 43.3
+      },
+      "2025": {
+        "totalGdpUsd": 389020000000,
+        "gdpPerCapitaUsd": 35678.38,
+        "growthRatePct": 2.5,
+        "debtRatioPct": 44.6
+      },
+      "2026": {
+        "totalGdpUsd": 432597000000,
+        "gdpPerCapitaUsd": 39795.19,
+        "growthRatePct": 2.2,
+        "debtRatioPct": 46.4
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 189108000000,
+        "gdpPerCapita": 17944.84,
+        "growthRate": 5,
+        "debtRatio": 39.5
+      },
+      {
+        "year": 2016,
+        "gdp": 198161000000,
+        "gdpPerCapita": 18731.83,
+        "growthRate": 2.6,
+        "debtRatio": 36.2
+      },
+      {
+        "year": 2017,
+        "gdp": 221564000000,
+        "gdpPerCapita": 20882.42,
+        "growthRate": 5.2,
+        "debtRatio": 33.8
+      },
+      {
+        "year": 2018,
+        "gdp": 251992000000,
+        "gdpPerCapita": 23661.7,
+        "growthRate": 2.8,
+        "debtRatio": 31.7
+      },
+      {
+        "year": 2019,
+        "gdp": 256794000000,
+        "gdpPerCapita": 24013.06,
+        "growthRate": 3.6,
+        "debtRatio": 29.6
+      },
+      {
+        "year": 2020,
+        "gdp": 251110000000,
+        "gdpPerCapita": 23464.3,
+        "growthRate": -5.3,
+        "debtRatio": 36.9
+      },
+      {
+        "year": 2021,
+        "gdp": 290973000000,
+        "gdpPerCapita": 27667.66,
+        "growthRate": 4,
+        "debtRatio": 40.7
+      },
+      {
+        "year": 2022,
+        "gdp": 301831000000,
+        "gdpPerCapita": 27876.28,
+        "growthRate": 2.8,
+        "debtRatio": 42.5
+      },
+      {
+        "year": 2023,
+        "gdp": 345059000000,
+        "gdpPerCapita": 31800.88,
+        "debtRatio": 42.2
+      },
+      {
+        "year": 2024,
+        "gdp": 347083000000,
+        "gdpPerCapita": 31739.61,
+        "growthRate": 1.3,
+        "debtRatio": 43.3
+      },
+      {
+        "year": 2025,
+        "gdp": 389020000000,
+        "gdpPerCapita": 35678.38,
+        "growthRate": 2.5,
+        "debtRatio": 44.6
+      },
+      {
+        "year": 2026,
+        "gdp": 432597000000,
+        "gdpPerCapita": 39795.19,
+        "growthRate": 2.2,
+        "debtRatio": 46.4
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "ROU": {
+    "countryId": "ROU",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 382650000000,
+        "gdpPerCapitaUsd": 20199.15,
+        "growthRatePct": 0.9,
+        "debtRatioPct": 57.5
+      },
+      "2025": {
+        "totalGdpUsd": 427941000000,
+        "gdpPerCapitaUsd": 22724.53,
+        "growthRatePct": 0.7,
+        "debtRatioPct": 60.6
+      },
+      "2026": {
+        "totalGdpUsd": 480834000000,
+        "gdpPerCapitaUsd": 25692.97,
+        "growthRatePct": 0.7,
+        "debtRatioPct": 61.9
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 177878000000,
+        "gdpPerCapita": 8951.8,
+        "growthRate": 3.2,
+        "debtRatio": 39.4
+      },
+      {
+        "year": 2016,
+        "gdp": 185337000000,
+        "gdpPerCapita": 9379.11,
+        "growthRate": 2.9,
+        "debtRatio": 39.5
+      },
+      {
+        "year": 2017,
+        "gdp": 210530000000,
+        "gdpPerCapita": 10717.27,
+        "growthRate": 8.2,
+        "debtRatio": 37.1
+      },
+      {
+        "year": 2018,
+        "gdp": 241973000000,
+        "gdpPerCapita": 12387.59,
+        "growthRate": 5.4,
+        "debtRatio": 36.4
+      },
+      {
+        "year": 2019,
+        "gdp": 250056000000,
+        "gdpPerCapita": 12879.87,
+        "growthRate": 4,
+        "debtRatio": 36.8
+      },
+      {
+        "year": 2020,
+        "gdp": 250961000000,
+        "gdpPerCapita": 12983.76,
+        "growthRate": -3.6,
+        "debtRatio": 49.5
+      },
+      {
+        "year": 2021,
+        "gdp": 285275000000,
+        "gdpPerCapita": 14856.81,
+        "growthRate": 5.6,
+        "debtRatio": 51.8
+      },
+      {
+        "year": 2022,
+        "gdp": 295891000000,
+        "gdpPerCapita": 15537.96,
+        "growthRate": 4.2,
+        "debtRatio": 51.9
+      },
+      {
+        "year": 2023,
+        "gdp": 347829000000,
+        "gdpPerCapita": 18253.72,
+        "growthRate": 2.3,
+        "debtRatio": 52.6
+      },
+      {
+        "year": 2024,
+        "gdp": 382650000000,
+        "gdpPerCapita": 20199.15,
+        "growthRate": 0.9,
+        "debtRatio": 57.5
+      },
+      {
+        "year": 2025,
+        "gdp": 427941000000,
+        "gdpPerCapita": 22724.53,
+        "growthRate": 0.7,
+        "debtRatio": 60.6
+      },
+      {
+        "year": 2026,
+        "gdp": 480834000000,
+        "gdpPerCapita": 25692.97,
+        "growthRate": 0.7,
+        "debtRatio": 61.9
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "PER": {
+    "countryId": "PER",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 295220000000,
+        "gdpPerCapitaUsd": 8665.54,
+        "growthRatePct": 3.5,
+        "debtRatioPct": 32.1
+      },
+      "2025": {
+        "totalGdpUsd": 341025000000,
+        "gdpPerCapitaUsd": 9910.94,
+        "growthRatePct": 3.4,
+        "debtRatioPct": 30.2
+      },
+      "2026": {
+        "totalGdpUsd": 380900000000,
+        "gdpPerCapitaUsd": 10960.18,
+        "growthRatePct": 2.8,
+        "debtRatioPct": 30
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 193344000000,
+        "gdpPerCapita": 6452.56,
+        "growthRate": 3.3,
+        "debtRatio": 23.7
+      },
+      {
+        "year": 2016,
+        "gdp": 198818000000,
+        "gdpPerCapita": 6535.11,
+        "growthRate": 4,
+        "debtRatio": 23.9
+      },
+      {
+        "year": 2017,
+        "gdp": 220090000000,
+        "gdpPerCapita": 7105.65,
+        "growthRate": 2.5,
+        "debtRatio": 24.8
+      },
+      {
+        "year": 2018,
+        "gdp": 229550000000,
+        "gdpPerCapita": 7272.99,
+        "growthRate": 4,
+        "debtRatio": 25.7
+      },
+      {
+        "year": 2019,
+        "gdp": 236263000000,
+        "gdpPerCapita": 7353.11,
+        "growthRate": 2.2,
+        "debtRatio": 26.5
+      },
+      {
+        "year": 2020,
+        "gdp": 209057000000,
+        "gdpPerCapita": 6407.68,
+        "growthRate": -10.9,
+        "debtRatio": 34.3
+      },
+      {
+        "year": 2021,
+        "gdp": 228704000000,
+        "gdpPerCapita": 6923.09,
+        "growthRate": 13.4,
+        "debtRatio": 35.5
+      },
+      {
+        "year": 2022,
+        "gdp": 248179000000,
+        "gdpPerCapita": 7431.17,
+        "growthRate": 2.8,
+        "debtRatio": 33.5
+      },
+      {
+        "year": 2023,
+        "gdp": 272755000000,
+        "gdpPerCapita": 8086.19,
+        "growthRate": -0.4,
+        "debtRatio": 32.4
+      },
+      {
+        "year": 2024,
+        "gdp": 295220000000,
+        "gdpPerCapita": 8665.54,
+        "growthRate": 3.5,
+        "debtRatio": 32.1
+      },
+      {
+        "year": 2025,
+        "gdp": 341025000000,
+        "gdpPerCapita": 9910.94,
+        "growthRate": 3.4,
+        "debtRatio": 30.2
+      },
+      {
+        "year": 2026,
+        "gdp": 380900000000,
+        "gdpPerCapita": 10960.18,
+        "growthRate": 2.8,
+        "debtRatio": 30
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "GRC": {
+    "countryId": "GRC",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 256161000000,
+        "gdpPerCapitaUsd": 24688.42,
+        "growthRatePct": 2.1,
+        "debtRatioPct": 155.4
+      },
+      "2025": {
+        "totalGdpUsd": 280476000000,
+        "gdpPerCapitaUsd": 27040.81,
+        "growthRatePct": 2.1,
+        "debtRatioPct": 145.7
+      },
+      "2026": {
+        "totalGdpUsd": 307554000000,
+        "gdpPerCapitaUsd": 29695.96,
+        "growthRatePct": 1.8,
+        "debtRatioPct": 136.9
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 194587000000,
+        "gdpPerCapita": 17921.05,
+        "growthRate": -0.2,
+        "debtRatio": 180
+      },
+      {
+        "year": 2016,
+        "gdp": 193044000000,
+        "gdpPerCapita": 17901.38,
+        "debtRatio": 183.7
+      },
+      {
+        "year": 2017,
+        "gdp": 200310000000,
+        "gdpPerCapita": 18602.05,
+        "growthRate": 1.5,
+        "debtRatio": 182.6
+      },
+      {
+        "year": 2018,
+        "gdp": 213396000000,
+        "gdpPerCapita": 19867.09,
+        "growthRate": 2.1,
+        "debtRatio": 189.6
+      },
+      {
+        "year": 2019,
+        "gdp": 207329000000,
+        "gdpPerCapita": 19332.05,
+        "growthRate": 2.3,
+        "debtRatio": 183.7
+      },
+      {
+        "year": 2020,
+        "gdp": 191210000000,
+        "gdpPerCapita": 17839.12,
+        "growthRate": -9.2,
+        "debtRatio": 209.9
+      },
+      {
+        "year": 2021,
+        "gdp": 218449000000,
+        "gdpPerCapita": 20456.64,
+        "growthRate": 8.7,
+        "debtRatio": 197.8
+      },
+      {
+        "year": 2022,
+        "gdp": 218162000000,
+        "gdpPerCapita": 20853.52,
+        "growthRate": 5.5,
+        "debtRatio": 179.2
+      },
+      {
+        "year": 2023,
+        "gdp": 243016000000,
+        "gdpPerCapita": 23335.57,
+        "growthRate": 2.1,
+        "debtRatio": 165.5
+      },
+      {
+        "year": 2024,
+        "gdp": 256161000000,
+        "gdpPerCapita": 24688.42,
+        "growthRate": 2.1,
+        "debtRatio": 155.4
+      },
+      {
+        "year": 2025,
+        "gdp": 280476000000,
+        "gdpPerCapita": 27040.81,
+        "growthRate": 2.1,
+        "debtRatio": 145.7
+      },
+      {
+        "year": 2026,
+        "gdp": 307554000000,
+        "gdpPerCapita": 29695.96,
+        "growthRate": 1.8,
+        "debtRatio": 136.9
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "QAT": {
+    "countryId": "QAT",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 219163000000,
+        "gdpPerCapitaUsd": 69719.51,
+        "growthRatePct": 2.4,
+        "debtRatioPct": 41.3
+      },
+      "2025": {
+        "totalGdpUsd": 221229000000,
+        "gdpPerCapitaUsd": 69680.13,
+        "growthRatePct": 2.8,
+        "debtRatioPct": 41.4
+      },
+      "2026": {
+        "totalGdpUsd": 217416000000,
+        "gdpPerCapitaUsd": 68138.3,
+        "growthRatePct": -8.6,
+        "debtRatioPct": 43.3
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 161740000000,
+        "gdpPerCapita": 66346.91,
+        "growthRate": 4.8,
+        "debtRatio": 35.5
+      },
+      {
+        "year": 2016,
+        "gdp": 151732000000,
+        "gdpPerCapita": 57965.38,
+        "growthRate": 3.1,
+        "debtRatio": 46.7
+      },
+      {
+        "year": 2017,
+        "gdp": 161099000000,
+        "gdpPerCapita": 59127.51,
+        "growthRate": -1.5,
+        "debtRatio": 51.6
+      },
+      {
+        "year": 2018,
+        "gdp": 183335000000,
+        "gdpPerCapita": 66421.62,
+        "growthRate": 1.2,
+        "debtRatio": 52.2
+      },
+      {
+        "year": 2019,
+        "gdp": 176371000000,
+        "gdpPerCapita": 63007.7,
+        "growthRate": 0.7,
+        "debtRatio": 62.1
+      },
+      {
+        "year": 2020,
+        "gdp": 144411000000,
+        "gdpPerCapita": 50962.5,
+        "growthRate": -3.6,
+        "debtRatio": 72.6
+      },
+      {
+        "year": 2021,
+        "gdp": 179732000000,
+        "gdpPerCapita": 65400.85,
+        "growthRate": 1.6,
+        "debtRatio": 58.4
+      },
+      {
+        "year": 2022,
+        "gdp": 235709000000,
+        "gdpPerCapita": 80385.39,
+        "growthRate": 4.2,
+        "debtRatio": 42.6
+      },
+      {
+        "year": 2023,
+        "gdp": 217309000000,
+        "gdpPerCapita": 70946.18,
+        "growthRate": 1.5,
+        "debtRatio": 42.8
+      },
+      {
+        "year": 2024,
+        "gdp": 219163000000,
+        "gdpPerCapita": 69719.51,
+        "growthRate": 2.4,
+        "debtRatio": 41.3
+      },
+      {
+        "year": 2025,
+        "gdp": 221229000000,
+        "gdpPerCapita": 69680.13,
+        "growthRate": 2.8,
+        "debtRatio": 41.4
+      },
+      {
+        "year": 2026,
+        "gdp": 217416000000,
+        "gdpPerCapita": 68138.3,
+        "growthRate": -8.6,
+        "debtRatio": 43.3
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "HUN": {
+    "countryId": "HUN",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 222878000000,
+        "gdpPerCapitaUsd": 23252.81,
+        "growthRatePct": 0.6,
+        "debtRatioPct": 73.5
+      },
+      "2025": {
+        "totalGdpUsd": 246891000000,
+        "gdpPerCapitaUsd": 25825.58,
+        "growthRatePct": 0.4,
+        "debtRatioPct": 75.2
+      },
+      "2026": {
+        "totalGdpUsd": 271122000000,
+        "gdpPerCapitaUsd": 28430.47,
+        "growthRatePct": 1.7,
+        "debtRatioPct": 77.9
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 125244000000,
+        "gdpPerCapita": 12759.18,
+        "growthRate": 3.7,
+        "debtRatio": 75.7
+      },
+      {
+        "year": 2016,
+        "gdp": 128984000000,
+        "gdpPerCapita": 13188.5,
+        "growthRate": 2.4,
+        "debtRatio": 74.6
+      },
+      {
+        "year": 2017,
+        "gdp": 143335000000,
+        "gdpPerCapita": 14716.13,
+        "growthRate": 4.1,
+        "debtRatio": 72
+      },
+      {
+        "year": 2018,
+        "gdp": 161185000000,
+        "gdpPerCapita": 16593.03,
+        "growthRate": 5.6,
+        "debtRatio": 68.8
+      },
+      {
+        "year": 2019,
+        "gdp": 164927000000,
+        "gdpPerCapita": 17002.76,
+        "growthRate": 5.1,
+        "debtRatio": 65
+      },
+      {
+        "year": 2020,
+        "gdp": 158468000000,
+        "gdpPerCapita": 16355.5,
+        "growthRate": -4.3,
+        "debtRatio": 78.7
+      },
+      {
+        "year": 2021,
+        "gdp": 183283000000,
+        "gdpPerCapita": 18991.06,
+        "growthRate": 7.2,
+        "debtRatio": 76.2
+      },
+      {
+        "year": 2022,
+        "gdp": 177784000000,
+        "gdpPerCapita": 18499.92,
+        "growthRate": 4.2,
+        "debtRatio": 74.1
+      },
+      {
+        "year": 2023,
+        "gdp": 213315000000,
+        "gdpPerCapita": 22220.35,
+        "growthRate": -0.8,
+        "debtRatio": 73.2
+      },
+      {
+        "year": 2024,
+        "gdp": 222878000000,
+        "gdpPerCapita": 23252.81,
+        "growthRate": 0.6,
+        "debtRatio": 73.5
+      },
+      {
+        "year": 2025,
+        "gdp": 246891000000,
+        "gdpPerCapita": 25825.58,
+        "growthRate": 0.4,
+        "debtRatio": 75.2
+      },
+      {
+        "year": 2026,
+        "gdp": 271122000000,
+        "gdpPerCapita": 28430.47,
+        "growthRate": 1.7,
+        "debtRatio": 77.9
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "KWT": {
+    "countryId": "KWT",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 160902000000,
+        "gdpPerCapitaUsd": 32106.28,
+        "growthRatePct": -1.5,
+        "debtRatioPct": 2.9
+      },
+      "2025": {
+        "totalGdpUsd": 157835000000,
+        "gdpPerCapitaUsd": 30876.88,
+        "growthRatePct": 3.5,
+        "debtRatioPct": 14.6
+      },
+      "2026": {
+        "totalGdpUsd": 172920000000,
+        "gdpPerCapitaUsd": 33164.45,
+        "growthRatePct": -0.6,
+        "debtRatioPct": 22.3
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 114606000000,
+        "gdpPerCapita": 29195.28,
+        "growthRate": 0.6,
+        "debtRatio": 4.6
+      },
+      {
+        "year": 2016,
+        "gdp": 109399000000,
+        "gdpPerCapita": 26795.71,
+        "growthRate": 2.9,
+        "debtRatio": 9.9
+      },
+      {
+        "year": 2017,
+        "gdp": 120688000000,
+        "gdpPerCapita": 28552.15,
+        "growthRate": -4.7,
+        "debtRatio": 19.6
+      },
+      {
+        "year": 2018,
+        "gdp": 138655000000,
+        "gdpPerCapita": 31369.18,
+        "growthRate": 2.7,
+        "debtRatio": 14.3
+      },
+      {
+        "year": 2019,
+        "gdp": 140855000000,
+        "gdpPerCapita": 31549.88,
+        "growthRate": 2.3,
+        "debtRatio": 10.5
+      },
+      {
+        "year": 2020,
+        "gdp": 111048000000,
+        "gdpPerCapita": 25610.72,
+        "growthRate": -4.8,
+        "debtRatio": 10.2
+      },
+      {
+        "year": 2021,
+        "gdp": 148346000000,
+        "gdpPerCapita": 33824.86,
+        "growthRate": 1.7,
+        "debtRatio": 7.2
+      },
+      {
+        "year": 2022,
+        "gdp": 183539000000,
+        "gdpPerCapita": 38288.6,
+        "growthRate": 6.8,
+        "debtRatio": 3
+      },
+      {
+        "year": 2023,
+        "gdp": 165474000000,
+        "gdpPerCapita": 33679.03,
+        "growthRate": -1.6,
+        "debtRatio": 3.1
+      },
+      {
+        "year": 2024,
+        "gdp": 160902000000,
+        "gdpPerCapita": 32106.28,
+        "growthRate": -1.5,
+        "debtRatio": 2.9
+      },
+      {
+        "year": 2025,
+        "gdp": 157835000000,
+        "gdpPerCapita": 30876.88,
+        "growthRate": 3.5,
+        "debtRatio": 14.6
+      },
+      {
+        "year": 2026,
+        "gdp": 172920000000,
+        "gdpPerCapita": 33164.45,
+        "growthRate": -0.6,
+        "debtRatio": 22.3
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "UKR": {
+    "countryId": "UKR",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 190834000000,
+        "gdpPerCapitaUsd": 5723.4,
+        "growthRatePct": 3.2,
+        "debtRatioPct": 89.7
+      },
+      "2025": {
+        "totalGdpUsd": 212927000000,
+        "gdpPerCapitaUsd": 6499.26,
+        "growthRatePct": 1.8,
+        "debtRatioPct": 108.7
+      },
+      "2026": {
+        "totalGdpUsd": 225337000000,
+        "gdpPerCapitaUsd": 6980.12,
+        "growthRatePct": 2,
+        "debtRatioPct": 122.6
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 90981000000,
+        "gdpPerCapita": 2136.16,
+        "growthRate": -9.8,
+        "debtRatio": 79.3
+      },
+      {
+        "year": 2016,
+        "gdp": 93355000000,
+        "gdpPerCapita": 2201.01,
+        "growthRate": 2.4,
+        "debtRatio": 79.5
+      },
+      {
+        "year": 2017,
+        "gdp": 112091000000,
+        "gdpPerCapita": 2655.12,
+        "growthRate": 2.4,
+        "debtRatio": 71.6
+      },
+      {
+        "year": 2018,
+        "gdp": 130891000000,
+        "gdpPerCapita": 3117.67,
+        "growthRate": 3.5,
+        "debtRatio": 60.4
+      },
+      {
+        "year": 2019,
+        "gdp": 153883000000,
+        "gdpPerCapita": 3687.34,
+        "growthRate": 3.2,
+        "debtRatio": 50.5
+      },
+      {
+        "year": 2020,
+        "gdp": 156618000000,
+        "gdpPerCapita": 3781.33,
+        "growthRate": -3.8,
+        "debtRatio": 60.5
+      },
+      {
+        "year": 2021,
+        "gdp": 199766000000,
+        "gdpPerCapita": 4872.61,
+        "growthRate": 3.4,
+        "debtRatio": 48.9
+      },
+      {
+        "year": 2022,
+        "gdp": 161990000000,
+        "gdpPerCapita": 4693.89,
+        "growthRate": -28.8,
+        "debtRatio": 77.7
+      },
+      {
+        "year": 2023,
+        "gdp": 181222000000,
+        "gdpPerCapita": 5326.01,
+        "growthRate": 5.5,
+        "debtRatio": 81.2
+      },
+      {
+        "year": 2024,
+        "gdp": 190834000000,
+        "gdpPerCapita": 5723.4,
+        "growthRate": 3.2,
+        "debtRatio": 89.7
+      },
+      {
+        "year": 2025,
+        "gdp": 212927000000,
+        "gdpPerCapita": 6499.26,
+        "growthRate": 1.8,
+        "debtRatio": 108.7
+      },
+      {
+        "year": 2026,
+        "gdp": 225337000000,
+        "gdpPerCapita": 6980.12,
+        "growthRate": 2,
+        "debtRatio": 122.6
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "TWN": {
+    "countryId": "TWN",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 801495000000,
+        "gdpPerCapitaUsd": 34251.62,
+        "growthRatePct": 5.3,
+        "debtRatioPct": 26.8
+      },
+      "2025": {
+        "totalGdpUsd": 920050000000,
+        "gdpPerCapitaUsd": 39488.57,
+        "growthRatePct": 8.7,
+        "debtRatioPct": 22.4
+      },
+      "2026": {
+        "totalGdpUsd": 976719000000,
+        "gdpPerCapitaUsd": 42102.7,
+        "growthRatePct": 5.2,
+        "debtRatioPct": 27.6
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 534515000000,
+        "gdpPerCapita": 22752.99,
+        "growthRate": 1.5,
+        "debtRatio": 35.9
+      },
+      {
+        "year": 2016,
+        "gdp": 543081000000,
+        "gdpPerCapita": 23070.73,
+        "growthRate": 2.2,
+        "debtRatio": 35.4
+      },
+      {
+        "year": 2017,
+        "gdp": 591687000000,
+        "gdpPerCapita": 25102.09,
+        "growthRate": 3.7,
+        "debtRatio": 34.5
+      },
+      {
+        "year": 2018,
+        "gdp": 610690000000,
+        "gdpPerCapita": 25888.84,
+        "growthRate": 2.9,
+        "debtRatio": 33.8
+      },
+      {
+        "year": 2019,
+        "gdp": 613512000000,
+        "gdpPerCapita": 25992.85,
+        "growthRate": 3.1,
+        "debtRatio": 32.6
+      },
+      {
+        "year": 2020,
+        "gdp": 676861000000,
+        "gdpPerCapita": 28727.74,
+        "growthRate": 3.4,
+        "debtRatio": 32
+      },
+      {
+        "year": 2021,
+        "gdp": 776965000000,
+        "gdpPerCapita": 33238.72,
+        "growthRate": 6.7,
+        "debtRatio": 30.1
+      },
+      {
+        "year": 2022,
+        "gdp": 765624000000,
+        "gdpPerCapita": 32909.32,
+        "growthRate": 2.7,
+        "debtRatio": 29.5
+      },
+      {
+        "year": 2023,
+        "gdp": 757387000000,
+        "gdpPerCapita": 32338.71,
+        "growthRate": 1.1,
+        "debtRatio": 29
+      },
+      {
+        "year": 2024,
+        "gdp": 801495000000,
+        "gdpPerCapita": 34251.62,
+        "growthRate": 5.3,
+        "debtRatio": 26.8
+      },
+      {
+        "year": 2025,
+        "gdp": 920050000000,
+        "gdpPerCapita": 39488.57,
+        "growthRate": 8.7,
+        "debtRatio": 22.4
+      },
+      {
+        "year": 2026,
+        "gdp": 976719000000,
+        "gdpPerCapita": 42102.7,
+        "growthRate": 5.2,
+        "debtRatio": 27.6
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "PAK": {
+    "countryId": "PAK",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 372243000000,
+        "gdpPerCapitaUsd": 1577.64,
+        "growthRatePct": 2.6,
+        "debtRatioPct": 70.2
+      },
+      "2025": {
+        "totalGdpUsd": 407786000000,
+        "gdpPerCapitaUsd": 1695.65,
+        "growthRatePct": 3.1,
+        "debtRatioPct": 72.8
+      },
+      "2026": {
+        "totalGdpUsd": 407786000000,
+        "gdpPerCapitaUsd": 1695.65,
+        "growthRatePct": 3.6,
+        "debtRatioPct": 70.1
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 299930000000,
+        "gdpPerCapita": 1535.35,
+        "growthRate": 3.8,
+        "debtRatio": 59.1
+      },
+      {
+        "year": 2016,
+        "gdp": 313623000000,
+        "gdpPerCapita": 1566.63,
+        "growthRate": 4.1,
+        "debtRatio": 62.1
+      },
+      {
+        "year": 2017,
+        "gdp": 339229000000,
+        "gdpPerCapita": 1653.41,
+        "growthRate": 4.6,
+        "debtRatio": 62.1
+      },
+      {
+        "year": 2018,
+        "gdp": 356163000000,
+        "gdpPerCapita": 1698.03,
+        "growthRate": 6.1,
+        "debtRatio": 66.3
+      },
+      {
+        "year": 2019,
+        "gdp": 321071000000,
+        "gdpPerCapita": 1500.68,
+        "growthRate": 3.1,
+        "debtRatio": 78.7
+      },
+      {
+        "year": 2020,
+        "gdp": 300410000000,
+        "gdpPerCapita": 1376.51,
+        "growthRate": -0.9,
+        "debtRatio": 80.8
+      },
+      {
+        "year": 2021,
+        "gdp": 348481000000,
+        "gdpPerCapita": 1565.58,
+        "growthRate": 5.8,
+        "debtRatio": 74.7
+      },
+      {
+        "year": 2022,
+        "gdp": 374850000000,
+        "gdpPerCapita": 1651.32,
+        "growthRate": 6.2,
+        "debtRatio": 77.3
+      },
+      {
+        "year": 2023,
+        "gdp": 336555000000,
+        "gdpPerCapita": 1454.12,
+        "growthRate": -0.2,
+        "debtRatio": 78.5
+      },
+      {
+        "year": 2024,
+        "gdp": 372243000000,
+        "gdpPerCapita": 1577.64,
+        "growthRate": 2.6,
+        "debtRatio": 70.2
+      },
+      {
+        "year": 2025,
+        "gdp": 407786000000,
+        "gdpPerCapita": 1695.65,
+        "growthRate": 3.1,
+        "debtRatio": 72.8
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  },
+  "KAZ": {
+    "countryId": "KAZ",
+    "years": {
+      "2024": {
+        "totalGdpUsd": 291480000000,
+        "gdpPerCapitaUsd": 14459.34,
+        "growthRatePct": 5,
+        "debtRatioPct": 24.4
+      },
+      "2025": {
+        "totalGdpUsd": 302746000000,
+        "gdpPerCapitaUsd": 14854.78,
+        "growthRatePct": 6.5,
+        "debtRatioPct": 24.6
+      },
+      "2026": {
+        "totalGdpUsd": 360456000000,
+        "gdpPerCapitaUsd": 17502.65,
+        "growthRatePct": 4.6,
+        "debtRatioPct": 24.9
+      }
+    },
+    "historical": [
+      {
+        "year": 2015,
+        "gdp": 184388000000,
+        "gdpPerCapita": 10511.37,
+        "growthRate": 1,
+        "debtRatio": 21.9
+      },
+      {
+        "year": 2016,
+        "gdp": 137278000000,
+        "gdpPerCapita": 7715.44,
+        "growthRate": 0.9,
+        "debtRatio": 19.7
+      },
+      {
+        "year": 2017,
+        "gdp": 166806000000,
+        "gdpPerCapita": 9248.38,
+        "growthRate": 3.9,
+        "debtRatio": 19.9
+      },
+      {
+        "year": 2018,
+        "gdp": 179340000000,
+        "gdpPerCapita": 9813.28,
+        "growthRate": 4.1,
+        "debtRatio": 20.3
+      },
+      {
+        "year": 2019,
+        "gdp": 181667000000,
+        "gdpPerCapita": 9813.06,
+        "growthRate": 4.5,
+        "debtRatio": 19.9
+      },
+      {
+        "year": 2020,
+        "gdp": 171082000000,
+        "gdpPerCapita": 9121.99,
+        "growthRate": -2.6,
+        "debtRatio": 26.4
+      },
+      {
+        "year": 2021,
+        "gdp": 197112000000,
+        "gdpPerCapita": 10373.95,
+        "growthRate": 4.1,
+        "debtRatio": 25.1
+      },
+      {
+        "year": 2022,
+        "gdp": 225496000000,
+        "gdpPerCapita": 11484.42,
+        "growthRate": 3.2,
+        "debtRatio": 23.5
+      },
+      {
+        "year": 2023,
+        "gdp": 261840000000,
+        "gdpPerCapita": 13157.58,
+        "growthRate": 5.1,
+        "debtRatio": 23
+      },
+      {
+        "year": 2024,
+        "gdp": 291480000000,
+        "gdpPerCapita": 14459.34,
+        "growthRate": 5,
+        "debtRatio": 24.4
+      },
+      {
+        "year": 2025,
+        "gdp": 302746000000,
+        "gdpPerCapita": 14854.78,
+        "growthRate": 6.5,
+        "debtRatio": 24.6
+      },
+      {
+        "year": 2026,
+        "gdp": 360456000000,
+        "gdpPerCapita": 17502.65,
+        "growthRate": 4.6,
+        "debtRatio": 24.9
+      }
+    ],
+    "source": "IMF World Economic Outlook (WEO)",
+    "lastUpdated": "IMF WEO Official Database"
+  }
+}

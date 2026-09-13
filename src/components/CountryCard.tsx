@@ -1,6 +1,6 @@
 import React from 'react'
 import { TrendingUp, TrendingDown, ArrowRight, LineChart } from 'lucide-react'
-import type { CountryMeta, BaseCurrency, ExchangeRates, Language } from '../types/economics'
+import type { CountryMeta, BaseCurrency, ExchangeRates, Language, EconomicYear } from '../types/economics'
 import { formatGdpCompact, formatPerCapita, formatExchangeRate } from '../utils/formatters'
 import { getConversionRate } from '../services/exchangeApi'
 import { translations } from '../i18n/translations'
@@ -14,9 +14,11 @@ interface CountryCardProps {
   totalGdpUsd: number
   gdpPerCapitaUsd: number
   growthRatePct: number | null
+  debtRatioPct: number | null
   baseCurrency: BaseCurrency
   exchangeRates: ExchangeRates | null
   lang: Language
+  selectedYear?: EconomicYear
   onSelect: (c: CountryMeta) => void
 }
 
@@ -26,6 +28,7 @@ export const CountryCard: React.FC<CountryCardProps> = ({
   totalGdpUsd,
   gdpPerCapitaUsd,
   growthRatePct,
+  debtRatioPct,
   baseCurrency,
   exchangeRates,
   lang,
@@ -69,9 +72,25 @@ export const CountryCard: React.FC<CountryCardProps> = ({
             </div>
           </div>
 
-          <span className="text-xs font-bold font-mono px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700/60">
-            #{rank}
-          </span>
+          <div className="flex items-center gap-1.5 shrink-0">
+            {debtRatioPct !== null && (
+              <span
+                className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded-full border ${
+                  debtRatioPct < 60
+                    ? 'text-emerald-300 bg-emerald-950/60 border-emerald-500/30'
+                    : debtRatioPct <= 100
+                    ? 'text-amber-300 bg-amber-950/60 border-amber-500/30'
+                    : 'text-rose-300 bg-rose-950/60 border-rose-500/30'
+                }`}
+                title={`${t.modalDebtTitle}: ${debtRatioPct.toFixed(1)}%`}
+              >
+                {t.cardDebtRatio} {debtRatioPct.toFixed(1)}%
+              </span>
+            )}
+            <span className="text-xs font-bold font-mono px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700/60">
+              #{rank}
+            </span>
+          </div>
         </div>
 
         {/* GDP & Stock Index Metrics */}

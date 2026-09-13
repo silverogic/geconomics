@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { GitCompare, ArrowRightLeft, TrendingUp } from 'lucide-react'
 import { COUNTRIES } from '../data/countries'
-import type { CountryGdpDetail, BaseCurrency, ExchangeRates, Language } from '../types/economics'
+import type { CountryGdpDetail, BaseCurrency, ExchangeRates, Language, EconomicYear } from '../types/economics'
 import { fetchCountryGdpDetail } from '../services/worldBankApi'
 import { getConversionRate } from '../services/exchangeApi'
 import { formatGdpCompact, formatPerCapita, formatExchangeRate } from '../utils/formatters'
@@ -13,12 +13,16 @@ interface CompareViewProps {
   baseCurrency: BaseCurrency
   exchangeRates: ExchangeRates | null
   lang: Language
+  selectedYear?: EconomicYear
+  onYearChange?: (year: EconomicYear) => void
 }
 
 export const CompareView: React.FC<CompareViewProps> = ({
   baseCurrency,
   exchangeRates,
   lang,
+  selectedYear = '2024',
+  onYearChange,
 }) => {
   const t = translations[lang]
   const [countryAId, setCountryAId] = useState<string>('USA')
@@ -35,7 +39,10 @@ export const CompareView: React.FC<CompareViewProps> = ({
     let active = true
     setLoading(true)
 
-    Promise.all([fetchCountryGdpDetail(countryA.id), fetchCountryGdpDetail(countryB.id)])
+    Promise.all([
+      fetchCountryGdpDetail(countryA.id, selectedYear),
+      fetchCountryGdpDetail(countryB.id, selectedYear),
+    ])
       .then(([resA, resB]) => {
         if (active) {
           setDetailA(resA)
@@ -51,7 +58,7 @@ export const CompareView: React.FC<CompareViewProps> = ({
     return () => {
       active = false
     }
-  }, [countryA.id, countryB.id])
+  }, [countryA.id, countryB.id, selectedYear])
 
   const handleSwap = () => {
     const temp = countryAId
@@ -84,7 +91,7 @@ export const CompareView: React.FC<CompareViewProps> = ({
     <div className="space-y-6">
       {/* Top Header & Presets */}
       <div className="bg-slate-900 border border-slate-800 rounded-2xl p-4 sm:p-6">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-5">
+        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-5">
           <div>
             <h2 className="text-xl sm:text-2xl font-black text-white flex items-center gap-2">
               <GitCompare className="w-6 h-6 text-indigo-400" />
@@ -95,9 +102,31 @@ export const CompareView: React.FC<CompareViewProps> = ({
             </p>
           </div>
 
-          {/* Preset Buttons with Vector Flags */}
-          <div className="flex flex-wrap items-center gap-1.5 text-xs">
-            <span className="text-slate-500 mr-1 font-medium">{t.compareRecommended}</span>
+          <div className="flex flex-wrap items-center gap-3">
+            {onYearChange && (
+              <div className="flex items-center bg-slate-950/90 border border-slate-800 p-1 rounded-xl shrink-0">
+                <span className="text-[11px] font-semibold text-slate-400 px-2 hidden sm:inline">
+                  {t.yearLabel}:
+                </span>
+                {(['2024', '2025', '2026'] as const).map((yr) => (
+                  <button
+                    key={yr}
+                    onClick={() => onYearChange(yr)}
+                    className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-all ${
+                      selectedYear === yr
+                        ? 'bg-indigo-600 text-white shadow-sm shadow-indigo-600/30 font-bold'
+                        : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
+                    }`}
+                  >
+                    {yr === '2024' ? t.year2024 : yr === '2025' ? t.year2025 : t.year2026}
+                  </button>
+                ))}
+              </div>
+            )}
+
+            {/* Preset Buttons with Vector Flags */}
+            <div className="flex flex-wrap items-center gap-1.5 text-xs">
+              <span className="text-slate-500 mr-1 font-medium">{t.compareRecommended}</span>
             <button
               onClick={() => setPreset('USA', 'CHN')}
               className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors flex items-center gap-1.5"
@@ -124,6 +153,7 @@ export const CompareView: React.FC<CompareViewProps> = ({
             </button>
           </div>
         </div>
+      </div>
 
         {/* Selectors */}
         <div className="grid grid-cols-1 md:grid-cols-[1fr,auto,1fr] gap-3 items-center">
@@ -230,6 +260,25 @@ export const CompareView: React.FC<CompareViewProps> = ({
                   : 'N/A'}
               </span>
             </div>
+
+            <div className="bg-slate-950/70 p-3 rounded-xl flex justify-between items-center">
+              <span className="text-xs text-slate-400">{t.compareDebtRatio}</span>
+              <span
+                className={`text-sm font-mono font-bold ${
+                  detailA?.debtRatioPct === null || detailA?.debtRatioPct === undefined
+                    ? 'text-slate-400'
+                    : detailA.debtRatioPct < 60
+                      ? 'text-emerald-400'
+                      : detailA.debtRatioPct <= 100
+                        ? 'text-amber-400'
+                        : 'text-rose-400'
+                }`}
+              >
+                {detailA?.debtRatioPct !== null && detailA?.debtRatioPct !== undefined
+                  ? `${detailA.debtRatioPct.toFixed(1)}%`
+                  : 'N/A'}
+              </span>
+            </div>
           </div>
         </div>
 
@@ -282,6 +331,25 @@ export const CompareView: React.FC<CompareViewProps> = ({
               <span className="text-sm font-mono font-bold text-emerald-400">
                 {detailB?.growthRatePct !== null && detailB?.growthRatePct !== undefined
                   ? `${detailB.growthRatePct > 0 ? '+' : ''}${detailB.growthRatePct.toFixed(2)}%`
+                  : 'N/A'}
+              </span>
+            </div>
+
+            <div className="bg-slate-950/70 p-3 rounded-xl flex justify-between items-center">
+              <span className="text-xs text-slate-400">{t.compareDebtRatio}</span>
+              <span
+                className={`text-sm font-mono font-bold ${
+                  detailB?.debtRatioPct === null || detailB?.debtRatioPct === undefined
+                    ? 'text-slate-400'
+                    : detailB.debtRatioPct < 60
+                      ? 'text-emerald-400'
+                      : detailB.debtRatioPct <= 100
+                        ? 'text-amber-400'
+                        : 'text-rose-400'
+                }`}
+              >
+                {detailB?.debtRatioPct !== null && detailB?.debtRatioPct !== undefined
+                  ? `${detailB.debtRatioPct.toFixed(1)}%`
                   : 'N/A'}
               </span>
             </div>

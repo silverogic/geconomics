@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react'
 import { ArrowUpDown, Search, ArrowUp, ArrowDown } from 'lucide-react'
-import type { CountryMeta, BaseCurrency, ExchangeRates, Language } from '../types/economics'
+import type { CountryMeta, BaseCurrency, ExchangeRates, Language, EconomicYear } from '../types/economics'
 import { formatGdpCompact, formatPerCapita, formatExchangeRate } from '../utils/formatters'
 import { getConversionRate } from '../services/exchangeApi'
 import { translations } from '../i18n/translations'
@@ -12,6 +12,7 @@ export interface CountryRowItem {
   totalGdpUsd: number
   gdpPerCapitaUsd: number
   growthRatePct: number | null
+  debtRatioPct: number | null
 }
 
 interface RankingTableProps {
@@ -21,9 +22,11 @@ interface RankingTableProps {
   lang: Language
   onSelectCountry: (c: CountryMeta) => void
   hideHeader?: boolean
+  selectedYear?: EconomicYear
+  onYearChange?: (year: EconomicYear) => void
 }
 
-type SortField = 'rank' | 'countryName' | 'totalGdpUsd' | 'gdpPerCapitaUsd' | 'growthRatePct' | 'fxRate'
+type SortField = 'rank' | 'countryName' | 'totalGdpUsd' | 'gdpPerCapitaUsd' | 'growthRatePct' | 'debtRatioPct' | 'fxRate'
 
 export const RankingTable: React.FC<RankingTableProps> = ({
   items,
@@ -32,6 +35,8 @@ export const RankingTable: React.FC<RankingTableProps> = ({
   lang,
   onSelectCountry,
   hideHeader = false,
+  selectedYear = '2024',
+  onYearChange,
 }) => {
   const t = translations[lang]
   const [searchTerm, setSearchTerm] = useState('')
@@ -45,7 +50,7 @@ export const RankingTable: React.FC<RankingTableProps> = ({
       setSortDirection((prev) => (prev === 'asc' ? 'desc' : 'asc'))
     } else {
       setSortField(field)
-      if (['totalGdpUsd', 'gdpPerCapitaUsd', 'growthRatePct'].includes(field)) {
+      if (['totalGdpUsd', 'gdpPerCapitaUsd', 'growthRatePct', 'debtRatioPct'].includes(field)) {
         setSortDirection('desc')
       } else {
         setSortDirection('asc')
@@ -102,7 +107,7 @@ export const RankingTable: React.FC<RankingTableProps> = ({
     <div className="bg-slate-900 border border-slate-800 rounded-2xl p-4 sm:p-6 space-y-4">
       {/* Header & Search */}
       {!hideHeader && (
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
             <h2 className="text-xl sm:text-2xl font-black text-white">{t.tableTitle}</h2>
             <p className="text-xs sm:text-sm text-slate-400 mt-0.5">
@@ -110,16 +115,39 @@ export const RankingTable: React.FC<RankingTableProps> = ({
             </p>
           </div>
 
-          {/* Search Input */}
-          <div className="relative w-full sm:w-72">
-            <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
-            <input
-              type="text"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              placeholder={t.searchPlaceholder}
-              className="w-full bg-slate-950/80 border border-slate-800 rounded-xl pl-9 pr-4 py-2 text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors"
-            />
+          <div className="flex flex-wrap items-center gap-3 self-start md:self-auto">
+            {onYearChange && (
+              <div className="flex items-center bg-slate-950/90 border border-slate-800 p-1 rounded-xl shrink-0">
+                <span className="text-[11px] font-semibold text-slate-400 px-2 hidden sm:inline">
+                  {t.yearLabel}:
+                </span>
+                {(['2024', '2025', '2026'] as const).map((yr) => (
+                  <button
+                    key={yr}
+                    onClick={() => onYearChange(yr)}
+                    className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-all ${
+                      selectedYear === yr
+                        ? 'bg-indigo-600 text-white shadow-sm shadow-indigo-600/30 font-bold'
+                        : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
+                    }`}
+                  >
+                    {yr === '2024' ? t.year2024 : yr === '2025' ? t.year2025 : t.year2026}
+                  </button>
+                ))}
+              </div>
+            )}
+
+            {/* Search Input */}
+            <div className="relative w-full sm:w-64">
+              <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+              <input
+                type="text"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                placeholder={t.searchPlaceholder}
+                className="w-full bg-slate-950/80 border border-slate-800 rounded-xl pl-9 pr-4 py-2 text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors"
+              />
+            </div>
           </div>
         </div>
       )}
@@ -190,13 +218,23 @@ export const RankingTable: React.FC<RankingTableProps> = ({
                   {renderSortIcon('growthRatePct')}
                 </div>
               </th>
+
+              <th
+                onClick={() => handleSort('debtRatioPct')}
+                className="py-3 px-3.5 cursor-pointer hover:text-slate-200 text-right hidden md:table-cell"
+              >
+                <div className="flex items-center justify-end gap-1.5">
+                  <span>{t.colDebt}</span>
+                  {renderSortIcon('debtRatioPct')}
+                </div>
+              </th>
             </tr>
           </thead>
 
           <tbody className="divide-y divide-slate-800/60 bg-slate-900/50">
             {filteredAndSorted.length === 0 ? (
               <tr>
-                <td colSpan={7} className="py-12 text-center text-slate-500">
+                <td colSpan={8} className="py-12 text-center text-slate-500">
                   {t.noCountriesFound}
                 </td>
               </tr>
@@ -267,6 +305,24 @@ export const RankingTable: React.FC<RankingTableProps> = ({
                         }`}
                       >
                         {item.growthRatePct > 0 ? `+${item.growthRatePct.toFixed(1)}%` : `${item.growthRatePct.toFixed(1)}%`}
+                      </span>
+                    ) : (
+                      <span className="text-slate-600 font-mono">-</span>
+                    )}
+                  </td>
+
+                  <td className="py-3.5 px-3.5 text-right hidden md:table-cell">
+                    {item.debtRatioPct !== null ? (
+                      <span
+                        className={`inline-block font-mono font-semibold px-1.5 py-0.5 rounded text-xs ${
+                          item.debtRatioPct < 60
+                            ? 'text-emerald-400 bg-emerald-500/10'
+                            : item.debtRatioPct <= 100
+                            ? 'text-amber-400 bg-amber-500/10'
+                            : 'text-rose-400 bg-rose-500/10'
+                        }`}
+                      >
+                        {item.debtRatioPct.toFixed(1)}%
                       </span>
                     ) : (
                       <span className="text-slate-600 font-mono">-</span>
