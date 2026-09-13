@@ -30,6 +30,16 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
             </a>
             <span>•</span>
             <a
+              href="https://www.imf.org/external/datamapper/"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-1 hover:text-indigo-400 transition-colors"
+            >
+              <span>{t.footerImf}</span>
+              <ExternalLink className="w-3 h-3" />
+            </a>
+            <span>•</span>
+            <a
               href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html"
               target="_blank"
               rel="noreferrer"
@@ -64,7 +74,7 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
         </div>
 
         <div className="text-center text-slate-600 text-[11px]">
-          (C) {new Date().getFullYear()} Geonomics. Powered by World Bank Open API & Open Exchange Rates. Hosted on GitHub Pages.
+          (C) {new Date().getFullYear()} Geonomics. Powered by World Bank Open API, IMF World Economic Outlook (WEO) & ECB Reference Rates. Hosted on GitHub Pages.
         </div>
       </div>
     </footer>

@@ -294,8 +294,9 @@ export const CountryModal: React.FC<CountryModalProps> = ({
                     : 'GDP Statistics: Sourced from IMF World Economic Outlook (WEO) & DGBAS Taiwan official data.')
                 : t.modalAccuracyGdp}
             </p>
+            <p>• {t.modalAccuracyDebt}</p>
             <p>• {t.modalAccuracyFx}</p>
-            <div className="pt-1 flex items-center gap-4 text-indigo-400">
+            <div className="pt-1 flex flex-wrap items-center gap-4 text-indigo-400">
               <a
                 href={country.id === 'TWN' ? 'https://www.imf.org/en/Countries/TWN' : `https://data.worldbank.org/country/${country.id.toLowerCase()}`}
                 target="_blank"
@@ -303,6 +304,15 @@ export const CountryModal: React.FC<CountryModalProps> = ({
                 className="flex items-center gap-1 hover:underline"
               >
                 <span>{country.id === 'TWN' ? (lang === 'ko' ? 'IMF 대만 공식 경제 포털 바로가기' : 'Visit IMF Taiwan Data Portal') : t.modalWorldBankLink}</span>
+                <ExternalLink className="w-3 h-3" />
+              </a>
+              <a
+                href={`https://www.imf.org/external/datamapper/GGXWDG_NGDP@WEO/OEMDC/ADVEC/WEOWORLD/${country.id}`}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-1 hover:underline"
+              >
+                <span>{t.modalImfLink}</span>
                 <ExternalLink className="w-3 h-3" />
               </a>
             </div>
