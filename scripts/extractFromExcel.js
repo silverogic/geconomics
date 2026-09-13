@@ -69,7 +69,8 @@ const growthWb = XLSX.readFile(growthFilePath)
 const growthRows = XLSX.utils.sheet_to_json(growthWb.Sheets[growthWb.SheetNames[0]], { header: 1 })
 const growthHeader = growthRows[0]
 
-const existingJsonPath = path.join(projectRoot, 'src', 'data', 'imfEconomicData.json')
+// Read existing json to preserve population reference ratios
+const existingJsonPath = path.join(projectRoot, 'src', 'data', 'excelEconomicData.json')
 let existing = {}
 if (fs.existsSync(existingJsonPath)) {
   try {
@@ -167,11 +168,8 @@ for (const c of COUNTRIES) {
 
 const outputTargets = [
   path.join(projectRoot, 'src', 'data', 'excelEconomicData.json'),
-  path.join(projectRoot, 'src', 'data', 'imfEconomicData.json'),
   path.join(projectRoot, 'public', 'data', 'excelEconomicData.json'),
-  path.join(projectRoot, 'public', 'data', 'imfEconomicData.json'),
   path.join(projectRoot, 'docs', 'data', 'excelEconomicData.json'),
-  path.join(projectRoot, 'docs', 'data', 'imfEconomicData.json'),
 ]
 
 const jsonContent = JSON.stringify(result, null, 2)
